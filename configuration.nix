@@ -75,6 +75,7 @@
     gh
     kitty
     waybar
+    dunst
   ];
 
   # Programs
