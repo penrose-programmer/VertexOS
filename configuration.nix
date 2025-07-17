@@ -73,6 +73,7 @@
     wget
     obsidian
     gh
+    kitty
   ];
 
   # Programs
