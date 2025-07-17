@@ -4,7 +4,6 @@
   imports =
     [ 
       ./hardware-configuration.nix
-      # Home Manager comes from flake.nix now
     ];
 
   # Bootloader
@@ -73,6 +72,7 @@
     vscode
     wget
     obsidian
+    gh
   ];
 
   # Programs
