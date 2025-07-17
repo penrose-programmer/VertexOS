@@ -76,6 +76,7 @@
     kitty
     waybar
     dunst
+    hypridle
   ];
 
   # Programs
@@ -84,6 +85,8 @@
 
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+
+  programs.hyprlock.enable = true;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
