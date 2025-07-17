@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -74,12 +74,15 @@
     obsidian
     gh
     kitty
+    waybar
   ];
 
   # Programs
   programs.firefox.enable = true;
   programs.git.enable = true;
+
   programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

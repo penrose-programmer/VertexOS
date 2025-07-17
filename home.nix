@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # TODO please change the username & home directory to your own
@@ -142,6 +142,64 @@
       k = "kubectl";
       urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
       urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
+    };
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+            "$mod" = "SUPER";
+      "$mod_s" = "SUPER_SHIFT";
+      "$mod_c" = "SUPER_CTRL";
+      exec-once = ["waybar"];
+      misc = {
+        disable_hyprland_logo = true;
+      };
+      decoration = {
+        rounding = 8;
+        inactive_opacity = 0.75;
+      };
+      bind = [
+        "$mod, RETURN, exec, kitty"
+	"$mod, H, movefocus, l"
+	"$mod, J, movefocus, d"
+	"$mod, k, movefocus, u"
+	"$mod, l, movefocus, r"
+	"$mod, Q, killactive"
+	"$mod, F, fullscreen"
+	"$mod, T, togglefloating"
+	"$mod_s, H, movewindow, l"
+	"$mod_s, J, movewindow, d"
+	"$mod_s, K, movewindow, u"
+	"$mod_s, L, movewindow, r"
+        ''
+        $mod_s, S, exec, grim -g "$(slurp -d)" - | wl-copy
+	''
+        "$mod_c, H, resizeactive, -10 0"
+	"$mod_c, J, resizeactive, 0 10"
+	"$mod_c, K, resizeactive, 0 -10"
+	"$mod_c, L, resizeactive, 10 0"
+        "$mod, DELETE, exec, hyprlock"
+        ''
+        ALT, SPACE, exec, walker
+        ''
+      ] ++ (
+        # workspaces
+        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+        builtins.concatLists (builtins.genList (i:
+            let ws = i + 1;
+            in [
+              "$mod, code:1${toString i}, focusworkspaceoncurrentmonitor, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, movetoworkspacesilent, ${toString ws}"
+            ]
+          )
+        9)
+      );
+
+      bindm = [
+	"$mod, mouse:273, resizewindow"
+	"$mod, mouse:272, movewindow"
+      ];
     };
   };
 
