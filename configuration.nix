@@ -72,6 +72,7 @@
     vscode
     wget
     obsidian
+    morgen
     gh
     kitty
     waybar
