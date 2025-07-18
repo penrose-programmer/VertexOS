@@ -78,6 +78,7 @@
     dunst
     hypridle
     inputs.zen-browser.packages."${system}".default
+    pnpm
   ];
 
   # Programs
