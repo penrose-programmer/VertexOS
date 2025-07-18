@@ -79,6 +79,7 @@
     hypridle
     inputs.zen-browser.packages."${system}".default
     pnpm
+    nodejs_22
   ];
 
   # Programs
