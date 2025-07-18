@@ -77,7 +77,6 @@
     waybar
     dunst
     hypridle
-    morgen
     inputs.zen-browser.packages."${system}".default
   ];
 
