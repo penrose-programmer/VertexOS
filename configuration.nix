@@ -72,12 +72,13 @@
     vscode
     wget
     obsidian
-    morgen
     gh
     kitty
     waybar
     dunst
     hypridle
+    morgen
+    inputs.zen-browser.packages."${system}".default
   ];
 
   # Programs
