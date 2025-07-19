@@ -109,7 +109,9 @@
     };
   };
   
-  programs.waybar.enable = true;
+  programs.waybar = {
+    enable = true;
+  };
 
   services.hypridle.enable = true;
   services.hypridle.settings = {

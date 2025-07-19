@@ -81,6 +81,7 @@
     pnpm
     nodejs_22
     hyprpaper
+    walker
   ];
 
   # Programs
