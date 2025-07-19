@@ -82,6 +82,7 @@
     nodejs_22
     hyprpaper
     walker
+    networkmanagerapplet
   ];
 
   # Programs
