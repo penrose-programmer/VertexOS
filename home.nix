@@ -183,8 +183,8 @@
         "$mod_c, K, resizeactive, 0 -10"
         "$mod_c, L, resizeactive, 10 0"
         "$mod, DELETE, exec, hyprlock"
-        "$mod, SPACE, exec, walker"
         "$mod, B, exec, zen-browser"
+        "ALT, SPACE, exec, walker"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
