@@ -212,7 +212,7 @@
       style = ''
       * {
         border: none;
-        font-family: "Rubik", "JetBrainsMono Nerd Font", Helvetica, Arial, sans-serif;
+        font-family: "JetBrainsMono Nerd Font", "Rubik", Helvetica, Arial, sans-serif;
         font-size: 14px;
         min-height: 0;
         background: none;
@@ -222,8 +222,8 @@
       .modules-left {
         background: alpha( #212121, 1.8);
         border-radius: 5px;
-        padding: 10px;
-        margin: 10 0 5 10;
+        padding: 5 3 5 3;
+        margin: 10 0 5 20;
       }
 
       .modules-center {
@@ -233,8 +233,8 @@
       .modules-right {
         background: alpha( #212121, 1.8);
         border-radius: 5px;
-        padding: 10px;
-        margin: 10 10 5 0;
+        padding: 5 3 5 3;
+        margin: 10 20 5 0;
       }
 
       #workspaces button {
@@ -249,7 +249,6 @@
       #workspaces button.visible {
         background-color: shade(rgb(100, 125, 240), 0.9);
         margin: 0 2 0 2;
-        color: black;
       }
 
       #workspaces button.visible:hover {
@@ -257,15 +256,29 @@
       }
 
       #clock {
-        min-width: 200px;
+        min-width: 100px;
+        padding: 0 10 0 0;
       }
 
       #battery {
-        padding: 0 10px;
+        padding: 0 10 0 10;
+        margin: 0 10 0 2;
+        background-color: #303030;
+        border-radius: 5px;
+      }
+
+      #network {
+        padding: 0 10 0 10;
+        margin: 0 2 0 2;
+        background-color: #303030;
+        border-radius: 5px;
       }
 
       #pulseaudio {
-        padding-right: 10px;
+        padding: 0 10 0 10;
+        margin: 0 2 0 0;
+        background-color: #303030;
+        border-radius: 5px;
       }
 
       @keyframes blink
