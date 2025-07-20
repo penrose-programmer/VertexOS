@@ -247,11 +247,11 @@
      }
 
      #workspaces button.visible {
-        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
+        background-color: shade(#82AAFF, 0.8);
      }
 
      #workspaces button.visible:hover {
-        background-color: #${config.stylix.base16Scheme.base0D};
+        background-color: #82AAFF;
      }
 
      #clock {
@@ -351,7 +351,6 @@
         "$mod_c, K, resizeactive, 0 -10"
         "$mod_c, L, resizeactive, 10 0"
         "$mod, DELETE, exec, hyprlock"
-        "$mod, B, exec, zengg"
         "ALT, SPACE, exec, walker"
       ] ++ (
         # workspaces
