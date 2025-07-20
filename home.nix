@@ -339,12 +339,12 @@
 
       misc = {
         disable_hyprland_logo = true;
+        gaps_out = 10;
       };
       
       decoration = {
         rounding = 8;
         inactive_opacity = 0.75;
-        gaps_out = 10;
       };
 
       bind = [
