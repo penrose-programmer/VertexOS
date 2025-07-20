@@ -81,6 +81,7 @@
     nodejs_22
     hyprpaper
     walker
+    pavucontrol
   ];
 
   fonts.packages = with pkgs; [
