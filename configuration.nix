@@ -82,6 +82,7 @@
     hyprpaper
     walker
     pavucontrol
+    swaync-client
   ];
 
   fonts.packages = with pkgs; [
