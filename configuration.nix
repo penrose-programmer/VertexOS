@@ -82,7 +82,7 @@
     hyprpaper
     walker
     pavucontrol
-    swaync-client
+    swaynotificationcenter
   ];
 
   fonts.packages = with pkgs; [
