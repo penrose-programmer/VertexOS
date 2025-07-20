@@ -61,7 +61,6 @@
     isNormalUser = true;
     description = "Talhah Ahmed";
     extraGroups = [ "networkmanager" "wheel" ];
-    # Don’t put user-level packages here anymore; Home Manager handles it
   };
 
   # Allow unfree packages
@@ -102,6 +101,8 @@
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   programs.hyprlock.enable = true;
+
+  programs.hyprpaper.
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
