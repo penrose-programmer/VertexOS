@@ -224,14 +224,14 @@
         background: alpha( #2e3440, 1.8);
         border-radius: 5px;
         padding: 5 3 5 3;
-        margin: 10 0 0 20;
+        margin: 10 0 0 10;
       }
 
       .modules-right {
         background: alpha( #2e3440, 1.8);
         border-radius: 5px;
         padding: 5 3 5 3;
-        margin: 10 20 0 0;
+        margin: 10 10 0 0;
       }
 
       #workspaces button {
@@ -344,6 +344,7 @@
       decoration = {
         rounding = 8;
         inactive_opacity = 0.75;
+        gaps_out = 10;
       };
 
       bind = [
