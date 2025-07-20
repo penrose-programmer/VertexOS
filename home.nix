@@ -217,9 +217,9 @@
           };
           tooltip = false;
         };
-    };
+      };
 
-    style = ''
+      style = ''
       * {
         border: none;
         font-family: "Rubik", "JetBrainsMono Nerd Font", Helvetica, Arial, sans-serif;
@@ -278,6 +278,7 @@
        animation-direction       : alternate;
      }
     '';
+    };
   };
 
   services.hypridle.enable = true;
