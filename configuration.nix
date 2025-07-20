@@ -82,7 +82,6 @@
     nodejs_22
     hyprpaper
     walker
-    networkmanagerapplet
   ];
 
   hardware.bluetooth.enable = true;
