@@ -265,7 +265,7 @@
      {
        to
        {
-         background-color: #${config.stylix.base16Scheme.base08};
+         background-color: #F07178;
        }
      }
 
