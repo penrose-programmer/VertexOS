@@ -102,8 +102,6 @@
 
   programs.hyprlock.enable = true;
 
-  programs.hyprpaper.
-
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
