@@ -84,8 +84,15 @@
     walker
   ];
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    rubik
+    noto-fonts
+  ];
+
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+  programs.nm-applet.enable = true;
 
   # Programs
   programs.firefox.enable = true;

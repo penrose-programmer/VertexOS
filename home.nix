@@ -113,16 +113,9 @@
     enable = true;
     settings = {
       mainBar = {
-        modules-right = [ "tray" "idle_inhibitor" "cpu" "memory" "pulseaudio" "network" "battery" "clock" "custom/notification"];
+        modules-right = [ "tray" "pulseaudio" "network" "battery" "clock" "custom/notification"];
         modules-center = [ "hyprland/window" ];
         modules-left = [ "hyprland/workspaces" ];
-        "idle_inhibitor"= {
-            format = "{icon}";
-            format-icons = {
-                activated = "";
-                deactivated = "";
-            };
-        };
         "custom/notification" = {
           tooltip = false;
           format = "{} {icon}";
@@ -159,9 +152,6 @@
           };
         };
 
-        cpu.format = "CPU {usage}%";
-        memory.format = "MEM {}%";
-
         pulseaudio = {
           format = "{volume}% {icon}";
           format-bluetooth = "{volume}% {icon}";
@@ -187,7 +177,7 @@
 
         network = {
           format = "{ifname}";
-          format-wifi = "{essid} ({signalStrength}%)";
+          format-wifi = "{essid}";
           format-ethernet = "{ipaddr}/{cidr}";
           format-disconnected = "";
         };
@@ -218,7 +208,7 @@
           tooltip = false;
         };
       };
-
+    };
       style = ''
       * {
         border: none;
@@ -226,59 +216,75 @@
         font-size: 14px;
         min-height: 0;
         background: none;
-        color: @theme_text_color;
+        color: #EEFFFF;
       }
 
-      #waybar {
-        background: @theme_bg_color;
+      .modules-left {
+        background: alpha( #212121, 1.8);
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10 0 5 10;
       }
 
-      #tray menu {
-        background: @theme_bg_color;
+      .modules-center {
+        color:rgba(0, 0, 0, 0)
       }
 
-      .module {
-        margin: 0 10px 0;
+      .modules-right {
+        background: alpha( #212121, 1.8);
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10 10 5 0;
       }
 
+      #workspaces button {
+        margin: 0 2 0 2;
+      }
 
-     #workspaces button:hover {
-       background-color: shade(@theme_bg_color, 1.8);
-     }
+      #workspaces button:hover {
+        background-color: #000000;
+        margin: 0 2 0 2;
+      }
 
-     #workspaces button.visible {
-        background-color: shade(#82AAFF, 0.8);
-     }
+      #workspaces button.visible {
+        background-color: shade(rgb(100, 125, 240), 0.9);
+        margin: 0 2 0 2;
+        color: black;
+      }
 
-     #workspaces button.visible:hover {
-        background-color: #82AAFF;
-     }
+      #workspaces button.visible:hover {
+        background-color:rgb(100, 125, 240);
+      }
 
-     #clock {
-         min-width:  200px;
-     }
+      #clock {
+        min-width: 200px;
+      }
 
-     #battery {
-      padding: 0 10px;
-     }
-     @keyframes blink
-     {
-       to
-       {
-         background-color: #F07178;
-       }
-     }
+      #battery {
+        padding: 0 10px;
+      }
 
-     #battery.critical:not(.charging)
-     {
-       animation-name            : blink;
-       animation-duration        : 1s;
-       animation-timing-function : linear;
-       animation-iteration-count : infinite;
-       animation-direction       : alternate;
-     }
-    '';
-    };
+      #pulseaudio {
+        padding-right: 10px;
+      }
+
+      @keyframes blink
+      {
+        to
+        {
+          background-color: #F07178;
+        }
+      }
+
+      #battery.critical:not(.charging)
+      {
+        animation-name            : blink;
+        animation-duration        : 1s;
+        animation-timing-function : linear;
+        animation-iteration-count : infinite;
+        animation-direction       : alternate;
+      }
+      '';
   };
 
   services.hypridle.enable = true;
@@ -374,6 +380,8 @@
         "hypridle"
         "waybar"
         "hyprpaper"
+        "blueman-applet"
+        "nm-applet"
       ];
     };
   };
