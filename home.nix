@@ -111,6 +111,173 @@
   
   programs.waybar = {
     enable = true;
+    settings = {
+      mainBar = {
+        modules-right = [ "tray" "idle_inhibitor" "cpu" "memory" "pulseaudio" "network" "battery" "clock" "custom/notification"];
+        modules-center = [ "hyprland/window" ];
+        modules-left = [ "hyprland/workspaces" ];
+        "idle_inhibitor"= {
+            format = "{icon}";
+            format-icons = {
+                activated = "";
+                deactivated = "";
+            };
+        };
+        "custom/notification" = {
+          tooltip = false;
+          format = "{} {icon}";
+          "format-icons" = {
+            notification = "󱅫";
+            none = "";
+            "dnd-notification" = " ";
+            "dnd-none" = "󰂛";
+            "inhibited-notification" = " ";
+            "inhibited-none" = "";
+            "dnd-inhibited-notification" = " ";
+            "dnd-inhibited-none" = " ";
+          };
+          "return-type" = "json";
+          "exec-if" = "which swaync-client";
+          exec = "swaync-client -swb";
+          "on-click" = "sleep 0.1 && swaync-client -t -sw";
+          "on-click-right" = "sleep 0.1 && swaync-client -d -sw";
+          escape = true;
+        };
+
+        clock = {
+          interval = 1;
+          format = "{:%r %d/%m/%Y}";
+        };
+
+        "hyprland/window" = {
+          separate-outputs = true;
+        };
+
+        "hyprland/workspaces" = {
+          persistent-workspaces = {
+            "*" = 3;
+          };
+        };
+
+        cpu.format = "CPU {usage}%";
+        memory.format = "MEM {}%";
+
+        pulseaudio = {
+          format = "{volume}% {icon}";
+          format-bluetooth = "{volume}% {icon}";
+          format-muted = "";
+          format-icons = {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo" = "";
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted" = "";
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            phone-muted = "";
+            portable = "";
+            car = "";
+            default = [
+              ""
+              ""
+            ];
+          };
+          scroll-step = 1;
+          on-click = "pavucontrol";
+        };
+
+        network = {
+          format = "{ifname}";
+          format-wifi = "{essid} ({signalStrength}%)";
+          format-ethernet = "{ipaddr}/{cidr}";
+          format-disconnected = "";
+        };
+
+        battery = {
+          format = "{capacity}% {icon}";
+          format-charging = " {capacity}%";
+          format-plugged = " {capacity}%";
+          format-alt = "{time} {icon}";
+          format-icons = [
+            "󰂎"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
+          interval = 5;
+          states = {
+            warning = 30;
+            critical = 10;
+          };
+          tooltip = false;
+        };
+    };
+
+    style = ''
+      * {
+        border: none;
+        font-family: "Rubik", "JetBrainsMono Nerd Font", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        min-height: 0;
+        background: none;
+        color: @theme_text_color;
+      }
+
+      #waybar {
+        background: @theme_bg_color;
+      }
+
+      #tray menu {
+        background: @theme_bg_color;
+      }
+
+      .module {
+        margin: 0 10px 0;
+      }
+
+
+     #workspaces button:hover {
+       background-color: shade(@theme_bg_color, 1.8);
+     }
+
+     #workspaces button.visible {
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
+     }
+
+     #workspaces button.visible:hover {
+        background-color: #${config.stylix.base16Scheme.base0D};
+     }
+
+     #clock {
+         min-width:  200px;
+     }
+
+     #battery {
+      padding: 0 10px;
+     }
+     @keyframes blink
+     {
+       to
+       {
+         background-color: #${config.stylix.base16Scheme.base08};
+       }
+     }
+
+     #battery.critical:not(.charging)
+     {
+       animation-name            : blink;
+       animation-duration        : 1s;
+       animation-timing-function : linear;
+       animation-iteration-count : infinite;
+       animation-direction       : alternate;
+     }
+    '';
   };
 
   services.hypridle.enable = true;
