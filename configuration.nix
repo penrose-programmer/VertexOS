@@ -85,6 +85,9 @@
     networkmanagerapplet
   ];
 
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Programs
   programs.firefox.enable = true;
   programs.git.enable = true;
