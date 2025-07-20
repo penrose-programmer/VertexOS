@@ -114,7 +114,6 @@
     settings = {
       mainBar = {
         modules-right = [ "tray" "pulseaudio" "network" "battery" "clock" "custom/notification"];
-        modules-center = [ "hyprland/window" ];
         modules-left = [ "hyprland/workspaces" ];
         "custom/notification" = {
           tooltip = false;
@@ -212,47 +211,45 @@
       style = ''
       * {
         border: none;
+        outline: none;
+        box-shadow: none;
         font-family: "JetBrainsMono Nerd Font", "Rubik", Helvetica, Arial, sans-serif;
         font-size: 14px;
         min-height: 0;
         background: none;
-        color: #EEFFFF;
+        color: #cdd6f4;
       }
 
       .modules-left {
-        background: alpha( #212121, 1.8);
+        background: alpha( #2e3440, 1.8);
         border-radius: 5px;
         padding: 5 3 5 3;
-        margin: 10 0 5 20;
-      }
-
-      .modules-center {
-        color:rgba(0, 0, 0, 0)
+        margin: 10 0 0 20;
       }
 
       .modules-right {
-        background: alpha( #212121, 1.8);
+        background: alpha( #2e3440, 1.8);
         border-radius: 5px;
         padding: 5 3 5 3;
-        margin: 10 20 5 0;
+        margin: 10 20 0 0;
       }
 
       #workspaces button {
+        background-color: #3b4252;
+        padding: 2 4 2 4;
         margin: 0 2 0 2;
       }
 
       #workspaces button:hover {
-        background-color: #000000;
-        margin: 0 2 0 2;
+        background-color: shade( #3b4252, 0.9);
       }
 
       #workspaces button.visible {
-        background-color: shade(rgb(100, 125, 240), 0.9);
-        margin: 0 2 0 2;
+        background-color: #5e81ac;
       }
 
       #workspaces button.visible:hover {
-        background-color:rgb(100, 125, 240);
+        background-color: shade( #5e81ac, 0.9);
       }
 
       #clock {
@@ -263,21 +260,21 @@
       #battery {
         padding: 0 10 0 10;
         margin: 0 10 0 2;
-        background-color: #303030;
+        background-color: #3b4252;
         border-radius: 5px;
       }
 
       #network {
         padding: 0 10 0 10;
         margin: 0 2 0 2;
-        background-color: #303030;
+        background-color: #3b4252;
         border-radius: 5px;
       }
 
       #pulseaudio {
         padding: 0 10 0 10;
-        margin: 0 2 0 0;
-        background-color: #303030;
+        margin: 0 2 0 2;
+        background-color: #3b4252;
         border-radius: 5px;
       }
 
@@ -285,7 +282,7 @@
       {
         to
         {
-          background-color: #F07178;
+          background-color: #bf616a;
         }
       }
 
