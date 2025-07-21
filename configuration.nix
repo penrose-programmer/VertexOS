@@ -83,6 +83,7 @@
     walker
     pavucontrol
     nautilus
+    hollywood
   ];
 
   stylix = {
