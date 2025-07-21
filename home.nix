@@ -117,12 +117,20 @@
     enable = true;
     settings = {
       mainBar = {
-        modules-right = [ "cpu" "memory" "network" "pulseaudio" "battery" "clock"];
+        modules-right = [ "idle_inhibitor" "cpu" "memory" "network" "pulseaudio" "battery" "clock"];
         modules-left = [ "hyprland/workspaces" ];
 
         clock = {
           interval = 1;
           format = "{:%r %d/%m/%Y}";
+        };
+
+        "idle_inhibitor"= {
+            format = "{icon}";
+            format-icons = {
+                activated = "";
+                deactivated = "";
+            };
         };
 
         "hyprland/window" = {
@@ -131,7 +139,7 @@
 
         "hyprland/workspaces" = {
           persistent-workspaces = {
-            "*" = 5;
+            "*" = 4;
           };
         };
 
@@ -275,17 +283,21 @@
         border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 1;
-        min-width: 40px;
       }
 
       #cpu  {
         background-color: shade(#${config.stylix.base16Scheme.base08}, 0.8);
-        border-radius: 50 0 0 50;
+        border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 2;
-        min-width: 40px;
       }
 
+      #idle_inhibitor {
+        background-color: shade(#${config.stylix.base16Scheme.base04}, 0.8);
+        border-radius: 50 0 0 50;
+        padding: 0 15 0 10;
+        margin: 0 1 0 2;
+      }
 
       @keyframes blink
       {
