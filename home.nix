@@ -125,7 +125,7 @@
           format = "{:%r %d/%m/%Y}";
         };
 
-        "idle_inhibitor"= {
+        "idle_inhibitor" = {
             format = "{icon}";
             format-icons = {
                 activated = "";
@@ -143,8 +143,15 @@
           };
         };
 
-        cpu.format = "CPU {usage}%";
-        memory.format = "MEM {}%";
+        cpu = {
+          format = "CPU {usage}%";
+          on-click = "kitty btop";
+        };
+
+        memory = {
+          format = "MEM {}%";
+          on-click = "kitty btop";
+        };
 
         pulseaudio = {
           format = "{volume}% {icon}";
@@ -165,6 +172,7 @@
           format-wifi = "{essid}";
           format-ethernet = "{ipaddr}/{cidr}";
           format-disconnected = "";
+          on-click = "kitty nmtui";
         };
 
         battery = {
@@ -253,7 +261,7 @@
 
       #clock {
         min-width: 100px;
-        padding: 0 10 0 0;
+        padding: 0 10 0 10;
       }
 
       #battery {
@@ -400,7 +408,9 @@
         "$mod_c, K, resizeactive, 0 -10"
         "$mod_c, L, resizeactive, 10 0"
         "$mod, DELETE, exec, hyprlock"
+        "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
         "ALT, SPACE, exec, walker"
+        "$mod_s, F, exec, zen"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
