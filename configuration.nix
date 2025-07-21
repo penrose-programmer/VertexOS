@@ -82,7 +82,6 @@
     hyprpaper
     walker
     pavucontrol
-    swaynotificationcenter
   ];
 
   fonts.packages = with pkgs; [

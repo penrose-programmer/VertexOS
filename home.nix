@@ -127,7 +127,7 @@
 
         "hyprland/workspaces" = {
           persistent-workspaces = {
-            "*" = 3;
+            "*" = 5;
           };
         };
 
@@ -136,15 +136,6 @@
           format-bluetooth = "{volume}% {icon}";
           format-muted = "";
           format-icons = {
-            "alsa_output.pci-0000_00_1f.3.analog-stereo" = "";
-            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted" = "";
-            headphone = "";
-            hands-free = "";
-            headset = "";
-            phone = "";
-            phone-muted = "";
-            portable = "";
-            car = "";
             default = [
               ""
               ""
@@ -185,28 +176,6 @@
             critical = 10;
           };
           tooltip = false;
-
-        };
-        
-        "custom/notification" = {
-          tooltip = false;
-          format = "{} {icon}";
-          "format-icons" = {
-            notification = "󱅫";
-            none = "";
-            "dnd-notification" = " ";
-            "dnd-none" = "󰂛";
-            "inhibited-notification" = " ";
-            "inhibited-none" = "";
-            "dnd-inhibited-notification" = " ";
-            "dnd-inhibited-none" = " ";
-          };
-          "return-type" = "json";
-          "exec-if" = "which swaync-client";
-          exec = "swaync-client -swb";
-          "on-click" = "sleep 0.1 && swaync-client -t -sw";
-          "on-click-right" = "sleep 0.1 && swaync-client -d -sw";
-          escape = true;
         };
       };
     };
@@ -276,15 +245,16 @@
       #pulseaudio {
         padding: 0 10 0 10;
         margin: 0 2 0 2;
+        min-width: 40px;
         background-color: #3b4252;
         border-radius: 5px;
       }
 
-      #custom/notification {
+      #tray menu {
         padding: 0 10 0 10;
         margin: 0 2 0 2;
         background-color: #3b4252;
-        border-radius: 50px;
+        border-radius: 5px;
       }
 
       @keyframes blink
@@ -336,6 +306,14 @@
         on-timeout = "systemctl suspend";                # suspend pc
       }
     ];
+  };
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = ["/home/penrose/pictures/nixos.webp"];
+      wallpaper = ["/home/penrose/pictures/nixos.webp"];
+    };
   };
 
   wayland.windowManager.hyprland = {
@@ -393,8 +371,6 @@
           )
         9)
       );
-
-      hyprpaper.
 
       bindm = [
         "$mod, mouse:273, resizewindow"
