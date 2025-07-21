@@ -117,7 +117,7 @@
     enable = true;
     settings = {
       mainBar = {
-        modules-right = [ "tray" "pulseaudio" "network" "battery" "clock" "custom/notification"];
+        modules-right = [ "cpu" "memory" "network" "pulseaudio" "battery" "clock"];
         modules-left = [ "hyprland/workspaces" ];
 
         clock = {
@@ -134,6 +134,9 @@
             "*" = 5;
           };
         };
+
+        cpu.format = "CPU {usage}%";
+        memory.format = "MEM {}%";
 
         pulseaudio = {
           format = "{volume}% {icon}";
@@ -192,27 +195,40 @@
         font-size: 14px;
         min-height: 0;
         background: none;
-        color: #cdd6f4;
+        color: #${config.stylix.base16Scheme.base07};
       }
 
       .modules-left {
         background: alpha( @theme_bg_color, 0.5);
-        border-radius: 5px;
-        padding: 5 3 5 3;
+        border-radius: 50px;
+        padding: 4 2 4 2;
         margin: 10 0 0 10;
       }
 
       .modules-right {
         background: alpha( @theme_bg_color, 0.5);
-        border-radius: 5px;
-        padding: 5 3 5 3;
+        border-radius: 50px;
+        padding: 4 0 4 2;
         margin: 10 10 0 0;
       }
 
       #workspaces button {
         background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
+        margin: 0 1 0 1;
+        border-radius: 0px;
         padding: 2 4 2 4;
-        margin: 0 2 0 2;
+      }
+
+      #workspaces button:first-child {
+        border-radius: 50 0 0 50;
+        padding: 2 6 2 12;
+        margin: 0 1 0 2;
+      }
+
+      #workspaces button:last-child {
+        border-radius: 0 50 50 0;
+        padding: 2 12 2 6;
+        margin: 0 2 0 1;
       }
 
       #workspaces button:hover {
@@ -233,39 +249,49 @@
       }
 
       #battery {
+        background-color: shade(#${config.stylix.base16Scheme.base0B}, 0.8);
         padding: 0 10 0 10;
-        margin: 0 10 0 2;
-        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
-        border-radius: 5px;
-      }
-
-      #network {
-        padding: 0 10 0 10;
-        margin: 0 2 0 2;
-        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
-        border-radius: 5px;
+        border-radius: 0 3 3 0;
+        margin: 0 10 0 1;
       }
 
       #pulseaudio {
-        padding: 0 10 0 10;
-        margin: 0 2 0 2;
-        min-width: 40px;
-        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
-        border-radius: 5px;
+        background-color: shade(#${config.stylix.base16Scheme.base0C}, 0.8);
+        border-radius: 0px;
+        padding: 0 15 0 10;
+        margin: 0 1 0 1;
+        min-width: 50px;
       }
 
-      #tray menu {
+      #network {
+        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        border-radius: 0px;
         padding: 0 10 0 10;
-        margin: 0 2 0 2;
-        background-color: alpha(@theme_bg_color, 0.5);
-        border-radius: 5px;
+        margin: 0 1 0 1;
       }
+
+      #memory {
+        background-color: shade(#${config.stylix.base16Scheme.base0A}, 0.8);
+        border-radius: 0px;
+        padding: 0 10 0 10;
+        margin: 0 1 0 1;
+        min-width: 40px;
+      }
+
+      #cpu  {
+        background-color: shade(#${config.stylix.base16Scheme.base08}, 0.8);
+        border-radius: 50 0 0 50;
+        padding: 0 10 0 10;
+        margin: 0 1 0 2;
+        min-width: 40px;
+      }
+
 
       @keyframes blink
       {
         to
         {
-          background-color: alpha(#${config.stylix.base16Scheme.base0F}, 0.5);
+          background-color: alpha(#${config.stylix.base16Scheme.base0F}, 0.8);
         }
       }
 
