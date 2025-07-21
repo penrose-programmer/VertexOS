@@ -22,9 +22,13 @@
 
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
-    "Xcursor.size" = 16;
     "Xft.dpi" = 172;
   };
+
+  stylix.enable = true;
+  stylix.autoEnable = true;
+  stylix.targets.kitty.enable = true;
+  stylix.targets.waybar.enable = false;
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
@@ -192,35 +196,35 @@
       }
 
       .modules-left {
-        background: alpha( #2e3440, 1.8);
+        background: alpha( @theme_bg_color, 0.5);
         border-radius: 5px;
         padding: 5 3 5 3;
         margin: 10 0 0 10;
       }
 
       .modules-right {
-        background: alpha( #2e3440, 1.8);
+        background: alpha( @theme_bg_color, 0.5);
         border-radius: 5px;
         padding: 5 3 5 3;
         margin: 10 10 0 0;
       }
 
       #workspaces button {
-        background-color: #3b4252;
+        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
         padding: 2 4 2 4;
         margin: 0 2 0 2;
       }
 
       #workspaces button:hover {
-        background-color: shade( #3b4252, 0.9);
+        background-color: shade( alpha(#${config.stylix.base16Scheme.base01}, 0.5), 0.9);
       }
 
       #workspaces button.visible {
-        background-color: #5e81ac;
+        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.9);
       }
 
       #workspaces button.visible:hover {
-        background-color: shade( #5e81ac, 0.9);
+        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.8);
       }
 
       #clock {
@@ -231,14 +235,14 @@
       #battery {
         padding: 0 10 0 10;
         margin: 0 10 0 2;
-        background-color: #3b4252;
+        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
         border-radius: 5px;
       }
 
       #network {
         padding: 0 10 0 10;
         margin: 0 2 0 2;
-        background-color: #3b4252;
+        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
         border-radius: 5px;
       }
 
@@ -246,14 +250,14 @@
         padding: 0 10 0 10;
         margin: 0 2 0 2;
         min-width: 40px;
-        background-color: #3b4252;
+        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
         border-radius: 5px;
       }
 
       #tray menu {
         padding: 0 10 0 10;
         margin: 0 2 0 2;
-        background-color: #3b4252;
+        background-color: alpha(@theme_bg_color, 0.5);
         border-radius: 5px;
       }
 
@@ -261,7 +265,7 @@
       {
         to
         {
-          background-color: #bf616a;
+          background-color: alpha(#${config.stylix.base16Scheme.base0F}, 0.5);
         }
       }
 
