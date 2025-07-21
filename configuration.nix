@@ -82,6 +82,7 @@
     hyprpaper
     walker
     pavucontrol
+    nautilus
   ];
 
   stylix = {
