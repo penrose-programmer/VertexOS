@@ -115,26 +115,6 @@
       mainBar = {
         modules-right = [ "tray" "pulseaudio" "network" "battery" "clock" "custom/notification"];
         modules-left = [ "hyprland/workspaces" ];
-        "custom/notification" = {
-          tooltip = false;
-          format = "{} {icon}";
-          "format-icons" = {
-            notification = "󱅫";
-            none = "";
-            "dnd-notification" = " ";
-            "dnd-none" = "󰂛";
-            "inhibited-notification" = " ";
-            "inhibited-none" = "";
-            "dnd-inhibited-notification" = " ";
-            "dnd-inhibited-none" = " ";
-          };
-          "return-type" = "json";
-          "exec-if" = "which swaync-client";
-          exec = "swaync-client -swb";
-          "on-click" = "sleep 0.1 && swaync-client -t -sw";
-          "on-click-right" = "sleep 0.1 && swaync-client -d -sw";
-          escape = true;
-        };
 
         clock = {
           interval = 1;
@@ -205,6 +185,28 @@
             critical = 10;
           };
           tooltip = false;
+
+        };
+        
+        "custom/notification" = {
+          tooltip = false;
+          format = "{} {icon}";
+          "format-icons" = {
+            notification = "󱅫";
+            none = "";
+            "dnd-notification" = " ";
+            "dnd-none" = "󰂛";
+            "inhibited-notification" = " ";
+            "inhibited-none" = "";
+            "dnd-inhibited-notification" = " ";
+            "dnd-inhibited-none" = " ";
+          };
+          "return-type" = "json";
+          "exec-if" = "which swaync-client";
+          exec = "swaync-client -swb";
+          "on-click" = "sleep 0.1 && swaync-client -t -sw";
+          "on-click-right" = "sleep 0.1 && swaync-client -d -sw";
+          escape = true;
         };
       };
     };
@@ -276,6 +278,13 @@
         margin: 0 2 0 2;
         background-color: #3b4252;
         border-radius: 5px;
+      }
+
+      #custom/notification {
+        padding: 0 10 0 10;
+        margin: 0 2 0 2;
+        background-color: #3b4252;
+        border-radius: 50px;
       }
 
       @keyframes blink
