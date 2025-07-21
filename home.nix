@@ -348,8 +348,6 @@
 
       general = {
         gaps_out = 10;
-        col.nogroup_border_active = rgb(94,129,172);
-        no_focus_fallback = true;
       };
 
       bind = [
