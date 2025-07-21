@@ -82,7 +82,6 @@
     hyprpaper
     walker
     pavucontrol
-    cmatrix
   ];
 
   stylix = {
@@ -125,7 +124,7 @@
           name = "Noto Serif";
         };
       };
-      image = ./nixos.webp;
+      image = ./trees.jpeg;
       opacity = {
         terminal = 0.8;
         desktop = 0.5;
