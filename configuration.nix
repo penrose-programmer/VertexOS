@@ -125,7 +125,7 @@
           name = "Noto Serif";
         };
       };
-      image = ./trees.jpg;
+      image = ./tree-sunset.jpg;
       opacity = {
         terminal = 0.8;
         desktop = 0.5;
