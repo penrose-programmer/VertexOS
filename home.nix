@@ -117,7 +117,7 @@
     enable = true;
     settings = {
       mainBar = {
-        modules-right = [ "idle_inhibitor" "cpu" "memory" "network" "pulseaudio" "battery" "clock"];
+        modules-right = [ "tray" "idle_inhibitor" "cpu" "memory" "network" "pulseaudio" "battery" "clock"];
         modules-left = [ "hyprland/workspaces" ];
 
         clock = {

@@ -14,7 +14,9 @@
   networking.hostName = "nixos";
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+  };
 
   # Time zone and locale
   time.timeZone = "Australia/Sydney";
