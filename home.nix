@@ -296,14 +296,21 @@
       #cpu  {
         background-color: shade(#${config.stylix.base16Scheme.base08}, 0.8);
         border-radius: 0px;
-        padding: 0 10 0 10;
+        padding: 0 15 0 10;
         margin: 0 1 0 2;
       }
 
       #idle_inhibitor {
         background-color: shade(#${config.stylix.base16Scheme.base04}, 0.8);
-        border-radius: 50 0 0 50;
+        border-radius: 0px;
         padding: 0 15 0 10;
+        margin: 0 1 0 1
+      }
+
+      #tray {
+        background-color: shade(#${config.stylix.base16Scheme.base03}, 0.8);
+        border-radius: 50 0 0 50;
+        padding: 0 5 0 10;
         margin: 0 1 0 2;
       }
 
