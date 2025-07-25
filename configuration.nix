@@ -86,7 +86,8 @@
     pavucontrol
     nautilus
     hollywood
-    python313Packages.pip
+    python313Packages.textual
+    python313Packages.textual-dev
   ];
 
   stylix = {
