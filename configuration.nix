@@ -86,7 +86,6 @@
     pavucontrol
     nautilus
     hollywood
-    python313Packages.textual
     python313Packages.textual-dev
   ];
 
