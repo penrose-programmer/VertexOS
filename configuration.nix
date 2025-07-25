@@ -87,6 +87,7 @@
     nautilus
     hollywood
     uv
+    python314
   ];
 
   stylix = {
