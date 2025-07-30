@@ -89,6 +89,7 @@
     uv
     python314
     tlp
+    inkscape
   ];
 
   stylix = {
