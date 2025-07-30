@@ -88,6 +88,7 @@
     hollywood
     uv
     python314
+    tlp
   ];
 
   stylix = {
