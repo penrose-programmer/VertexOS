@@ -346,7 +346,7 @@
         timeout = 120;
         on-timeout = "brightnessctl -s set 10%";
         on-resume = "brightnessctl -r";
-      }hyprctl dispatch dpms offhyprctl dispatch dpms offhyprctl dispatch dpms offhyprctl dispatch dpms off
+      }
       {
         timeout = 150;
         on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
