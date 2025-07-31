@@ -49,6 +49,9 @@
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.gutenprint ];
 
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
+
   # Enable sound (PipeWire)
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
