@@ -47,6 +47,7 @@
 
   # Enable printing
   services.printing.enable = true;
+  services.printing.drivers = [ pkgs.gutenprint ];
 
   # Enable sound (PipeWire)
   services.pulseaudio.enable = false;
