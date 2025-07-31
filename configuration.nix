@@ -90,6 +90,7 @@
     python314
     tlp
     inkscape
+    anki-bin
   ];
 
   stylix = {
