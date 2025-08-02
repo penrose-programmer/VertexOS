@@ -95,7 +95,6 @@
     tlp
     inkscape
     anki-bin
-    davinci-resolve
   ];
 
   stylix = {
