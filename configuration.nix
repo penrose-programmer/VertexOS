@@ -95,6 +95,7 @@
     tlp
     inkscape
     anki-bin
+    unityhub
   ];
 
   stylix = {
