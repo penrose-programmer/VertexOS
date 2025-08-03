@@ -96,6 +96,9 @@
     inkscape
     anki-bin
     unityhub
+    grim
+    swappy
+    slurp
   ];
 
   stylix = {
