@@ -99,6 +99,7 @@
     grim
     swappy
     slurp
+    wl-clipboard
   ];
 
   stylix = {
