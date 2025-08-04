@@ -95,11 +95,11 @@
     tlp
     inkscape
     anki-bin
-    unityhub
     grim
     swappy
     slurp
     wl-clipboard
+    virtualboxKvm
   ];
 
   stylix = {
