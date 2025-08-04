@@ -62,6 +62,8 @@
     pulse.enable = true;
   };
 
+  virtualisation.libvirtd.enable = true;
+
   # Users
   users.users.penrose = {
     isNormalUser = true;
