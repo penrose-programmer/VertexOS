@@ -99,7 +99,6 @@
     swappy
     slurp
     wl-clipboard
-    virtualboxKvm
   ];
 
   stylix = {
