@@ -99,6 +99,7 @@
     swappy
     slurp
     wl-clipboard
+    virt-manager
   ];
 
   stylix = {
