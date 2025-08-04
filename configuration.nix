@@ -66,7 +66,7 @@
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
   };
 
   # Allow unfree packages
@@ -100,6 +100,9 @@
     slurp
     wl-clipboard
     virt-manager
+    qemu
+    libvirt
+    virt-viewer
   ];
 
   stylix = {
