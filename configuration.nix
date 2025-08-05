@@ -64,7 +64,12 @@
     pulse.enable = true;
   };
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    defaultNetwork.enable = true;
+    # optional for bridge helper
+    qemuBridgeHelper = true;
+  };
 
   # Users
   users.users.penrose = {
