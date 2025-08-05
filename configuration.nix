@@ -66,9 +66,6 @@
 
   virtualisation.libvirtd = {
     enable = true;
-    defaultNetwork.enable = true;
-    # optional for bridge helper
-    qemuBridgeHelper = true;
   };
 
   # Users
