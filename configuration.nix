@@ -18,6 +18,8 @@
     enable = true;
   };
 
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
+
   # Time zone and locale
   time.timeZone = "Australia/Sydney";
 
@@ -50,7 +52,7 @@
   services.printing.drivers = [ pkgs.gutenprint ];
 
   services.avahi.enable = true;
-  services.avahi.nssmdns = true;
+  services.avahi.nssmdns4 = true;
 
   # Enable sound (PipeWire)
   services.pulseaudio.enable = false;
