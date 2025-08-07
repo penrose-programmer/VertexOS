@@ -109,6 +109,7 @@
     qemu
     libvirt
     virt-viewer
+    swtpm
   ];
 
   stylix = {
