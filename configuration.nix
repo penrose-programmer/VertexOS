@@ -68,6 +68,14 @@
     enable = true;
   };
 
+  virtualisation.libvirtd.qemu.verbatimConfig = ''
+    nvram = [
+      "/etc/nixos/ovmf_code.fd:/etc/nixos/ovmf_vars.fd"
+    ]
+  '';
+
+  virtualisation.libvirtd.qemu.swtpm.enable = true;
+
   # Users
   users.users.penrose = {
     isNormalUser = true;
