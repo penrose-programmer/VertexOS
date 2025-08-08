@@ -51,9 +51,6 @@
   services.printing.enable = true;
   services.printing.drivers = [ pkgs.gutenprint ];
 
-  services.avahi.enable = true;
-  services.avahi.nssmdns4 = true;
-
   # Enable sound (PipeWire)
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -73,6 +70,11 @@
   virtualisation.spiceUSBRedirection.enable = true;
 
   virtualisation.libvirtd.qemu.swtpm.enable = true;
+
+  virtualisation.libvirtd.qemu.extraConfig = ''
+    swtpm_user = "root"
+    swtpm_group = "root"
+  '';
 
   # Users
   users.users.penrose = {
