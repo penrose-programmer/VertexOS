@@ -66,15 +66,11 @@
 
   virtualisation.libvirtd = {
     enable = true;
+    qemu.runAsRoot = true;
+    qemu.package = pkgs.qemu_kvm;
   };
 
   virtualisation.spiceUSBRedirection.enable = true;
-
-  virtualisation.libvirtd.qemu.verbatimConfig = ''
-    nvram = [
-      "/etc/nixos/ovmf_code.fd:/etc/nixos/ovmf_vars.fd"
-    ]
-  '';
 
   virtualisation.libvirtd.qemu.swtpm.enable = true;
 
