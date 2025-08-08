@@ -70,12 +70,6 @@
   virtualisation.spiceUSBRedirection.enable = true;
 
   virtualisation.libvirtd.qemu.swtpm.enable = true;
-
-  virtualisation.libvirtd.qemu.extraConfig = ''
-    swtpm_user = "root"
-    swtpm_group = "root"
-  '';
-
   # Users
   users.users.penrose = {
     isNormalUser = true;
