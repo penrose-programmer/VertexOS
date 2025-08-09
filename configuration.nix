@@ -177,7 +177,6 @@
   programs.git.enable = true;
 
   programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   programs.hyprlock.enable = true;
 
