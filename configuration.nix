@@ -114,6 +114,7 @@
     virt-viewer
     swtpm
     wineWowPackages.wayland
+    prusa-slicer
   ];
 
   stylix = {
