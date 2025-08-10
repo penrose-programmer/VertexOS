@@ -83,7 +83,6 @@
 
   # System-wide packages
   environment.systemPackages = with pkgs; [
-    vscode
     wget
     obsidian
     gh
