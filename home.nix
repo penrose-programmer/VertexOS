@@ -31,7 +31,7 @@
   stylix.targets.waybar.enable = false;
 
   home.sessionVariables = {
-    EDITOR = "zeditor"
+    EDITOR = "zeditor";
   };
 
   # Packages that should be installed to the user profile.
