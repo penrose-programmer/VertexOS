@@ -115,6 +115,7 @@
     swtpm
     wineWowPackages.wayland
     prusa-slicer
+    zed-editor
   ];
 
   stylix = {
