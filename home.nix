@@ -95,7 +95,7 @@
 
   programs.git = {
     enable = true;
-    userName = "penrose";
+    userName = "penrose-programmer";
     userEmail = "syedtalhahahmed@gmail.com";
   };
 
@@ -112,7 +112,7 @@
       test-update = "sudo nixos-rebuild test --flake .#nixos";
     };
   };
-  
+
   programs.waybar = {
     enable = true;
     settings = {
@@ -384,7 +384,7 @@
       misc = {
         disable_hyprland_logo = true;
       };
-      
+
       decoration = {
         rounding = 8;
         inactive_opacity = 0.75;
@@ -445,7 +445,7 @@
         ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
       ];
 
-      exec-once = [ 
+      exec-once = [
         "hypridle"
         "waybar"
         "hyprpaper"
@@ -455,7 +455,7 @@
     };
   };
 
-  
+
 
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
