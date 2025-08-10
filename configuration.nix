@@ -158,7 +158,7 @@
           name = "Noto Serif";
         };
       };
-      image = ./mountains.jpg;
+      image = ./slugcat.jpg;
       opacity = {
         terminal = 0.8;
         desktop = 0.5;
