@@ -83,6 +83,7 @@
 
   # System-wide packages
   environment.systemPackages = with pkgs; [
+    vscode
     wget
     obsidian
     gh
@@ -113,11 +114,8 @@
     virt-viewer
     swtpm
     wineWowPackages.wayland
-<<<<<<< HEAD
     prusa-slicer
     zed-editor
-=======
->>>>>>> parent of 8566e5e (i prusa-slicer)
   ];
 
   stylix = {
