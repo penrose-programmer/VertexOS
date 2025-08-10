@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
     ];
 
@@ -70,7 +70,7 @@
   virtualisation.spiceUSBRedirection.enable = true;
 
   virtualisation.libvirtd.qemu.swtpm.enable = true;
-  
+
   # Users
   users.users.penrose = {
     isNormalUser = true;
@@ -103,7 +103,6 @@
     python314
     tlp
     inkscape
-    anki-bin
     grim
     swappy
     slurp
