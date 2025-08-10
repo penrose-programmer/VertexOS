@@ -115,6 +115,7 @@
     wineWowPackages.wayland
     prusa-slicer
     zed-editor
+    unityhub
   ];
 
   stylix = {
