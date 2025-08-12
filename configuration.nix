@@ -116,6 +116,7 @@
     prusa-slicer
     zed-editor
     rustup
+    p3x-onenote
   ];
 
   stylix = {
