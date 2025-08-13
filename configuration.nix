@@ -159,7 +159,7 @@
           name = "Noto Serif";
         };
       };
-      image = ./slugcat.png;
+      image = ./hk-wallpaper.jpeg;
       opacity = {
         terminal = 0.8;
         desktop = 0.5;
