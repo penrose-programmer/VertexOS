@@ -301,7 +301,7 @@
         background-color: shade(#${config.stylix.base16Scheme.base08}, 0.8);
         border-radius: 0px;
         padding: 0 15 0 10;
-        margin: 0 1 0 2;
+        margin: 0 1 0 1;
       }
 
       #idle_inhibitor {
