@@ -256,11 +256,11 @@
       }
 
       #workspaces button.visible {
-        background-color: shade( #${config.stylix.base16Scheme.base0E}, 0.9);
+        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.9);
       }
 
       #workspaces button.visible:hover {
-        background-color: shade( #${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.8);
       }
 
       #clock {
@@ -269,14 +269,14 @@
       }
 
       #battery {
-        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         padding: 0 10 0 10;
         border-radius: 0 3 3 0;
         margin: 0 10 0 1;
       }
 
       #pulseaudio {
-        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         border-radius: 0px;
         padding: 0 15 0 10;
         margin: 0 1 0 1;
@@ -284,28 +284,28 @@
       }
 
       #network {
-        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 1;
       }
 
       #memory {
-        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 1;
       }
 
       #cpu  {
-        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         border-radius: 0px;
         padding: 0 15 0 10;
         margin: 0 1 0 1;
       }
 
       #idle_inhibitor {
-        background-color: shade(#${config.stylix.base16Scheme.base0E}, 0.8);
+        background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         border-radius: 0px;
         border-radius: 50 0 0 50;
         margin: 0 1 0 1
