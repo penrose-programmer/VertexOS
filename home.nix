@@ -308,7 +308,7 @@
         background-color: shade(#${config.stylix.base16Scheme.base0D}, 0.8);
         border-radius: 0px;
         border-radius: 50 0 0 50;
-        padding: 0 10 0 10;
+        padding: 0 15 0 10;
         margin: 0 1 0 1
       }
 
