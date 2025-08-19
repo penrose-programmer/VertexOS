@@ -26,6 +26,7 @@
   };
 
   programs.zsh.enable = true;
+  programs.zoxide.enable = true;
 
   stylix.enable = true;
   stylix.autoEnable = true;
