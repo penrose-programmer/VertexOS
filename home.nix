@@ -25,6 +25,8 @@
     "Xft.dpi" = 172;
   };
 
+  programs.zsh.enable = true;
+
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.targets.kitty.enable = true;
@@ -458,7 +460,7 @@
 
       input.touchpad = {
         natural_scroll = true;
-        scroll_factor = 0.2;
+        scroll_factor = 1;
       };
     };
   };
