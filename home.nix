@@ -200,11 +200,11 @@
       }
 
       #workspaces button.visible {
-        background-color: ${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
       }
 
       #workspaces button.visible:hover {
-        background-color: shade( #${config.stylix.base16Scheme.base0B}, 0.9);
+        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.9);
       }
 
       #clock {
@@ -213,14 +213,14 @@
       }
 
       #battery {
-        background-color: #${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
         padding: 0 10 0 10;
         border-radius: 0 3 3 0;
         margin: 0 10 0 1;
       }
 
       #pulseaudio {
-        background-color: #${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
         border-radius: 0px;
         padding: 0 15 0 10;
         margin: 0 1 0 1;
@@ -228,28 +228,28 @@
       }
 
       #network {
-        background-color: ${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
         border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 1;
       }
 
       #memory {
-        background-color: #${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
         border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 1;
       }
 
       #cpu  {
-        background-color: #${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
         border-radius: 0px;
         padding: 0 15 0 10;
         margin: 0 1 0 1;
       }
 
       #idle_inhibitor {
-        background-color: #${config.stylix.base16Scheme.base0B};
+        background-color: #${config.stylix.base16Scheme.base0D};
         border-radius: 0px;
         border-radius: 50 0 0 50;
         padding: 0 15 0 10;
