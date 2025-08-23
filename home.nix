@@ -41,7 +41,6 @@
   home.packages = with pkgs; [
     # Terminal
     kitty
-    alacritty
     alacritty-theme
 
     # Commands
@@ -52,6 +51,11 @@
     # AI
     gemini-cli
   ];
+
+  programs.alacritty = {
+    enable = true;
+    settings.general.import = [ pkgs.alacritty-theme.cyber_punk_neon ];
+  };
 
   programs.git = {
     enable = true;
