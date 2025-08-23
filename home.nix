@@ -60,7 +60,6 @@
     };
   };
 
-
   programs.waybar = {
     enable = true;
     settings = {
@@ -406,6 +405,11 @@
         natural_scroll = true;
         scroll_factor = 0.5;
       };
+    };
+
+    services.ollama = {
+      enable = true;
+      loadModels = [ "gemma3:1b""];
     };
   };
 
