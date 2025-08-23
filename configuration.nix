@@ -85,40 +85,32 @@
 
   # System-wide packages
   environment.systemPackages = with pkgs; [
-    vscode
-    wget
-    obsidian
-    gh
+    # Terminal
     kitty
+    gh
+
+    # Desktop
     waybar
-    dunst
     hypridle
-    inputs.zen-browser.packages."${system}".default
-    pnpm
-    nodejs_22
     hyprpaper
+    dunst
     walker
     pavucontrol
-    nautilus
-    hollywood
-    uv
-    python314
     tlp
-    inkscape
+
+    # Applications
+    inputs.zen-browser.packages."${system}".default
+    zed-editor
+    obsidian
+    nautilus
+    p3x-onenote
+
+    # Screenshot
     grim
     swappy
     slurp
     wl-clipboard
-    virt-manager
-    qemu
-    libvirt
-    virt-viewer
-    swtpm
-    wineWowPackages.wayland
-    prusa-slicer
-    zed-editor
-    rustup
-    p3x-onenote
+
   ];
 
   stylix = {
