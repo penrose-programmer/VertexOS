@@ -354,17 +354,16 @@
         "$mod_s, J, movewindow, d"
         "$mod_s, K, movewindow, u"
         "$mod_s, L, movewindow, r"
-        ''
-        $mod_s, S, exec, grim -g "$(slurp -d)" - | wl-copy
-	      ''
+        "$mod_s, S, exec, grim -g "$(slurp -d)" - | wl-copy"
         "$mod_c, H, resizeactive, -10 0"
         "$mod_c, J, resizeactive, 0 10"
         "$mod_c, K, resizeactive, 0 -10"
         "$mod_c, L, resizeactive, 10 0"
         "$mod, DELETE, exec, hyprlock"
         "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
-        "ALT, SPACE, exec, rofi -show drun"
-        "$mod_s, F, exec, zen"
+        "ALT, SPACE, exec, rofi -show drun -theme Arc-Dark"
+        "$mod, Z, exec, zeditor"
+        "$mod, X, exec, zen"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
