@@ -122,14 +122,14 @@
         base05 = "EEFFFF";
         base06 = "EEFFFF";
         base07 = "FFFFFF";
-        base08 = "F07178";
-        base09 = "F78C6C";
-        base0A = "FFCB6B";
-        base0B = "C3E88D";
-        base0C = "89DDFF";
-        base0D = "82AAFF";
-        base0E = "C792EA";
-        base0F = "FF5370";
+        base08 = "cf462d"; # Coral
+        base09 = "bd561d"; # Orange
+        base0A = "9e6a03"; # Yellow
+        base0B = "238636"; # Green
+        base0C = "1D8281"; # Teal
+        base0D = "1f6feb"; # Blue
+        base0E = "8957e5"; # Purple
+        base0F = "da3633"; # Red
       };
       enable = true;
       autoEnable = true;
