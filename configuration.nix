@@ -41,7 +41,7 @@
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = false;
 
-  services.xserver.libinput.touchpad.naturalScrolling = true;
+  services.libinput.touchpad.naturalScrolling = true;
 
   # Keyboard layout
   services.xserver.xkb = {
