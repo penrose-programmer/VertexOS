@@ -65,7 +65,6 @@
     theme = "Arc-Dark";
   };
 
-
   programs.waybar = {
     enable = true;
     settings = {
