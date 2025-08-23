@@ -60,6 +60,12 @@
     };
   };
 
+  programs.rofi = {
+    enable = true;
+    theme = "Arc-Dark";
+  };
+
+
   programs.waybar = {
     enable = true;
     settings = {
@@ -362,7 +368,7 @@
         "$mod_c, L, resizeactive, 10 0"
         "$mod, DELETE, exec, hyprlock"
         "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
-        "ALT, SPACE, exec, walker"
+        "ALT, SPACE, exec, rofi -show drun"
         "$mod_s, F, exec, zen"
       ] ++ (
         # workspaces
