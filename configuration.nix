@@ -114,7 +114,7 @@
 
   services.ollama = {
     enable = true;
-    models = [ "gemma3:1b" ];
+    loadModels = [ "gemma3:1b" ];
   };
 
   stylix = {
