@@ -31,6 +31,7 @@
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.targets.kitty.enable = true;
+  stylix.targets.alacritty.enable = true;
   stylix.targets.waybar.enable = false;
 
   home.sessionVariables = {
@@ -42,6 +43,7 @@
     kitty
     alacritty
     ripgrep
+    neofetch
     gh
 
     # AI
