@@ -112,6 +112,11 @@
     wl-clipboard
   ];
 
+  services.ollama = {
+    enable = true;
+    models = [ "gemma3:1b" ];
+  };
+
   stylix = {
     base16Scheme = {
         base00 = "212121";
