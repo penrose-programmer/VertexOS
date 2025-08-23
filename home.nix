@@ -60,10 +60,6 @@
     };
   };
 
-  programs.rofi = {
-    enable = true;
-    theme = "Arc-Dark";
-  };
 
   programs.waybar = {
     enable = true;

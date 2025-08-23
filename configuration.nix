@@ -94,6 +94,7 @@
     hypridle
     hyprpaper
     dunst
+    rofi
     pavucontrol
     tlp
 
