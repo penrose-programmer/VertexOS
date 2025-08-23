@@ -104,6 +104,7 @@
     obsidian
     xfce.thunar
     p3x-onenote
+    ollama
 
     # Screenshot
     grim
