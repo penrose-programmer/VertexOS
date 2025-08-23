@@ -410,7 +410,7 @@
 
   services.ollama = {
     enable = true;
-    loadModels = [ "gemma3:1b""];
+    loadModels = [ "gemma3:1b" ];
   };
 
 
