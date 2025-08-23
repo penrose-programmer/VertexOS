@@ -100,12 +100,12 @@
 
         cpu = {
           format = "CPU {usage}%";
-          on-click = "kitty htop";
+          on-click = "alacritty htop";
         };
 
         memory = {
           format = "MEM {}%";
-          on-click = "kitty htop";
+          on-click = "alacritty htop";
         };
 
         pulseaudio = {
@@ -127,7 +127,7 @@
           format-wifi = "{essid}";
           format-ethernet = "{ipaddr}/{cidr}";
           format-disconnected = "";
-          on-click = "kitty nmtui";
+          on-click = "alacritty nmtui";
         };
 
         battery = {
@@ -349,7 +349,7 @@
       };
 
       bind = [
-        "$mod, RETURN, exec, kitty"
+        "$mod, RETURN, exec, alacritty"
         "$mod, H, movefocus, l"
         "$mod, J, movefocus, d"
         "$mod, k, movefocus, u"
