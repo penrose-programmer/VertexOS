@@ -10,7 +10,6 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    alacritty-theme.url = "github:alexghr/alacritty-theme.nix";
   };
 
   outputs =
@@ -28,11 +27,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.penrose = ./home.nix;
           }
-          programs.alacritty = {
-            enable = true;
-            # use a color scheme from the overlay
-            settings.general.import = [ pkgs.alacritty-theme.cyber_punk_neon ];
-          };
         ];
       };
     };
