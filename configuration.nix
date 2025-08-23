@@ -85,9 +85,6 @@
 
   # System-wide packages
   environment.systemPackages = with pkgs; [
-    # Terminal
-    kitty
-    gh
 
     # Desktop
     waybar

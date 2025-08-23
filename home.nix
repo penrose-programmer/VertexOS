@@ -38,6 +38,13 @@
   };
 
   home.packages = with pkgs; [
+    # Terminal
+    kitty
+    alacritty
+    ripgrep
+    gh
+
+    # AI
     gemini-cli
   ];
 
