@@ -95,6 +95,7 @@
     hyprpaper
     dunst
     walker
+    rofi
     pavucontrol
     tlp
 
@@ -110,7 +111,6 @@
     swappy
     slurp
     wl-clipboard
-
   ];
 
   stylix = {
