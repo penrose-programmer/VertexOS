@@ -104,6 +104,7 @@
     obsidian
     xfce.thunar
     p3x-onenote
+    htop
 
     # Screenshot
     grim
@@ -114,7 +115,7 @@
 
   services.ollama = {
     enable = true;
-    loadModels = [ "llama3.1:8b" "gemma3:12b" ];
+    loadModels = [ "llama3.2:1b" "gemma3:1b" ];
   };
 
   stylix = {
