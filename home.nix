@@ -42,6 +42,9 @@
     # Terminal
     kitty
     alacritty
+    alacritty-theme
+
+    # Commands
     ripgrep
     neofetch
     gh
