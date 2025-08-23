@@ -27,8 +27,12 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.penrose = ./home.nix;
-            settings.general.import = [ pkgs.alacritty-theme.cyber_punk_neon ];
           }
+          programs.alacritty = {
+            enable = true;
+            # use a color scheme from the overlay
+            settings.general.import = [ pkgs.alacritty-theme.cyber_punk_neon ];
+          };
         ];
       };
     };
