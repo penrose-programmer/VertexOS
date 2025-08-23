@@ -364,9 +364,9 @@
         "$mod, DELETE, exec, hyprlock"
         "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
         "ALT, SPACE, exec, rofi -show drun -theme Arc-Dark"
-        "$mod_s, 1, exec, zen"
-        "$mod_s, 2, exec, zeditor"
-        "$mod_s, 3, exec, thunar"
+        "$mod, Z, exec, zen"
+        "$mod, X, exec, zeditor"
+        "$mod, C, exec, thunar"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
