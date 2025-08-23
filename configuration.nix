@@ -102,7 +102,7 @@
     inputs.zen-browser.packages."${system}".default
     zed-editor
     obsidian
-    nautilus
+    thunar
     p3x-onenote
 
     # Screenshot
