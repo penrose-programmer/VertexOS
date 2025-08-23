@@ -406,13 +406,12 @@
         scroll_factor = 0.5;
       };
     };
-
-    services.ollama = {
-      enable = true;
-      loadModels = [ "gemma3:1b""];
-    };
   };
 
+  services.ollama = {
+    enable = true;
+    loadModels = [ "gemma3:1b""];
+  };
 
 
   # This value determines the home Manager release that your
