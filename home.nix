@@ -92,12 +92,12 @@
 
         cpu = {
           format = "CPU {usage}%";
-          on-click = "kitty btop";
+          on-click = "kitty htop";
         };
 
         memory = {
           format = "MEM {}%";
-          on-click = "kitty btop";
+          on-click = "kitty htop";
         };
 
         pulseaudio = {
