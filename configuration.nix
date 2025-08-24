@@ -112,7 +112,7 @@
 
   services.ollama = {
     enable = true;
-    loadModels = [ "gemma3:1b" "gemma3:4b" ];
+    loadModels = [ "gemma3:1b" "gemma3:4b" gpt-oss:20b ];
   };
 
   stylix = {
