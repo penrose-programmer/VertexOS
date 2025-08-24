@@ -31,7 +31,6 @@
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.targets.kitty.enable = true;
-  stylix.targets.alacritty.enable = true;
   stylix.targets.waybar.enable = false;
 
   home.sessionVariables = {
@@ -41,7 +40,6 @@
   home.packages = with pkgs; [
     # Terminal
     kitty
-    alacritty
 
     # Commands
     ripgrep
@@ -104,12 +102,12 @@
 
         cpu = {
           format = "CPU {usage}%";
-          on-click = "alacritty htop";
+          on-click = "kitty htop";
         };
 
         memory = {
           format = "MEM {}%";
-          on-click = "alacritty htop";
+          on-click = "kitty htop";
         };
 
         pulseaudio = {
@@ -131,7 +129,7 @@
           format-wifi = "{essid}";
           format-ethernet = "{ipaddr}/{cidr}";
           format-disconnected = "";
-          on-click = "alacritty nmtui";
+          on-click = "kitty nmtui";
         };
 
         battery = {
@@ -353,7 +351,7 @@
       };
 
       bind = [
-        "$mod, RETURN, exec, alacritty"
+        "$mod, RETURN, exec, kitty"
         "$mod, H, movefocus, l"
         "$mod, J, movefocus, d"
         "$mod, k, movefocus, u"
