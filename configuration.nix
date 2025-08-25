@@ -101,6 +101,7 @@
     obsidian
     xfce.thunar
     p3x-onenote
+    obs-studio
     htop
 
     # Screenshot
