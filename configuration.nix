@@ -111,6 +111,9 @@
     swappy
     slurp
     wl-clipboard
+
+    # Misc
+    udisks
   ];
 
   services.ollama = {
