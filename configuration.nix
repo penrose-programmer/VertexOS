@@ -77,7 +77,7 @@
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" "dialout" ];
   };
 
   # Allow unfree packages
