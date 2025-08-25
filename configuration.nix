@@ -98,6 +98,7 @@
     # Applications
     inputs.zen-browser.packages."${system}".default
     zed-editor
+    thonny
     obsidian
     xfce.thunar
     p3x-onenote
