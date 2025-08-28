@@ -117,6 +117,11 @@
     udisks
   ];
 
+  services.ollama = {
+    enable = true;
+    loadModels = [ "gemma3:4b" "qwen3:14b" "gpt-oss:20b" ];
+  };
+
   stylix = {
     base16Scheme = {
         base00 = "212121";
