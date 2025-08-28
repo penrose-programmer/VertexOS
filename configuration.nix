@@ -104,6 +104,7 @@
     xfce.thunar
     p3x-onenote
     obs-studio
+    fabric-ai
     vlc
     htop
 
