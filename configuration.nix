@@ -101,6 +101,7 @@
     thonny
     obsidian
     xfce.thunar
+    davinci-resolve
     p3x-onenote
     obs-studio
     vlc
