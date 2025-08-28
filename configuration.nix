@@ -97,6 +97,7 @@
 
     # Applications
     inputs.zen-browser.packages."${system}".default
+    vscode
     zed-editor
     thonny
     obsidian

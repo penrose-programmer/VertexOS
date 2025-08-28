@@ -34,7 +34,7 @@
   stylix.targets.waybar.enable = false;
 
   home.sessionVariables = {
-    EDITOR = "zeditor";
+    EDITOR = "vscode";
   };
 
   home.packages = with pkgs; [
