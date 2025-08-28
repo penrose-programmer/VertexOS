@@ -48,9 +48,6 @@
 
     # AI
     gemini-cli
-
-    # Languages
-    go
   ];
 
   programs.git = {
