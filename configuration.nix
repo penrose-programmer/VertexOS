@@ -163,7 +163,7 @@
         };
       };
       opacity = {
-        desktop = 0.5;
+        window = 0.5;
         terminal = 0.5;
       };
   };
