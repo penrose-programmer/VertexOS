@@ -375,6 +375,8 @@
         "$mod, Z, exec, rofi -show run -theme Arc-Dark"
         "$mod, X, exec, zeditor"
         "$mod, C, exec, thunar"
+        "$mod, P, exec, pkill -STOP mpvpaper"
+        "$mod_s, P, exec, pkill -CONT mpvpaper"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
