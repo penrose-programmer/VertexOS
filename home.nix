@@ -175,18 +175,18 @@
         font-size: 14px;
         min-height: 0;
         background: none;
-        color: #${config.stylix.base16Scheme.base05};
+        color: #${config.stylix.base16Scheme.base00};
       }
 
       .modules-left {
-        background: alpha( @theme_bg_color, 0.5);
+        background: alpha( #${config.stylix.base16Scheme.base00}, 0.5);
         border-radius: 50px;
         padding: 4 2 4 2;
         margin: 10 0 0 10;
       }
 
       .modules-right {
-        background: alpha( @theme_bg_color, 0.5);
+        background: alpha( #${config.stylix.base16Scheme.base00}, 0.5);
         border-radius: 50px;
         padding: 4 0 4 2;
         margin: 10 10 0 0;
