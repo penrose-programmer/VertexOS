@@ -92,6 +92,7 @@
     dunst
     rofi
     pavucontrol
+    stylix
     tlp
 
     # Applications
