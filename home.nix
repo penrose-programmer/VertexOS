@@ -28,6 +28,8 @@
   programs.zsh.enable = true;
   programs.zoxide.enable = true;
 
+  programs.mpvpaper.enable = true;
+
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
 

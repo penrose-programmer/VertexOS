@@ -89,7 +89,6 @@
     # Desktop
     waybar
     hypridle
-    mpvpaper
     dunst
     rofi
     pavucontrol
@@ -162,7 +161,6 @@
           name = "Noto Serif";
         };
       };
-      image = ./wallpaper/hk-wallpaper.jpeg;
       opacity = {
         terminal = 0.8;
         desktop = 0.5;
