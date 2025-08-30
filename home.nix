@@ -29,6 +29,7 @@
   programs.zoxide.enable = true;
 
   stylix.enable = true;
+  stylix.targets.waybar.enable = false;
 
   home.sessionVariables = {
     EDITOR = "vscode";
