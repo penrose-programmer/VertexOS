@@ -146,6 +146,8 @@
       cursor.name = "Bibata-Modern-Classic";
       cursor.size = 24;
 
+      image = ./wallpaper/overlook.png;
+
       fonts = {
         monospace = {
            package = pkgs.jetbrains-mono;
