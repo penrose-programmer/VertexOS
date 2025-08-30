@@ -31,7 +31,7 @@
   stylix.enable = true;
   stylix.autoEnable = true;
   stylix.targets.kitty.enable = true;
-  stylix.targets.waybar.enable = true;
+  stylix.targets.waybar.enable = false;
   stylix.targets.firefox.enable = true;
 
   home.sessionVariables = {
