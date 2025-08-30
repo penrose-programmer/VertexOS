@@ -32,7 +32,10 @@
     enable = true;
   };
 
-  xdg.configFile."mpvpaper/pauselist".text = "";
+  xdg.configFile = {
+    "mpvpaper/pauselist".text = "";
+    "mpvpaper/stoplist".text = "";
+  }
 
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
