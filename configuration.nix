@@ -120,61 +120,54 @@
     loadModels = [ "gemma3:4b" "llama3.1:8b" "qwen3:14b" ];
   };
 
-  services.xserver.windowManager.picom.enable = true;
-
   stylix = {
-    enable = true;
-    autoEnable = true;
-
-    # Opacity settings (handled by picom)
-    opacity = {
-      desktop = 1;    # keep wallpaper fully visible
-      terminal = 0.5; # semi-transparent terminal
-    };
-
-    # Base16 color scheme
     base16Scheme = {
-      base00 = "1e1e2e"; # base
-      base01 = "181825"; # mantle
-      base02 = "313244"; # surface0
-      base03 = "45475a"; # surface1
-      base04 = "585b70"; # surface2
-      base05 = "cdd6f4"; # text
-      base06 = "f5e0dc"; # rosewater
-      base07 = "b4befe"; # lavender
-      base08 = "f38ba8"; # red
-      base09 = "fab387"; # peach
-      base0A = "f9e2af"; # yellow
-      base0B = "a6e3a1"; # green
-      base0C = "94e2d5"; # teal
-      base0D = "89b4fa"; # blue
-      base0E = "cba6f7"; # mauve
-      base0F = "f2cdcd"; # flamingo
-    };
-
-    # Fonts
-    fonts = {
-      monospace = {
-        package = pkgs.jetbrains-mono;
-        name = "JetBrainsMono";
+        base00 = "1e1e2e"; # base
+        base01 = "181825"; # mantle
+        base02 = "313244"; # surface0
+        base03 = "45475a"; # surface1
+        base04 = "585b70"; # surface2
+        base05 = "cdd6f4"; # text
+        base06 = "f5e0dc"; # rosewater
+        base07 = "b4befe"; # lavender
+        base08 = "f38ba8"; # red
+        base09 = "fab387"; # peach
+        base0A = "f9e2af"; # yellow
+        base0B = "a6e3a1"; # green
+        base0C = "94e2d5"; # teal
+        base0D = "89b4fa"; # blue
+        base0E = "cba6f7"; # mauve
+        base0F = "f2cdcd"; # flamingo
       };
-      sansSerif = {
-        package = pkgs.rubik;
-        name = "Rubik";
-      };
-      serif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Serif";
-      };
-    };
+      enable = true;
+      autoEnable = true;
 
-    # Wallpaper
-    image = ./wallpaper/hk-wallpaper.jpeg;
+      useCompositor = false;
 
-    # Cursor
-    cursor.package = pkgs.bibata-cursors;
-    cursor.name = "Bibata-Modern-Classic";
-    cursor.size = 24;
+      cursor.package = pkgs.bibata-cursors;
+      cursor.name = "Bibata-Modern-Classic";
+      cursor.size = 24;
+
+      image = ./wallpaper/hk-wallpaper.jpeg;
+
+      fonts = {
+        monospace = {
+           package = pkgs.jetbrains-mono;
+           name = "JetBrainsMono";
+        };
+        sansSerif = {
+          package = pkgs.rubik;
+          name = "Rubik";
+        };
+        serif = {
+          package = pkgs.noto-fonts;
+          name = "Noto Serif";
+        };
+      };
+      opacity = {
+        desktop = 1;
+        terminal = 0.5;
+      };
   };
 
   fonts.packages = with pkgs; [
