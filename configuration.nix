@@ -92,7 +92,7 @@
     dunst
     rofi
     pavucontrol
-    stylix
+    inputs.stylix.packages.${system}.stylix
     tlp
 
     # Applications
