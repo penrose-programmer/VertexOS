@@ -175,7 +175,7 @@
         font-size: 14px;
         min-height: 0;
         background: none;
-        color: #${config.stylix.base16Scheme.base07};
+        color: #${config.stylix.base16Scheme.base05};
       }
 
       .modules-left {
