@@ -92,8 +92,9 @@
     dunst
     rofi
     pavucontrol
-    nixpkgs.stylix
     tlp
+
+    inputs.stylix.packages.${pkgs.system}.stylix
 
     # Applications
     vscode
