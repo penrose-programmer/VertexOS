@@ -146,7 +146,7 @@
       cursor.name = "Bibata-Modern-Classic";
       cursor.size = 24;
 
-      image = ./wallpaper/hk-wallpaper.jpeg;
+      image = ./wallpaper/overlook.png;
 
       fonts = {
         monospace = {
