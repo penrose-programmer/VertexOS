@@ -300,8 +300,6 @@
       '';
   };
 
-  services.picom.enable = true;
-
   services.hypridle.enable = true;
   services.hypridle.settings = {
     general = {
