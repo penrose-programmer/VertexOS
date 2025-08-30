@@ -32,7 +32,11 @@
   stylix.autoEnable = true;
   stylix.targets.kitty.enable = true;
   stylix.targets.waybar.enable = false;
-  stylix.targets.firefox.enable = true;
+
+  stylix.targets.firefox = {
+    enable = true;
+    profileNames = [ "default" ];
+  };
 
   home.sessionVariables = {
     EDITOR = "vscode";

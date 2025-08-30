@@ -180,7 +180,17 @@
   programs.nm-applet.enable = true;
 
   # Programs
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    profiles = {
+      default = {
+        id = 0;
+        name = "default";
+        isDefault = true;
+      };
+    };
+  };
+
   programs.git.enable = true;
 
   programs.hyprland.enable = true;
