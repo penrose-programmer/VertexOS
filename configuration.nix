@@ -163,7 +163,8 @@
         };
       };
       opacity = {
-        kitty = 0.8;
+        desktop = 0.5;
+        terminal = 0.5;
       };
   };
 
