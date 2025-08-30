@@ -89,7 +89,7 @@
     # Desktop
     waybar
     hypridle
-    hyprpaper
+    mpvpaper
     dunst
     rofi
     pavucontrol

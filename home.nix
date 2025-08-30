@@ -319,14 +319,6 @@
     ];
   };
 
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = ["/home/penrose/pictures/nixos.webp"];
-      wallpaper = ["/home/penrose/pictures/nixos.webp"];
-    };
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -404,7 +396,6 @@
       exec-once = [
         "hypridle"
         "waybar"
-        "hyprpaper"
         "blueman-applet"
         "nm-applet"
       ];
