@@ -28,14 +28,18 @@
   programs.zsh.enable = true;
   programs.zoxide.enable = true;
 
+  /* mpv paper configuration - disabled for now
+
   programs.mpvpaper = {
-    enable = true;
+    enable = false;
   };
 
   xdg.configFile = {
     "mpvpaper/pauselist".text = "";
     "mpvpaper/stoplist".text = "";
   };
+  
+  */
 
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
@@ -375,8 +379,8 @@
         "$mod, Z, exec, rofi -show run -theme Arc-Dark"
         "$mod, X, exec, zeditor"
         "$mod, C, exec, thunar"
-        "$mod, P, exec, pkill -STOP mpvpaper"
-        "$mod_s, P, exec, pkill -CONT mpvpaper"
+        # "$mod, P, exec, pkill -STOP mpvpaper"
+        # "$mod_s, P, exec, pkill -CONT mpvpaper"
       ] ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
