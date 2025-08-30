@@ -28,7 +28,14 @@
   programs.zsh.enable = true;
   programs.zoxide.enable = true;
 
-  programs.mpvpaper.enable = true;
+  programs.mpvpaper = {
+    enable = true;
+    settings = {
+      # optional mpvpaper config options
+    };
+  };
+
+  xdg.configFile."mpvpaper/pauselist".text = "";
 
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
