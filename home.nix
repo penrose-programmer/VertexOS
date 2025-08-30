@@ -30,7 +30,9 @@
 
   stylix.enable = true;
   stylix.autoEnable = true;
+  stylix.targets.hyprland.enable = true;
   stylix.targets.kitty.enable = true;
+  stylix.targets.rofi.enable = true;
 
   stylix.targets.firefox = {
     enable = true;
