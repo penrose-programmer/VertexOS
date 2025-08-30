@@ -371,7 +371,7 @@
         "$mod, DELETE, exec, hyprlock"
         "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
         "ALT, SPACE, exec, rofi -show drun -theme Arc-Dark"
-        "$mod, Z, exec, zen"
+        "$mod, Z, exec, rofi -show run -theme Arc-Dark"
         "$mod, X, exec, zeditor"
         "$mod, C, exec, thunar"
       ] ++ (
