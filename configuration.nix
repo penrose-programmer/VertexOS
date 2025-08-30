@@ -94,8 +94,6 @@
     pavucontrol
     tlp
 
-    inputs.stylix.packages.${pkgs.system}.stylix
-
     # Applications
     vscode
     thonny
