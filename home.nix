@@ -30,10 +30,6 @@
 
   stylix.enable = true;
 
-  stylix.targets.firefox = {
-    enable = true;
-  };
-
   home.sessionVariables = {
     EDITOR = "vscode";
   };
