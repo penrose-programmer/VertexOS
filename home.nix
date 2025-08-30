@@ -220,7 +220,7 @@
       }
 
       #workspaces button.visible:hover {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.5);
+        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.6);
       }
 
       #clock {
