@@ -407,7 +407,8 @@
         "waybar"
         "blueman-applet"
         "nm-applet"
-        "mpvpaper -o '--loop --no-audio --hwdec=auto --scale=ewa_lanczossharp' eDP-1 DP-3 HDMI-A-1 ./wallpaper/city.mp4"
+        "mpvpaper -o '--loop --no-audio --hwdec=auto --scale=ewa_lanczossharp' eDP-1 ./wallpaper/city.mp4"
+        "mpvpaper -o '--loop --no-audio --hwdec=auto --scale=ewa_lanczossharp' DP-3 ./wallpaper/city.mp4"
       ];
 
       input.touchpad = {
