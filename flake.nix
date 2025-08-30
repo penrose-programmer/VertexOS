@@ -5,7 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     stylix.url = "github:nix-community/stylix/release-25.05";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
