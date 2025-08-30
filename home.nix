@@ -33,7 +33,10 @@
   };
 
   xdg.configFile = {
-    "mpvpaper/pauselist".text = "";
+    "mpvpaper/pauselist".text = ''
+      firefox
+      vscode
+    '';
     "mpvpaper/stoplist".text = "";
   };
 

@@ -96,7 +96,6 @@
 
     # Applications
     vscode
-    zed-editor
     thonny
     obsidian
     xfce.thunar
