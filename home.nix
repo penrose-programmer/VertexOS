@@ -29,7 +29,6 @@
   programs.zoxide.enable = true;
 
   stylix.enable = true;
-  stylix.autoEnable = true;
 
   stylix.targets.firefox = {
     enable = true;
