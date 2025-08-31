@@ -102,6 +102,7 @@
     xfce.thunar
     p3x-onenote
     obs-studio
+    zsh
     vlc
     htop
 

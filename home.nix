@@ -24,8 +24,7 @@
   xresources.properties = {
     "Xft.dpi" = 172;
   };
-
-  programs.zsh.enable = true;
+  
   programs.zoxide.enable = true;
 
   /* mpv paper configuration - disabled for now
