@@ -55,6 +55,7 @@
     # Commands
     ripgrep
     neofetch
+    fzf
     gh
 
     go
