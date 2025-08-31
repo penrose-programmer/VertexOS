@@ -24,7 +24,7 @@
   xresources.properties = {
     "Xft.dpi" = 172;
   };
-  
+
   programs.zoxide.enable = true;
 
   /* mpv paper configuration - disabled for now
@@ -74,6 +74,8 @@
     enableCompletion = true;
     bashrcExtra = ''
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+      
+      source ~/.config/fabric/aliases.sh
     '';
 
     # set some aliases, feel free to add more or remove some
