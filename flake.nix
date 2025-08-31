@@ -22,13 +22,19 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
           inputs.stylix.nixosModules.stylix
-          inputs.textfox.homeManagerModules.default
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.penrose = ./home.nix;
           }
         ];
+      };
+      homeConfigurations."penrose@nixos" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+          modules = [
+              textfox.homeManagerModules.default
+          ];
       };
     };
 }
