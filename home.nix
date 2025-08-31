@@ -54,7 +54,6 @@
     # Commands
     ripgrep
     neofetch
-    lazygit
     yt-dlp
     fzf
     gh
