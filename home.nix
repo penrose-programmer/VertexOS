@@ -64,7 +64,6 @@
     gemini-cli
 
     textfox
-    };
   ];
 
   programs.git = {
