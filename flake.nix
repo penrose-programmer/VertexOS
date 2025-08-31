@@ -10,8 +10,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    textfox.url = "github:adriankarlen/textfox";
-    quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    textfox = {
+      url = "github:adriankarlen/textfox";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

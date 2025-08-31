@@ -64,10 +64,10 @@
     gemini-cli
   ];
 
-  inputs.textfox = {
+  textfox = {
     enable = true;
     profile = "default";
-  }
+  };
 
   programs.git = {
     enable = true;
