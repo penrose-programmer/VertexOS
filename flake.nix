@@ -2,11 +2,11 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    stylix.url = "github:nix-community/stylix/release-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    stylix.url = "github:nix-community/stylix/release-25.05";
 
     home-manager = { 
-      url = "github:nix-community/home-manager/release-unstable";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
