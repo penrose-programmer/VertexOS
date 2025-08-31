@@ -77,6 +77,7 @@
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" "dialout" ];
   };
 
