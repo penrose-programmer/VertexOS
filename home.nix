@@ -62,16 +62,16 @@
 
     # AI
     gemini-cli
-  ];
 
-  pkgs.textfox = {
-    enable = true;
-    profile = "default";
-    config = {
-        # Optional config
+    textfox = {
+      enable = true;
+      profile = "default";
+      config = {
+          # Optional config
+      };
     };
-};
-
+  ];
+  
   programs.git = {
     enable = true;
     userName = "penrose-programmer";
