@@ -64,7 +64,7 @@
     gemini-cli
   ];
 
-  textfox = {
+  pkgs.textfox = {
     enable = true;
     profile = "default";
     config = {
