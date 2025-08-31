@@ -4,14 +4,14 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     stylix.url = "github:nix-community/stylix/release-25.05";
-    
+
     home-manager = { 
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     textfox.url = "github:adriankarlen/textfox";
-    quickshell = url "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
   };
 
   outputs =
