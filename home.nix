@@ -57,6 +57,8 @@
     neofetch
     gh
 
+    go
+
     # AI
     gemini-cli
   ];
