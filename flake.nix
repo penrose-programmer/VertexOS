@@ -33,7 +33,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         specialArgs = {inherit inputs;};
         modules = [
-          inputs.textfox.homeManagerModules.default
+          textfox.homeManagerModules.default
         ];
       };
     };

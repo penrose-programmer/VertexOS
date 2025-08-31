@@ -64,7 +64,7 @@
     gemini-cli
   ];
 
-  inputs.textfox = {
+  textfox = {
     enable = true;
     profile = "default";
     config = {
