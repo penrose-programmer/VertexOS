@@ -54,6 +54,7 @@
     # Commands
     ripgrep
     neofetch
+    lazygit
     fzf
     gh
 
