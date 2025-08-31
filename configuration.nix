@@ -73,8 +73,6 @@
 
   virtualisation.libvirtd.qemu.swtpm.enable = true;
 
-  programs.zsh.enable = true;
-
   # Users
   users.users.penrose = {
     isNormalUser = true;
