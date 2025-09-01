@@ -42,12 +42,12 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           inputs.textfox.homeManagerModules.default
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.penrose = ./home.nix;
+          }
         ];
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.penrose = ./home.nix;
-        }
       };
     };
 }
