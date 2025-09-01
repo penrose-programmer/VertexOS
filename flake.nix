@@ -1,47 +1,45 @@
 {
-  description = "NixOS configuration";
+  description = "NixOS with Home Manager, Stylix, and Textfox";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    stylix.url = "github:nix-community/stylix/release-25.05";
 
-    home-manager = { 
+    home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix.url = "github:nix-community/stylix/release-25.05";
 
     textfox = {
       url = "github:adriankarlen/textfox";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs =
-    { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, stylix, textfox, ... }:
     {
-      nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        inputs.stylix.nixosModules.stylix
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.penrose = {
-            imports = [ 
-              ./home.nix
-              inputs.textfox.homeManagerModules.default
-            ];
-          };
-        }
-      ];
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          stylix.nixosModules.stylix
+
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+
+            home-manager.users.penrose = {
+              imports = [
+                ./home.nix
+                textfox.homeManagerModules.default
+              ];
+            };
+          }
+        ];
+      };
     };
-  };
 }
