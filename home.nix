@@ -66,12 +66,12 @@
 
   textfox = {
     enable = true;
-    profile = "firefox profile name here";
+    profile = "default";
     config = {
         # Optional config
     };
   };
-  
+
   programs.git = {
     enable = true;
     userName = "penrose-programmer";
