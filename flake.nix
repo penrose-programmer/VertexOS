@@ -22,7 +22,7 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, textfox, ... }@inputs:
+    { nixpkgs, home-manager, ... }@inputs:
     {
       nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -41,8 +41,13 @@
       homeConfigurations."penrose@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
-          textfox.homeManagerModules.default
+          inputs.textfox.homeManagerModules.default
         ];
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.penrose = ./home.nix;
+        }
       };
     };
 }
