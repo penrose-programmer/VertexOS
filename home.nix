@@ -64,6 +64,14 @@
     gemini-cli
   ];
 
+  textfox = {
+    enable = true;
+    profile = "firefox profile name here";
+    config = {
+        # Optional config
+    };
+  };
+  
   programs.git = {
     enable = true;
     userName = "penrose-programmer";
