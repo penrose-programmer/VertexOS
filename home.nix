@@ -33,6 +33,7 @@
   ];
 
   stylix.enable = true;
+  stylix.targets.waybar.enable = false;
 
   programs.bash = {
     enable = true;
