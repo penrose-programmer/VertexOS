@@ -101,6 +101,7 @@
     xfce.thunar
     p3x-onenote
     obs-studio
+    vpnc
     vlc
     htop
 
