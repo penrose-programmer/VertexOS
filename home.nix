@@ -34,7 +34,7 @@
 
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
-  stylix.targets.firefox.profileNames = [ "default" ];
+  stylix.targets.firefox.colorTheme.enable = true;
 
   programs.bash = {
     enable = true;
