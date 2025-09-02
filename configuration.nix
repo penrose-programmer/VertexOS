@@ -11,14 +11,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hostname
-  networking.hostName = "nixos";
+  networking.hostName = "vertex";
 
   # Enable networking
   networking.networkmanager = {
     enable = true;
   };
-
-  networking.firewall.trustedInterfaces = [ "virbr0" ];
 
   # Time zone and locale
   time.timeZone = "Australia/Sydney";
@@ -49,10 +47,6 @@
     variant = "";
   };
 
-  # Enable printing
-  services.printing.enable = true;
-  services.printing.drivers = [ pkgs.gutenprint ];
-
   # Enable sound (PipeWire)
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -63,21 +57,11 @@
     pulse.enable = true;
   };
 
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu.runAsRoot = true;
-    qemu.package = pkgs.qemu_kvm;
-  };
-
-  virtualisation.spiceUSBRedirection.enable = true;
-
-  virtualisation.libvirtd.qemu.swtpm.enable = true;
-
   # Users
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "kvm" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
   };
 
   # Allow unfree packages
@@ -96,12 +80,8 @@
 
     # Applications
     vscode
-    thonny
-    obsidian
     xfce.thunar
-    p3x-onenote
-    obs-studio
-    vpnc
+    kitty
     vlc
     htop
 
@@ -139,6 +119,7 @@
         base0E = "cba6f7"; # mauve
         base0F = "f2cdcd"; # flamingo
       };
+
       enable = true;
       autoEnable = true;
 
@@ -161,10 +142,6 @@
           package = pkgs.noto-fonts;
           name = "Noto Serif";
         };
-      };
-      opacity = {
-        desktop = 1;
-        terminal = 0.5;
       };
   };
 

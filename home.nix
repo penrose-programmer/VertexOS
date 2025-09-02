@@ -5,70 +5,46 @@
   home.username = "penrose";
   home.homeDirectory = "/home/penrose";
 
-  # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # link all files in `./scripts` to `~/.config/i3/scripts`
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
-
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-
   # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xft.dpi" = 172;
   };
-
-  programs.zoxide.enable = true;
-
-  /* mpv paper configuration - disabled for now
-
-  programs.mpvpaper = {
-    enable = false;
-  };
-
-  xdg.configFile = {
-    "mpvpaper/pauselist".text = "";
-    "mpvpaper/stoplist".text = "";
-  };
-  
-  */
-
-  stylix.enable = true;
-  stylix.targets.waybar.enable = false;
 
   home.sessionVariables = {
     EDITOR = "vscode";
   };
 
   home.packages = with pkgs; [
-    # Terminal
-    kitty
+    # Desktop
+    stylix
 
-    # Commands
-    ripgrep
+    # Applications
+    p3x-onenote
+    obs-studio
+    obsidians
+    thonny
+
+    # Terminal
     neofetch
-    yt-dlp
-    fzf
+    ripgrep
+    zoxide
     gh
 
-    go
-
-    # AI
+    # Terminal
     gemini-cli
   ];
 
-  textfox = {
+  programs.bash = {
     enable = true;
-    profile = "default";
-    config = {
-        # Optional config
+    enableCompletion = true;
+    bashrcExtra = ''
+      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+    '';
+
+    # set some aliases, feel free to add more or remove some
+    shellAliases = {
+      update = "sudo nixos-rebuild switch --flake .#nixos";
+      test-update = "sudo nixos-rebuild test --flake .#nixos";
     };
   };
 
@@ -78,20 +54,9 @@
     userEmail = "syedtalhahahmed@gmail.com";
   };
 
-  programs.bash = {
+  textfox = {
     enable = true;
-    enableCompletion = true;
-    bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-      
-      source ~/.config/fabric/aliases.sh
-    '';
-
-    # set some aliases, feel free to add more or remove some
-    shellAliases = {
-      update = "sudo nixos-rebuild switch --flake .#nixos";
-      test-update = "sudo nixos-rebuild test --flake .#nixos";
-    };
+    profile = "default";
   };
 
   programs.waybar = {
@@ -313,42 +278,43 @@
       '';
   };
 
-  services.hypridle.enable = true;
-  services.hypridle.settings = {
-    general = {
-        lock_cmd = "pidof hyprlock || hyprlock";       # avoid starting multiple hyprlock instances.
-        before_sleep_cmd = "loginctl lock-session";    # lock before suspend.
-        after_sleep_cmd = "hyprctl dispatch dpms on";  # to avoid having to press a key twice to turn on the display.
+  services.hypridle = {
+    enable = true;
+    services.hypridle.settings = {
+      general = {
+          lock_cmd = "pidof hyprlock || hyprlock";       # avoid starting multiple hyprlock instances.
+          before_sleep_cmd = "loginctl lock-session";    # lock before suspend.
+          after_sleep_cmd = "hyprctl dispatch dpms on";  # to avoid having to press a key twice to turn on the display.
+      };
+
+      listener = [
+        {
+          timeout = 120;
+          on-timeout = "brightnessctl -s set 10%";         # lower brightness when timout has passed
+          on-resume = "brightnessctl -r";
+        }
+        {
+          timeout = 150;
+          on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
+        }
+
+        {
+          timeout = 180;
+          on-timeout = "hyprctl dispatch dpms off";        # screen off when timeout has passed
+          on-resume = "hyprctl dispatch dpms on";          # screen on when activity is detected after timeout has fired.
+        }
+
+        {
+          timeout = 1800;                                  # 30min
+          on-timeout = "systemctl suspend";                # suspend pc
+        }
+      ];
     };
-
-    listener = [
-      {
-        timeout = 120;
-        on-timeout = "brightnessctl -s set 10%";
-        on-resume = "brightnessctl -r";
-      }
-      {
-        timeout = 150;
-        on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
-      }
-
-      {
-        timeout = 180;
-        on-timeout = "hyprctl dispatch dpms off";        # screen off when timeout has passed
-        on-resume = "hyprctl dispatch dpms on";          # screen on when activity is detected after timeout has fired.
-      }
-
-      {
-        timeout = 1800;                                # 30min
-        on-timeout = "systemctl suspend";                # suspend pc
-      }
-    ];
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-
       "$mod" = "SUPER";
       "$mod_s" = "SUPER_SHIFT";
       "$mod_c" = "SUPER_CTRL";
@@ -392,11 +358,8 @@
         "$mod, Z, exec, firefox"
         "$mod, X, exec, vscode"
         "$mod, C, exec, thunar"
-        # "$mod, P, exec, pkill -STOP mpvpaper"
-        # "$mod_s, P, exec, pkill -CONT mpvpaper"
       ] ++ (
         # workspaces
-        # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
         builtins.concatLists (builtins.genList (i:
             let ws = i + 1;
             in [
@@ -426,8 +389,7 @@
         "waybar"
         "blueman-applet"
         "nm-applet"
-        # "mpvpaper -o '--loop --no-audio --hwdec=auto --scale=ewa_lanczossharp --geometry=100%x100% --panscan=1 --vf=fps=12' eDP-1 ~/nixos-config/wallpaper/city_720p.mp4"
-        # "mpvpaper -o '--loop --no-audio --hwdec=auto --scale=ewa_lanczossharp --geometry=100%x100% --panscan=1 --vf=fps=12' DP-3 ~/nixos-config/wallpaper/city_720p.mp4"
+        "neofetch"
       ];
 
       input.touchpad = {
@@ -437,13 +399,5 @@
     };
   };
 
-  # This value determines the home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update home Manager without changing this value. See
-  # the home Manager release notes for a list of state version
-  # changes in each release.
   home.stateVersion = "25.05";
 }
