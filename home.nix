@@ -58,11 +58,6 @@
 
   programs.firefox = {
     enable = true;
-    profiles = {
-      default = {
-        name = "default";
-      };
-    };
   };
 
   programs.waybar = {
