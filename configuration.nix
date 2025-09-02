@@ -155,10 +155,7 @@
   services.blueman.enable = true;
   programs.nm-applet.enable = true;
 
-  # Programs
-  programs.firefox = {
-    enable = true;
-  };
+  programs.firefox.enable = true;
 
   programs.git.enable = true;
 

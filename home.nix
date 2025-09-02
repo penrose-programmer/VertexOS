@@ -34,6 +34,7 @@
 
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
+  stylix.targets.firefox.profileNames = [ "default" ];
 
   programs.bash = {
     enable = true;
@@ -53,6 +54,15 @@
     enable = true;
     userName = "penrose-programmer";
     userEmail = "syedtalhahahmed@gmail.com";
+  };
+
+  programs.firefox = {
+    enable = true;
+    profiles = {
+      default = {
+        name = "default";
+      };
+    };
   };
 
   programs.waybar = {
