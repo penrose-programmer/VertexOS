@@ -280,7 +280,7 @@
 
   services.hypridle = {
     enable = true;
-    services.hypridle.settings = {
+    settings = {
       general = {
           lock_cmd = "pidof hyprlock || hyprlock";       # avoid starting multiple hyprlock instances.
           before_sleep_cmd = "loginctl lock-session";    # lock before suspend.
