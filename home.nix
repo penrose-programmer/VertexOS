@@ -14,8 +14,6 @@
     EDITOR = "vscode";
   };
 
-  stylix.enable = false;
-
   home.packages = with pkgs; [
 
     # Applications
@@ -33,6 +31,8 @@
     # Terminal
     gemini-cli
   ];
+
+  stylix.enable = true;
 
   programs.bash = {
     enable = true;
