@@ -14,7 +14,7 @@
     EDITOR = "vscode";
   };
 
-  stylix.enable = true;
+  stylix.enable = false;
 
   home.packages = with pkgs; [
 
