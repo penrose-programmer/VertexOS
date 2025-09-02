@@ -14,9 +14,9 @@
     EDITOR = "vscode";
   };
 
+  stylix.enable = true;
+
   home.packages = with pkgs; [
-    # Desktop
-    stylix
 
     # Applications
     p3x-onenote
