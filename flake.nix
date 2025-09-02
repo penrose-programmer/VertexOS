@@ -12,7 +12,7 @@
     stylix.url = "github:nix-community/stylix/release-25.05";
   };
 
-  outputs = { nixpkgs, home-manager, stylix, textfox, ... }:
+  outputs = { nixpkgs, home-manager, stylix, ... }:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
