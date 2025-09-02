@@ -21,7 +21,7 @@
     # Applications
     p3x-onenote
     obs-studio
-    obsidians
+    obsidian
     thonny
 
     # Terminal
