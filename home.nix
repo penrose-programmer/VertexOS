@@ -55,11 +55,6 @@
     userEmail = "syedtalhahahmed@gmail.com";
   };
 
-  textfox = {
-    enable = true;
-    profile = "default";
-  };
-
   programs.waybar = {
     enable = true;
     settings = {

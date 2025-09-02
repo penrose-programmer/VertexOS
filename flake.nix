@@ -10,11 +10,6 @@
     };
 
     stylix.url = "github:nix-community/stylix/release-25.05";
-
-    textfox = {
-      url = "github:adriankarlen/textfox";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, stylix, textfox, ... }:
@@ -35,7 +30,6 @@
             home-manager.users.penrose = {
               imports = [
                 ./home.nix
-                textfox.homeManagerModules.default
               ];
             };
           }
