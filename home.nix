@@ -17,6 +17,7 @@
   home.packages = with pkgs; [
 
     # Applications
+    onlyoffice-desktopeditors
     p3x-onenote
     obs-studio
     obsidian
