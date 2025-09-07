@@ -81,6 +81,7 @@
     # Applications
     vscode
     xfce.thunar
+    xfce.thunar-archive-plugin
     kitty
     vlc
     htop
