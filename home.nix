@@ -20,7 +20,6 @@
     p3x-onenote
     obs-studio
     obsidian
-    unityhub
     thonny
 
     # Terminal
