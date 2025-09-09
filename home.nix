@@ -397,8 +397,9 @@
         scroll_factor = 0.5;
       };
 
-      input.keyboard = {
-        kb_layout = "us,dvorak";
+      input = {
+        kb_layout = "us";
+        kb_variant = "dvorak";
         kb_options = "grp:win_space_toggle";
       };
     };
