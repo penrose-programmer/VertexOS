@@ -43,7 +43,8 @@
 
   # Keyboard layout
   services.xserver = {
-    layout = "au,dvorak";
+    layout = "au";
+    xkbVariant = "dvorak";
     xkbOptions = "grp:win_space_toggle";
   };
 
