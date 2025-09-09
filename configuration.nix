@@ -42,10 +42,10 @@
   services.libinput.touchpad.naturalScrolling = true;
 
   # Keyboard layout
-  services.xserver = {
-    xkb.layout = "us";
-    xkbVariant = "dvorak";
-    xkbOptions = "grp:win_space_toggle";
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "dvorak";
+    options = "grp:win_space_toggle";
   };
 
   # Enable sound (PipeWire)
