@@ -398,8 +398,8 @@
       };
 
       input.keyboard = {
-        xkb_layout = "us,dvorak";
-        xkb_options = "grp:win_space_toggle";
+        kb_layout = "us,dvorak";
+        kb_options = "grp:win_space_toggle";
       };
     };
   };
