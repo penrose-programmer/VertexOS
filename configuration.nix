@@ -42,8 +42,7 @@
   services.libinput.touchpad.naturalScrolling = true;
 
   # Keyboard layout
-  services.xserver.xkb = {
-    enable = true;
+  services.xserver = {
     layout = "au";
     options = "grp:win_space_toggle";
     variant = "dvorak";
