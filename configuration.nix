@@ -163,14 +163,7 @@
   programs.git.enable = true;
 
   programs.hyprland.enable = true;
-
-  programs.hyprland.extraConfig = ''
-  input * {
-      xkb_layout = "us,dvorak"
-      xkb_options = "grp:win_space_toggle"
-  }
-'';
-
+  
   programs.hyprlock.enable = true;
 
   # Enable flakes
