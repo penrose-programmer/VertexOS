@@ -398,7 +398,8 @@
       };
 
       input = {
-        kb_layout = "us, dvorak";
+        kb_layout = "us, us";
+        kb_variant = ", dvorak";
         kb_options = "grp:win_space_toggle";
       };
     };
