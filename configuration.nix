@@ -43,8 +43,10 @@
 
   # Keyboard layout
   services.xserver.xkb = {
+    enable = true;
     layout = "au";
-    variant = "";
+    xkbOptions = "grp:win_space_toggle";
+    xkbVariant = "dvorak";
   };
 
   # Enable sound (PipeWire)
