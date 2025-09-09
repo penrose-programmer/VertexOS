@@ -45,8 +45,8 @@
   services.xserver.xkb = {
     enable = true;
     layout = "au";
-    xkbOptions = "grp:win_space_toggle";
-    xkbVariant = "dvorak";
+    options = "grp:win_space_toggle";
+    variant = "dvorak";
   };
 
   # Enable sound (PipeWire)
