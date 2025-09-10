@@ -20,6 +20,7 @@
     p3x-onenote
     protonvpn-gui
     obs-studio
+    notion-app
     obsidian
 
     # Terminal
