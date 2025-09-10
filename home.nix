@@ -18,6 +18,7 @@
 
     # Applications
     p3x-onenote
+    protonvpn-gui
     obs-studio
     obsidian
     thonny
