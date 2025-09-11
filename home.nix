@@ -26,6 +26,7 @@
     neofetch
     ripgrep
     zoxide
+    fzf
     gh
 
     # Terminal
