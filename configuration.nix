@@ -85,6 +85,7 @@
     file-roller
     xfce.thunar-archive-plugin
     kitty
+    nvim
     vlc
     htop
 
