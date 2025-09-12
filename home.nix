@@ -22,6 +22,9 @@
     obs-studio
     obsidian
 
+    # Languages
+    gcc
+
     # Terminal
     neofetch
     ripgrep
