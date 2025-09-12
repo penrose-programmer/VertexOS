@@ -35,6 +35,16 @@
     gemini-cli
   ];
 
+  programs.neovim = {
+    enable = true;
+    package = pkgs.neovim;
+
+    extraConfig = ''
+      vim.o.background = "dark"
+      vim.cmd.colorscheme("catppuccin")
+    '';
+  };
+
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
 
