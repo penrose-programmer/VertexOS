@@ -35,6 +35,14 @@
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
 
+  programs.neovim = {
+    enable = true;
+    package = pkgs.neovim; # or pkgs.neovim-unwrapped for bleeding edge
+    viAlias = true;
+    vimAlias = true;
+  };
+
+
   programs.bash = {
     enable = true;
     enableCompletion = true;
