@@ -21,7 +21,7 @@
   # Time zone and locale
   time.timeZone = "Australia/Sydney";
 
-nixos-con  i18n.defaultLocale = "en_AU.UTF-8";
+  i18n.defaultLocale = "en_AU.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_AU.UTF-8";
     LC_IDENTIFICATION = "en_AU.UTF-8";
