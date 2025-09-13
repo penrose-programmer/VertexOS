@@ -21,6 +21,7 @@
     protonvpn-gui
     obs-studio
     obsidian
+    godot
 
     # Terminal
     neofetch
