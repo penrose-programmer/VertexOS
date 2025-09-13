@@ -37,7 +37,6 @@
 
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
-  stylix.targets.neovim.enable = true;
 
   programs.bash = {
     enable = true;
