@@ -293,23 +293,23 @@
 
       listener = [
         {
-          timeout = 120;
+          timeout = 60;
           on-timeout = "brightnessctl -s set 10%";         # lower brightness when timout has passed
           on-resume = "brightnessctl -r";
         }
         {
-          timeout = 150;
+          timeout = 900;
           on-timeout = "loginctl lock-session";            # lock screen when timeout has passed
         }
 
         {
-          timeout = 180;
+          timeout = 1200;
           on-timeout = "hyprctl dispatch dpms off";        # screen off when timeout has passed
           on-resume = "hyprctl dispatch dpms on";          # screen on when activity is detected after timeout has fired.
         }
 
         {
-          timeout = 1800;                                  # 30min
+          timeout = 1800;
           on-timeout = "systemctl suspend";                # suspend pc
         }
       ];
