@@ -23,11 +23,6 @@
     obsidian
     unityhub
 
-    # Languages
-    gcc
-    mono
-    msbuild
-
     # Terminal
     neofetch
     ripgrep
