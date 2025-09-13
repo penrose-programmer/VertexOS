@@ -25,6 +25,9 @@
 
     # Languages
     gcc
+    mono
+    msbuild
+    dotnet-sdk_8
 
     # Terminal
     neofetch
