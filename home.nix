@@ -21,7 +21,6 @@
     protonvpn-gui
     obs-studio
     obsidian
-    unityhub
 
     # Terminal
     neofetch
