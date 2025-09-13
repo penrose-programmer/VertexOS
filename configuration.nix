@@ -81,6 +81,7 @@
 
     # Applications
     vscode
+    neovim
     xfce.thunar
     file-roller
     xfce.thunar-archive-plugin
