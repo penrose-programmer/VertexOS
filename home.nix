@@ -27,7 +27,7 @@
     gcc
     mono
     msbuild
-    dotnet-sdk
+    dotnet-sdk_9
 
     # Terminal
     neofetch
