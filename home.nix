@@ -1,11 +1,9 @@
 { config, pkgs, inputs, ... }:
 
 {
-  # TODO please change the username & home directory to your own
   home.username = "penrose";
   home.homeDirectory = "/home/penrose";
 
-  # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xft.dpi" = 172;
   };
@@ -44,7 +42,6 @@
       export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
     '';
 
-    # set some aliases, feel free to add more or remove some
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake .#nixos";
       test-update = "sudo nixos-rebuild test --flake .#nixos";
@@ -55,6 +52,15 @@
     enable = true;
     userName = "penrose-programmer";
     userEmail = "syedtalhahahmed@gmail.com";
+
+    extraConfig = {
+      credential.helper = "cache --timeout=3600";
+    };
+  };
+
+  programs.gh = {
+    enable = true;
+    settings.git_protocol = "https";
   };
 
   programs.firefox = {
