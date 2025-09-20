@@ -25,6 +25,7 @@
     # Terminal
     neofetch
     ripgrep
+    taskwarrior3
     nnn
     gh
 
