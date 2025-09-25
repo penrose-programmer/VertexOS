@@ -21,6 +21,7 @@
     obsidian
     logseq
     godot
+    minecraft
 
     # Terminal
     neofetch
