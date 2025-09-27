@@ -67,12 +67,7 @@
   programs.firefox = {
     enable = true;
   };
-
-  quickshell = {
-    enable = true;
-
-  };
-
+ 
   services.hypridle = {
     enable = true;
     settings = {
