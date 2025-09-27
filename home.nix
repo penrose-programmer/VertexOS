@@ -45,7 +45,7 @@
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake .#nixos";
       testUpdate = "sudo nixos-rebuild test --flake .#nixos";
-      hmUpdate = "home-manager switch --flake ~/.config/home-manager"
+      hmUpdate = "home-manager switch --flake ~/.config/home-manager";
     };
   };
 
