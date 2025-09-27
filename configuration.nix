@@ -72,7 +72,6 @@
   environment.systemPackages = with pkgs; [
 
     # Desktop
-    waybar
     hypridle
     dunst
     rofi
