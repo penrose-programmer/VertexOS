@@ -180,6 +180,7 @@
         "blueman-applet"
         "nm-applet"
         "neofetch"
+        "quickshell"
       ];
 
       input.touchpad = {
