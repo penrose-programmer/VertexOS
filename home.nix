@@ -71,7 +71,7 @@
   programs.quickshell = {
     enable = true;
 
-  }
+  };
 
   services.hypridle = {
     enable = true;
