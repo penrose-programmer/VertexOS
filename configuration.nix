@@ -72,7 +72,6 @@
   environment.systemPackages = with pkgs; [
 
     # Desktop
-    quickshell
     waybar
     hypridle
     dunst
