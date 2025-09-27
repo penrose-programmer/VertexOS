@@ -68,7 +68,7 @@
     enable = true;
   };
 
-  programs.quickshell = {
+  quickshell = {
     enable = true;
 
   };
