@@ -72,6 +72,7 @@
   environment.systemPackages = with pkgs; [
 
     # Desktop
+    quickshell
     hypridle
     dunst
     rofi
