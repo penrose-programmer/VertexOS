@@ -16,7 +16,7 @@
 
     stylix.url = "github:nix-community/stylix";
 
-    nixvim-flake.url = "./nixvim";
+    nixvim.url = "path:/home/penrose/nixos-config/nixvim";
   };
 
   outputs = { nixpkgs, home-manager, stylix, ... }:
@@ -28,7 +28,7 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
-          nixvim-flake.packages.${system}.default
+          nixvim.packages.${system}.default
 
           {
             home-manager.useGlobalPkgs = true;
