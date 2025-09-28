@@ -4,7 +4,6 @@
   imports =
   [
     ./hardware-configuration.nix
-    (import "${inputs.nixvim}/nixosModules/nixvim.nix")
   ];
 
   # Bootloader
