@@ -4,7 +4,7 @@
   imports =
   [
     ./hardware-configuration.nix
-    ./nixvim/flake.nix
+    nixvim.nixosModules.nixvim
   ];
 
   # Bootloader
