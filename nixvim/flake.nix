@@ -25,13 +25,7 @@
       perSystem =
         { system, ... }:
         let
-          nixvimLib = nixvim.lib.${system};
-          nixvim' = nixvim.legacyPackages.${system};
-          nixvimModule = {
-            inherit system;
-            module = import ./config;
-          };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
+          pkgs = import nixpkgs { inherit system; };
         in
         {
           checks = {
