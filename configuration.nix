@@ -81,7 +81,6 @@
 
     # Applications
     vscode
-    neovim
     xfce.thunar
     file-roller
     xfce.thunar-archive-plugin
@@ -98,6 +97,11 @@
     # Misc
     udisks
   ];
+
+  programs.nevoim = {
+    enable = true;
+    package = pkgs.nevoim_10;
+  }
 
   services.ollama = {
     enable = true;
@@ -130,8 +134,6 @@
       cursor.package = pkgs.bibata-cursors;
       cursor.name = "Bibata-Modern-Classic";
       cursor.size = 24;
-
-      image = ./wallpaper/hk-wallpaper.jpeg;
 
       fonts = {
         monospace = {
