@@ -1,42 +1,16 @@
 {
-  description = "A nixvim configuration";
+  description = "Nixvim";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs =
-    { nixvim, flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-
-      perSystem =
-        { system, ... }:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        {
-          checks = {
-            # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-          };
-
-          packages = {
-            # Lets you run `nix run .` to start nixvim
-            default = nvim;
-          };
-        };
-    };
+  outputs = { self, nixpkgs, ... }:
+    let
+      systems = ["x86_64-linux" "aarch64-linux"];
+    in
+      {
+        nixosModules.nixvim = { config, pkgs, system, ... }:
+          import ./config/default.nix { inherit pkgs system config; };
+      };
 }
