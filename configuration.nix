@@ -81,6 +81,7 @@
 
     # Applications
     vscode
+    inputs.nixvim-config.packages.${system}.default
     xfce.thunar
     file-roller
     xfce.thunar-archive-plugin
