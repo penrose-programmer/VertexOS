@@ -98,11 +98,6 @@
     udisks
   ];
 
-  programs.nevoim = {
-    enable = true;
-    package = pkgs.nevoim_10;
-  };
-
   services.ollama = {
     enable = true;
     loadModels = [ "gemma3:4b" "llama3.1:8b" "qwen3:14b" ];
