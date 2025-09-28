@@ -4,6 +4,7 @@
   imports =
   [
     ./hardware-configuration.nix
+    ./nixvim/flake.nix
   ];
 
   # Bootloader
@@ -81,7 +82,6 @@
 
     # Applications
     vscode
-    inputs.nixvim-config.packages.${system}.default
     xfce.thunar
     file-roller
     xfce.thunar-archive-plugin
@@ -98,6 +98,8 @@
     # Misc
     udisks
   ];
+
+  programs.nixvim.enable = true;
 
   services.ollama = {
     enable = true;
