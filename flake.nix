@@ -25,6 +25,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+          nixvim.packages.${system}.default
           stylix.nixosModules.stylix
 
           {
