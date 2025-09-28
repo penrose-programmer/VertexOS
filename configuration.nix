@@ -101,7 +101,7 @@
   programs.nevoim = {
     enable = true;
     package = pkgs.nevoim_10;
-  }
+  };
 
   services.ollama = {
     enable = true;
