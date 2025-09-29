@@ -7,10 +7,10 @@
     nixvim.url = "github:nix-community/nixvim";
   };
 
-  outputs = { self, nixpkgs, inputs, ... }: {
+  outputs = { self, nixpkgs, nixvim, ... }: {
     nixosModules.nixvim = {
       import = [
-        nixvim.nixosModules.nixvim
+        inputs.nixvim.nixosModules.nixvim
         ./config/default.nix
       ];
     };
