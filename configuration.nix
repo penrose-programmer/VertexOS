@@ -106,7 +106,7 @@
     plugins.lualine.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
-	tree-sitter
+	nvim-treesitter-textsubjects
     ];
   };
 
