@@ -11,7 +11,7 @@
     nixosModules.nixvim = {
       import = [
         nixvim.nixosModules.nixvim
-        ./config/default.nix;
+        ./config/default.nix
       ];
     };
   };
