@@ -9,7 +9,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "vscode";
+    EDITOR = "nixvim";
   };
 
   home.packages = with pkgs; [
