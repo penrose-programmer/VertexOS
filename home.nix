@@ -31,8 +31,6 @@
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
 
-  programs.starship.enable = true;
-
   programs.bash = {
     enable = true;
     enableCompletion = true;
