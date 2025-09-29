@@ -107,7 +107,7 @@
 
     extraPlugins = {
     	{ repo = "nvim-treesitter/nvim-treesitter"; }
-    }
+    };
   };
 
   services.ollama = {
