@@ -105,9 +105,9 @@
     colorschemes.catppuccin.enable = true;
     plugins.lualine.enable = true;
 
-    extraPlugins = {
-    	{ repo = "nvim-treesitter/nvim-treesitter"; }
-    };
+    extraPlugins = with pkgs.vimPlugins; [
+	tree-sitter
+    ];
   };
 
   services.ollama = {
