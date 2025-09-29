@@ -106,10 +106,9 @@
     plugins.lualine.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
-	nvim-treesitter-textsubjects
+	nvim-treesitter
 	neo-tree-nvim
 	nvim-web-devicons
-	oil-nvim
     ];
   };
 
