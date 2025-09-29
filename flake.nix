@@ -24,14 +24,11 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
-        specialArgs = {
-          inherit nixvim;
-        };
-
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
+          nixvim.nixosModules.nixvim
 
           {
             home-manager.useGlobalPkgs = true;
