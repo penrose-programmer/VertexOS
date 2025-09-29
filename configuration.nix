@@ -98,7 +98,11 @@
     udisks
   ];
 
-  programs.nixvim.enable = true;
+  programs.nixvim = { 
+    enable = true; 
+    defaultEditor = true;
+    nixpkgs.useGlobalPackages = true;
+  };
 
   services.ollama = {
     enable = true;
