@@ -102,7 +102,7 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
 
-    colorschemes.catppuccin.enable = true;
+    colorschemes.tokyonight.enable = true;
     plugins.lualine.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
