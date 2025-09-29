@@ -8,6 +8,11 @@
   };
 
   outputs = { self, nixpkgs, ... }: {
-    nixosModules.nixvim = import ./config/default.nix;
+    nixosModules.nixvim = {
+      import = [
+        nixvim.nixosModules.nixvim
+        ./config/default.nix;
+      ];
+    };
   };
 }
