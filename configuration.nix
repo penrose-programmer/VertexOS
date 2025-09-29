@@ -1,10 +1,10 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, nixvim ... }:
 
 {
   imports =
   [
     ./hardware-configuration.nix
-    (import ./nixvim)
+    nixvim.nixosModules.nixvim
   ];
 
   # Bootloader

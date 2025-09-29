@@ -14,6 +14,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim.url = "path:./nixvim";
+
     stylix.url = "github:nix-community/stylix";
   };
 
@@ -21,6 +23,10 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+
+        specialArgs = {
+          inherit nixvim;
+        };
 
         modules = [
           ./configuration.nix
