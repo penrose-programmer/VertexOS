@@ -80,7 +80,6 @@
     tlp
 
     # Applications
-    vscode
     xfce.thunar
     file-roller
     xfce.thunar-archive-plugin
