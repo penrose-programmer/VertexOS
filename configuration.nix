@@ -107,7 +107,12 @@
 
     extraPlugins = with pkgs.vimPlugins; [
 	nvim-treesitter-textsubjects
+	oil-nvim
     ];
+  };
+
+  programs.tmux = {
+    enable = true;
   };
 
   services.ollama = {
