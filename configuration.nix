@@ -107,6 +107,8 @@
 
     extraPlugins = with pkgs.vimPlugins; [
 	nvim-treesitter-textsubjects
+	neo-tree-nvim
+	nvim-web-devicons
 	oil-nvim
     ];
   };
