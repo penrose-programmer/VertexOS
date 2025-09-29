@@ -8,10 +8,6 @@
     "Xft.dpi" = 172;
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
-
   home.packages = with pkgs; [
 
     # Applications
