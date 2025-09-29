@@ -102,6 +102,9 @@
     enable = true; 
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
+
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable = true;
   };
 
   services.ollama = {

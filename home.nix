@@ -9,7 +9,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "nixvim";
+    EDITOR = "nvim";
   };
 
   home.packages = with pkgs; [
