@@ -33,6 +33,7 @@
 
         modules = [
           ./hosts/vertex/configuration.nix
+          ./nixosModules/default.nix
           home-manager.nixosModules.home-manager
 	  inputs.stylix.nixosModules.stylix
 

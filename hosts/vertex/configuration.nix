@@ -4,7 +4,6 @@
   imports =
   [
     ./hardware-configuration.nix
-    ./../../nixosModules/desktop/hypridle.nix
   ];
 
   # Bootloader
