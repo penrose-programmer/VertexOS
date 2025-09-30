@@ -4,6 +4,7 @@
   imports =
   [
     ./hardware-configuration.nix
+    ./../../nixosModules/desktop/dunst.nix
   ];
 
   # Bootloader
@@ -74,7 +75,6 @@
     # Desktop
     quickshell
     hypridle
-    dunst
     rofi
     pavucontrol
     tlp
