@@ -31,7 +31,6 @@
           ./configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
-          nixvim.nixosModules.nixvim
 
           {
             home-manager.useGlobalPkgs = true;
@@ -41,6 +40,7 @@
             home-manager.users.penrose = {
               imports = [
                 ./home.nix
+          	nixvim.nixosModules.nixvim
               ];
             };
           }
