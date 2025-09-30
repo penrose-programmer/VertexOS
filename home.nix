@@ -42,8 +42,7 @@
     ];
   };
 
-  stylix.enable = true;
-  stylix.targets.waybar.enable = false;
+  stylix.targest.nixvim.enable = false:
 
   programs.bash = {
     enable = true;
