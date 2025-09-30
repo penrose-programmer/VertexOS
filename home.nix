@@ -42,8 +42,6 @@
     ];
   };
 
-  stylix.target.nixvim.enable = false;
-
   programs.bash = {
     enable = true;
     enableCompletion = true;
