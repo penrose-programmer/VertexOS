@@ -28,6 +28,21 @@
     gemini-cli
   ];
 
+  programs.nixvim = { 
+    enable = true; 
+    defaultEditor = true;
+    nixpkgs.useGlobalPackages = true;
+
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable = true;
+
+    extraPlugins = with pkgs.vimPlugins; [
+	nvim-treesitter
+	neo-tree-nvim
+	nvim-web-devicons
+    ];
+  };
+
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
 
