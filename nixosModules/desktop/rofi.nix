@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  rofi.enable = true;
+  services.rofi.enable = true;
 }
