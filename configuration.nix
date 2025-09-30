@@ -102,14 +102,13 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
 
-    colorschemes.gruvbox.enable = true;
+    colorschemes.default.enable = true;
     plugins.lualine.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
 	nvim-treesitter
 	neo-tree-nvim
 	nvim-web-devicons
-	tokyonight-nvim
     ];
   };
 
