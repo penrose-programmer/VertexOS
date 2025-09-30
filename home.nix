@@ -43,7 +43,7 @@
 
     extraConfig = ''
     	set clipboard=unnamedplus
-    ''
+    '';
   };
 
   programs.bash = {
