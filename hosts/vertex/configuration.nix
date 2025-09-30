@@ -4,7 +4,7 @@
   imports =
   [
     ./hardware-configuration.nix
-    ./../../nixosModules/desktop/dunst.nix
+    # ./../../nixosModules/desktop/dunst.nix
   ];
 
   # Bootloader
@@ -96,6 +96,8 @@
     # Misc
     udisks
   ];
+
+  services.dunst.enable = true;
 
   programs.tmux = {
     enable = true;
