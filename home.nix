@@ -42,7 +42,7 @@
     ];
   };
 
-  stylix.targest.nixvim.enable = false:
+  stylix.targest.nixvim.enable = false;
 
   programs.bash = {
     enable = true;
