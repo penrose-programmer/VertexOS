@@ -8,6 +8,7 @@
 
     ./applications/thunar.nix
     ./applications/firefox.nix
+    ./applications/rofi.nix
 
     ./hypr/hypridle.nix
     ./hypr/hyprland.nix
