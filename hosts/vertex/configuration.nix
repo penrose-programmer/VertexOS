@@ -73,7 +73,6 @@
   environment.systemPackages = with pkgs; [
 
     # Desktop
-    quickshell
     hypridle
     rofi
     pavucontrol
