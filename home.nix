@@ -57,13 +57,8 @@
     };
 
     clipboard.register = "unnamedplus";
-
   };
 
-  services.ollama = {
-      enable = true;
-      loadModels = [ "gemma3:4b" "llama3.1:8b" "qwen3:14b" ];
-  };
   
   programs.kitty = {
     enable = true;
@@ -103,7 +98,6 @@
     shellAliases = {
       update = "sudo nixos-rebuild switch --flake .#nixos";
       testUpdate = "sudo nixos-rebuild test --flake .#nixos";
-      hmUpdate = "home-manager switch --flake ~/.config/home-manager";
     };
   };
 
