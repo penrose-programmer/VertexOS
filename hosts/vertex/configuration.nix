@@ -66,6 +66,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  programs.thunar.enable = true;
+
   stylix = {
     enable = true;
     autoEnable = false;

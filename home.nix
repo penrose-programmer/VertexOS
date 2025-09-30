@@ -17,7 +17,6 @@
     obsidian
     logseq
     godot
-    xcfe.thunar
     firefox
     kitty
     htop
