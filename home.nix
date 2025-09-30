@@ -40,6 +40,10 @@
 	neo-tree-nvim
 	nvim-web-devicons
     ];
+
+    extraConfig = ''
+    	set clipboard=unnamedplus
+    ''
   };
 
   programs.bash = {
