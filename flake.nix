@@ -1,5 +1,5 @@
 {
-  description = "Flake";
+  description = "flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -26,7 +26,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, stylix, nixvim, ... }:
+  outputs = { nixpkgs, home-manager, ... }:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
