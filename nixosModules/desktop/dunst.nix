@@ -1,3 +1,3 @@
 { pkgs, ...}: {
-  programs.dunst.enable = true;
+  services.dunst.enable = true;
 }
