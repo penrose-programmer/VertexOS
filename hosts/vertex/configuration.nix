@@ -74,7 +74,7 @@
 
     image = pkgs.fetchurl {
       url = "https://wallpapers.com/images/high/rain-world-creature-encounter-mbw3d33fkvsproi4.webp";
-      hash = "sha256-jISNr/0ME1amHJ8ywSULyugbMPnZtBaHqbBK/HsF2OM="
+      hash = "sha256-jISNr/0ME1amHJ8ywSULyugbMPnZtBaHqbBK/HsF2OM=";
     };
 
     cursor.package = pkgs.bibata-cursors;
