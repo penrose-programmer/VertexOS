@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  services.pavucontrol.enable = true;
+  environment.systemPackages = with pkgs; [ pavucontrol ];
 }

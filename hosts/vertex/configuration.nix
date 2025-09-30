@@ -71,10 +71,6 @@
   # System-wide packages
   environment.systemPackages = with pkgs; [
 
-    # Desktop
-    pavucontrol
-    tlp
-
     # Applications
     xfce.thunar
     kitty
