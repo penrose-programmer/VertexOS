@@ -30,9 +30,6 @@
     LC_TIME = "en_AU.UTF-8";
   };
 
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = false;
 
   services.libinput.touchpad.naturalScrolling = true;
 
@@ -59,7 +56,6 @@
   nixpkgs.config.allowUnfree = true;
 
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
   programs.nm-applet.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
