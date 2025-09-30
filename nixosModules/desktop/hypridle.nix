@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   environment.systemPackages = pkgs.hypridle;
 
-  programs.hypridle.enable = true;
+  services.hypridle.enable = true;
 }
