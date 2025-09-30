@@ -4,7 +4,7 @@
   imports =
   [
     ./hardware-configuration.nix
-    # ./../../nixosModules/desktop/dunst.nix
+    ./../../nixosModules/desktop/rofi.nix
   ];
 
   # Bootloader

@@ -1,0 +1,3 @@
+{ pkgs, ... }: {
+  rofi.enable = true;
+}
