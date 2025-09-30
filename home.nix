@@ -33,9 +33,6 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
 
-    colorschemes.catppuccin.enable = true;
-    plugins.lualine.enable = true;
-
     extraPlugins = with pkgs.vimPlugins; [
 	nvim-treesitter
 	neo-tree-nvim
