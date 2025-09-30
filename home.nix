@@ -28,7 +28,7 @@
     gemini-cli
   ];
 
-  programs.nixvim = { 
+  nixvim = { 
     enable = true; 
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
