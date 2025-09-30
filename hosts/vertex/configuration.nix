@@ -4,6 +4,7 @@
   imports =
   [
     ./hardware-configuration.nix
+    ./../../nixosModules/desktop/hypridle.nix
   ];
 
   # Bootloader
@@ -72,17 +73,12 @@
   environment.systemPackages = with pkgs; [
 
     # Desktop
-    hypridle
-    rofi
     pavucontrol
     tlp
 
     # Applications
     xfce.thunar
-    file-roller
-    xfce.thunar-archive-plugin
     kitty
-    vlc
     htop
 
     # Screenshot
@@ -91,8 +87,6 @@
     slurp
     wl-clipboard
 
-    # Misc
-    udisks
   ];
 
   programs.tmux = {

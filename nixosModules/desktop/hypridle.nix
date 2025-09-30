@@ -1,0 +1,3 @@
+{ pkgs, ... }: {
+  hypridle.enable = true;
+}
