@@ -40,7 +40,7 @@
             home-manager.users.penrose = {
               imports = [
                 ./home.nix
-          	nixvim.nixosModules.nixvim
+          	nixvim.homeModules.nixvim
               ];
             };
           }
