@@ -57,8 +57,8 @@
   programs.kitty = {
     enable = true;
 
-    font.name = "FiraCode Nerd Font";
-    font.size = 12;
+    font.name = "Jetbrains Mono Nerd Font";
+    font.size = 10;
 
     settings = {
       background = "#161616";
