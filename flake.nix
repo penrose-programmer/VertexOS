@@ -26,15 +26,15 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, inputs, ... }:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
           ./configuration.nix
-          home-manager.nixosModules.home-manager
-	  stylix.nixosModules.stylix
+          inputs.home-manager.nixosModules.home-manager
+	  inputs.stylix.nixosModules.stylix
 
           {
             home-manager.useGlobalPkgs = true;
