@@ -28,10 +28,12 @@
     gemini-cli
   ];
 
-  nixvim = { 
+  programs.nixvim = { 
     enable = true; 
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
+
+    colorschemes.oxocarbon.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
 	nvim-treesitter
