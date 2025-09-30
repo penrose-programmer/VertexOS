@@ -44,8 +44,6 @@
   # Keyboard layout
   services.xserver.xkb = {
     layout = "us";
-    variant = "dvorak";
-    options = "grp:win_space_toggle";
   };
 
   # Enable sound (PipeWire)
@@ -68,95 +66,24 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # System-wide packages
-  environment.systemPackages = with pkgs; [
-
-    # Applications
-    xfce.thunar
-    kitty
-    htop
-
-    # Screenshot
-    grim
-    swappy
-    slurp
-    wl-clipboard
-
-  ];
-
-  programs.tmux = {
-    enable = true;
-  };
-
-  services.ollama = {
-    enable = true;
-    loadModels = [ "gemma3:4b" "llama3.1:8b" "qwen3:14b" ];
-  };
-
   stylix = {
-    base16Scheme = {
-        base00 = "1e1e2e"; # base
-        base01 = "181825"; # mantle
-        base02 = "313244"; # surface0
-        base03 = "45475a"; # surface1
-        base04 = "585b70"; # surface2
-        base05 = "cdd6f4"; # text
-        base06 = "f5e0dc"; # rosewater
-        base07 = "b4befe"; # lavender
-        base08 = "f38ba8"; # red
-        base09 = "fab387"; # peach
-        base0A = "f9e2af"; # yellow
-        base0B = "a6e3a1"; # green
-        base0C = "94e2d5"; # teal
-        base0D = "89b4fa"; # blue
-        base0E = "cba6f7"; # mauve
-        base0F = "f2cdcd"; # flamingo
-      };
+    enable = true;
+    autoEnable = false;
 
-      enable = true;
-      autoEnable = false;
+    cursor.package = pkgs.bibata-cursors;
+    cursor.name = "Bibata-Modern-Classic";
+    cursor.size = 24;
+   };
 
-      cursor.package = pkgs.bibata-cursors;
-      cursor.name = "Bibata-Modern-Classic";
-      cursor.size = 24;
-
-      fonts = {
-        monospace = {
-           package = pkgs.jetbrains-mono;
-           name = "JetBrainsMono";
-        };
-        sansSerif = {
-          package = pkgs.rubik;
-          name = "Rubik";
-        };
-        serif = {
-          package = pkgs.noto-fonts;
-          name = "Noto Serif";
-        };
-      };
-  };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    rubik
-    noto-fonts
-  ];
+  fonts.packages = pkgs.nerd-fonts.jetbrains-mono;
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   programs.nm-applet.enable = true;
 
-  programs.firefox.enable = true;
-
-  programs.git.enable = true;
-
   programs.hyprland.enable = true;
-  
   programs.hyprlock.enable = true;
 
-  # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # System state version
   system.stateVersion = "25.05";
 }

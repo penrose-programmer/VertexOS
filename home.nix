@@ -17,12 +17,18 @@
     obsidian
     logseq
     godot
+    xcfe.thunar
+    firefox
+    kitty
+    htop
 
     # Terminal
     neofetch
     ripgrep
     nnn
     gh
+    tmux
+    git
 
     # AI
     gemini-cli
@@ -54,6 +60,10 @@
 
   };
 
+  services.ollama = {
+      enable = true;
+      loadModels = [ "gemma3:4b" "llama3.1:8b" "qwen3:14b" ];
+  };
   
   programs.kitty = {
     enable = true;
