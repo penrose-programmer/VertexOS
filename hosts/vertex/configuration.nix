@@ -72,6 +72,10 @@
     enable = true;
     autoEnable = false;
 
+    stylix.image = pkgs.fetchurl {
+      url = "https://wallpapers.com/images/high/rain-world-creature-encounter-mbw3d33fkvsproi4.webp";
+    };
+
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Classic";
     cursor.size = 24;
