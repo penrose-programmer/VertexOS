@@ -19,6 +19,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+	url = "github:nix-community/stylix"
+	inputs.nixpkgs.follows = "nixpkgs";
+    }
+
   };
 
   outputs = { nixpkgs, home-manager, nixvim, ... }:
@@ -29,6 +34,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+	  stylix.nixosModules.stylix
 
           {
             home-manager.useGlobalPkgs = true;
