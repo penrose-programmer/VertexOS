@@ -6,19 +6,15 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Hostname
   networking.hostName = "vertex";
 
-  # Enable networking
   networking.networkmanager = {
     enable = true;
   };
 
-  # Time zone and locale
   time.timeZone = "Australia/Sydney";
 
   i18n.defaultLocale = "en_AU.UTF-8";
@@ -34,21 +30,19 @@
     LC_TIME = "en_AU.UTF-8";
   };
 
-  # Enable X11 and GNOME
   services.xserver.enable = true;
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = false;
 
   services.libinput.touchpad.naturalScrolling = true;
 
-  # Keyboard layout
   services.xserver.xkb = {
     layout = "us";
   };
 
-  # Enable sound (PipeWire)
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -56,54 +50,17 @@
     pulse.enable = true;
   };
 
-  # Users
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
     extraGroups = [ "networkmanager" "wheel" "dialout" ];
   };
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  programs.thunar.enable = true;
-
-  stylix = {
-    enable = true;
-    autoEnable = false;
-
-    base16Scheme = {
-      base00 = "212121";
-      base01 = "303030";
-      base02 = "353535";
-      base03 = "4A4A4A";
-      base04 = "B2CCD6";
-      base05 = "EEFFFF";
-      base06 = "EEFFFF";
-      base07 = "FFFFFF";
-      base08 = "F07178";
-      base09 = "F78C6C";
-      base0A = "FFCB6B";
-      base0B = "C3E88D";
-      base0C = "89DDFF";
-      base0D = "82AAFF";
-      base0E = "C792EA";
-      base0F = "FF5370";
-    };
-
-    cursor.package = pkgs.bibata-cursors;
-    cursor.name = "Bibata-Modern-Classic";
-    cursor.size = 24;
-   };
-
-  fonts.packages = pkgs.nerd-fonts.jetbrains-mono;
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
   programs.nm-applet.enable = true;
-
-  programs.hyprland.enable = true;
-  programs.hyprlock.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.05";
