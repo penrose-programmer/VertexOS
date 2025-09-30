@@ -1,5 +1,7 @@
 { pkgs, ... }: {
   imports = [
-    ./desktop/.
+    ./desktop/hypridle.nix
+    ./desktop/pavucontrol.nix
+    ./desktop/tlp.nix
   ];
 }
