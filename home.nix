@@ -41,9 +41,8 @@
 	nvim-web-devicons
     ];
 
-    extraConfig = ''
-    	set clipboard=unnamedplus
-    '';
+    clipboard.register = "unnamedplus";
+
   };
 
   programs.bash = {
