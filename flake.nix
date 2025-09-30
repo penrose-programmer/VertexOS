@@ -32,7 +32,7 @@
         system = "x86_64-linux";
 
         modules = [
-          .hosts/vertex/configuration.nix
+          ./hosts/vertex/configuration.nix
           home-manager.nixosModules.home-manager
 	  inputs.stylix.nixosModules.stylix
 
