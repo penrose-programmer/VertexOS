@@ -11,9 +11,7 @@
 
   networking.hostName = "vertex";
 
-  networking.networkmanager = {
-    enable = true;
-  };
+  networking.networkmanager.enable = true;
 
   time.timeZone = "Australia/Sydney";
 
@@ -30,23 +28,6 @@
     LC_TIME = "en_AU.UTF-8";
   };
 
-
-  services.libinput.touchpad.naturalScrolling = true;
-
-  services.xserver.xkb = {
-    layout = "us";
-  };
-
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
@@ -54,9 +35,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  hardware.bluetooth.enable = true;
-  programs.nm-applet.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.05";

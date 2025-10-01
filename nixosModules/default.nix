@@ -9,10 +9,9 @@
     ./applications/thunar.nix
     ./applications/firefox.nix
     ./applications/rofi.nix
+    ./applications/nm-applet.nix
 
-    ./hypr/hypridle.nix
-    ./hypr/hyprland.nix
-    ./hypr/hyprlock.nix
+    ./hypr/hypr.nix
 
     ./services/services.nix
   ];
