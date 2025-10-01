@@ -4,5 +4,6 @@
     ./applications/nixvim.nix
     ./applications/neofetch.nix
     ./applications/tmux.nix
+    ./applications/kitty.nix
   ];
 }
