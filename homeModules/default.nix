@@ -10,5 +10,8 @@
 
     ./git/git.nix
     ./git/gh.nix
+
+    ./hypr/hyprland.nix
+    ./hypr/hypridle.nix
   ];
 }
