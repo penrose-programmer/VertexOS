@@ -4,6 +4,7 @@
 
     plugins = with pkgs.tmuxPlugins; [
       vim-tmux-navigator
+      tmux-nova
     ];
   };
 }
