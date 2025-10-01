@@ -1,4 +1,4 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, pkgs, ... }: {
   services.kanata = {
     enable = true;
     keyboards = {
