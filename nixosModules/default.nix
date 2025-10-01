@@ -16,5 +16,6 @@
     ./hypr/hypr.nix
 
     ./services/services.nix
+    ./services/kanata.nix
   ];
 }
