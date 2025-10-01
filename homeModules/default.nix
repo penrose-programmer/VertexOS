@@ -7,6 +7,7 @@
     ./applications/kitty.nix
     ./applications/bash.nix
     ./applications/firefox.nix
+    ./applications/pnpm.nix
 
     ./git/git.nix
     ./git/gh.nix
