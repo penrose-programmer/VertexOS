@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  programs.kitty.enable = true;
+  environment.systemPackages = with pkgs; [ kitty ];
 }

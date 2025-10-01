@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  programs.htop.enable = true;
+  environment.systemPackages = with pkgs; [ htop ];
 }
