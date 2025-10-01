@@ -23,6 +23,7 @@
       bind-key k select-pane -U
       bind-key l select-pane -R
       
+      set -g @nova-segment-mode-colors "#50fa7b #282a36"
     '';
   };
 }
