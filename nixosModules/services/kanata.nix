@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }: {
   services.kanata = {
-    enable = true;
+    enable = false;
     keyboards = {
       internalKeyboard = {
         devices = [];
