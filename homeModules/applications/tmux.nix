@@ -24,7 +24,7 @@
       bind-key l select-pane -R
       
       # Set segment colours to oxocarbon
-      set -g @nova-segment-mode-colors "#be95ff #262626"
+      set -g @nova-segment-mode-colors "#ffffff #161616"
     '';
     
     package = pkgs.writeShellScriptBin "tmux" ''
