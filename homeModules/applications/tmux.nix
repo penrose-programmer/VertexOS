@@ -23,8 +23,6 @@
       bind-key k select-pane -U
       bind-key l select-pane -R
       
-      # Set segment colours to oxocarbon
-      set -g @nova-segment-mode-colors "#ffffff #161616"
     '';
   };
 }
