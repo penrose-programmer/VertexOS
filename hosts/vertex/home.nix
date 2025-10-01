@@ -4,25 +4,6 @@
   home.username = "penrose";
   home.homeDirectory = "/home/penrose";
 
-  programs.git = {
-    enable = true;
-    userName = "penrose-programmer";
-    userEmail = "syedtalhahahmed@gmail.com";
-
-    extraConfig = {
-      credential.helper = "cache --timeout=3600";
-    };
-  };
-
-  programs.gh = {
-    enable = true;
-    settings.git_protocol = "https";
-  };
-
-  programs.firefox = {
-    enable = true;
-  };
- 
   services.hypridle = {
     enable = true;
     settings = {

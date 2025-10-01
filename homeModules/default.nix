@@ -6,5 +6,9 @@
     ./applications/tmux.nix
     ./applications/kitty.nix
     ./applications/bash.nix
+    ./applications/firefox.nix
+
+    ./git/git.nix
+    ./git/gh.nix
   ];
 }
