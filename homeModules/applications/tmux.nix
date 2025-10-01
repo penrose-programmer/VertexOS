@@ -11,7 +11,7 @@
         plugin = tmux-nova;
 
         extraConfig = ''
-          set -g @nova-segment-mode-colors "#ffffff #ffffff"
+          set -g @nova-segment-mode-colors "#78a2c1 #2e3440"
         '';
       }
     ];
