@@ -5,7 +5,7 @@
     plugins = with pkgs.tmuxPlugins; [
       { 
         plugin = vim-tmux-navigator 
-      }
+      };
 
       { 
         plugin = tmux-nova
@@ -15,7 +15,7 @@
 
           set -g @nova-segment-mode-colors "#ffffff #ffffff"
         ''
-      }
+      };
     ];
 
     
