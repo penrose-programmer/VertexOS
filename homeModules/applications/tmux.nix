@@ -3,8 +3,19 @@
     enable = true;
 
     plugins = with pkgs.tmuxPlugins; [
-      vim-tmux-navigator
-      tmux-nova
+      { 
+        plugin = vim-tmux-navigator 
+      }
+
+      { 
+        plugin = tmux-nova
+
+        extraConfig = ''
+          source-file ${pkgs.tmuxPlugins.tmux-nova}/share/tmux/nova.tmux
+
+          set -g @nova-segment-mode-colors "#ffffff #ffffff"
+        ''
+      }
     ];
 
     
@@ -22,8 +33,6 @@
       bind-key j select-pane -D
       bind-key k select-pane -U
       bind-key l select-pane -R
-      
-      set -g @nova-segment-mode-colors "#ffffff #ffffff"
     '';
   };
 }
