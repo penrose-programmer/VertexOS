@@ -26,9 +26,5 @@
       # Set segment colours to oxocarbon
       set -g @nova-segment-mode-colors "#ffffff #161616"
     '';
-    
-    package = pkgs.writeShellScriptBin "tmux" ''
-        exec ${pkgs.tmux}/bin/tmux -f "$HOME/.config/tmux/tmux.conf" "$@"
-    '';
   };
 }
