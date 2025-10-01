@@ -11,6 +11,7 @@
       nvim-treesitter
       neo-tree-nvim
       nvim-web-devicons
+      vim-tmux-navigator
     ];
 
     globalOpts = {
