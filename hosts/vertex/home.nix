@@ -12,14 +12,8 @@
 
     # Applications
     p3x-onenote
-    protonvpn-gui
     obs-studio
     obsidian
-    logseq
-    godot
-    firefox
-    kitty
-    htop
 
     # Terminal
     neofetch

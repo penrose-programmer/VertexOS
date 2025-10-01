@@ -10,6 +10,8 @@
     ./applications/firefox.nix
     ./applications/rofi.nix
     ./applications/nm-applet.nix
+    ./applications/htop.nix
+    ./applications/kitty.nix
 
     ./hypr/hypr.nix
 
