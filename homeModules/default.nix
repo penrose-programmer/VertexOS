@@ -5,5 +5,6 @@
     ./applications/neofetch.nix
     ./applications/tmux.nix
     ./applications/kitty.nix
+    ./applications/bash.nix
   ];
 }
