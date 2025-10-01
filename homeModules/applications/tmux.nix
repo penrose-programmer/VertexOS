@@ -27,6 +27,8 @@
       set -g @nova-segment-mode-colors "#be95ff #262626"
     '';
     
-    xdg.configFile = true;
+    package = pkgs.writeShellScriptBin "tmux" ''
+        exec ${pkgs.tmux}/bin/tmux -f "$HOME/.config/tmux/tmux.conf" "$@"
+    '';
   };
 }
