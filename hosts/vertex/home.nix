@@ -4,29 +4,6 @@
   home.username = "penrose";
   home.homeDirectory = "/home/penrose";
 
-  xresources.properties = {
-    "Xft.dpi" = 172;
-  };
-
-  home.packages = with pkgs; [
-
-    # Applications
-    p3x-onenote
-    obs-studio
-    obsidian
-
-    # Terminal
-    neofetch
-    ripgrep
-    nnn
-    gh
-    tmux
-    git
-
-    # AI
-    gemini-cli
-  ];
-
   programs.nixvim = { 
     enable = true; 
     defaultEditor = true;
@@ -52,6 +29,9 @@
     clipboard.register = "unnamedplus";
   };
 
+  programs.neofetch.enable = true;
+
+  programs.tmux.enable = true;
   
   programs.kitty = {
     enable = true;
@@ -239,6 +219,10 @@
         kb_options = "grp:win_space_toggle";
       };
     };
+  };
+
+  xresources.properties = {
+      "Xft.dpi" = 172;
   };
 
   home.stateVersion = "25.05";
