@@ -48,6 +48,7 @@
             home-manager.users.penrose = {
               imports = [
                 ./hosts/vertex/home.nix
+                ./homeModules/default.nix
           	inputs.nixvim.homeModules.nixvim
               ];
             };
