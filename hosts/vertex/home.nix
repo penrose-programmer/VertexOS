@@ -29,7 +29,7 @@
     clipboard.register = "unnamedplus";
   };
 
-  environment.systemPackages = [
+  environment.homePackages = [
     pkgs.neofetch
   ];
 
