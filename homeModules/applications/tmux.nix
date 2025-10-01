@@ -26,5 +26,7 @@
       # Set segment colours to oxocarbon
       set -g @nova-segment-mode-colors "#be95ff #262626"
     '';
+    
+    xdg.configFile = true;
   };
 }
