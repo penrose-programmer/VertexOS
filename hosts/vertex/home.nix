@@ -4,7 +4,6 @@
   home.username = "penrose";
   home.homeDirectory = "/home/penrose";
 
-  
   programs.kitty = {
     enable = true;
 
