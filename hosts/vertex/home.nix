@@ -29,7 +29,9 @@
     clipboard.register = "unnamedplus";
   };
 
-  programs.neofetch.enable = true;
+  environment.systemPackages = [
+    pkgs.neofetch
+  ];
 
   programs.tmux.enable = true;
   
