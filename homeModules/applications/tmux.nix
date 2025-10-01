@@ -4,18 +4,18 @@
 
     plugins = with pkgs.tmuxPlugins; [
       { 
-        plugin = vim-tmux-navigator 
-      };
+        plugin = vim-tmux-navigator;
+      }
 
       { 
-        plugin = tmux-nova
+        plugin = tmux-nova;
 
         extraConfig = ''
           source-file ${pkgs.tmuxPlugins.tmux-nova}/share/tmux/nova.tmux
 
           set -g @nova-segment-mode-colors "#ffffff #ffffff"
-        ''
-      };
+        '';
+      }
     ];
 
     
