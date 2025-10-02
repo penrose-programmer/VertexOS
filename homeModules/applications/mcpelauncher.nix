@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   home.packages = [
-    pkgs.mcpe-launcher-ui-qt
+    pkgs.mcpelauncher-ui-qt
   ];
 }

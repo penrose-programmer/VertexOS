@@ -8,7 +8,7 @@
     ./applications/bash.nix
     ./applications/firefox.nix
     ./applications/pnpm.nix
-    ./applications/mcpe-launcher.nix
+    ./applications/mcpelauncher.nix
 
     ./git/git.nix
     ./git/gh.nix
