@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   home.packages = [
-    pkgs.prismlauncher
+    pkgs.mcpe-launcher-ui-qt
   ];
 }
