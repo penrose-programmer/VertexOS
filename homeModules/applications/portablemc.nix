@@ -1,5 +1,5 @@
 { pkgs, ... }: {
   home.packages = [
-    pkgs.mcpelauncher-ui-qt
+    pkgs.portablemc
   ];
 }
