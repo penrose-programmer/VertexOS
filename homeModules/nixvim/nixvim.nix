@@ -29,12 +29,14 @@
 
         mapping = {
           "<C-Space>" = "cmp.mapping.complete()";
-          "<CR>"      = "cmp.mapping.confirm({ select = true })";
+          "<Tab>"      = "cmp.mapping.confirm({ select = true })";
         };
       };
     };
     
     plugins.cmp-nvim-lsp.enable = true;
+
+    plugins.telescope.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
