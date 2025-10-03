@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     nixd
-  ]
+  ];
 
   programs.nixvim = { 
     enable = true; 
