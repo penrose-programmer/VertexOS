@@ -21,13 +21,15 @@
  
     plugins.cmp = {
       enable = true;
-        settings = {
-          autoEnableSources = true;
-          sources = [
-            { name = "nvim_lsp"; }
-          ];
-        };
+      settings = {
+        autoEnableSources = true;
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
       };
+    };
 
     plugins.cmp-nvim-lsp.enable = true;
 
@@ -38,7 +40,7 @@
       vim-tmux-navigator
       nvim-cmp
     ];
-
+    
     globalOpts = {
       expandtab = true;
       shiftwidth = 2;
