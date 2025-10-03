@@ -15,7 +15,7 @@
       neo-tree-nvim
       nvim-web-devicons
       vim-tmux-navigator
-      telescope-nvim
+      telescope-fzf-native-nvim
       nvim-cmp
     ];
 
@@ -42,10 +42,17 @@
         };
       };
     };
+
+    plugins.telescope = {
+      enable = true;
+      extensions = {
+        fzf-native = {
+          enable = true;
+        };
+      };
+    };
     
     plugins.cmp-nvim-lsp.enable = true;
-
-    plugins.telescope.enable = true;
 
     plugins.web-devicons.enable = true;
 
