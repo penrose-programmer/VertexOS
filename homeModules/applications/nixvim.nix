@@ -10,6 +10,8 @@
       servers.nil_ls.enable = true;
     };
 
+    plugins.conform-nvim.enable = true;
+
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
       neo-tree-nvim
