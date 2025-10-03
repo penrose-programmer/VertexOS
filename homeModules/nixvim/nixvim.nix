@@ -57,64 +57,10 @@
     keymaps = [
     {
       mode = "n";
-      key = "<leader>q";
-      action = "<cmd>echo 'hi'<cr>";
+      key = "<leader>e";
+      action = "<cmd>Neotree toggle<CR>";
       options = {
         desc = "Leader Test";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>ff";
-      action = ":Telescope find_files";
-      options = {
-        silent = true;
-        desc = "Find Files";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>fg";
-      action = ":Telescope live_grep";
-      options = {
-        silent = true;
-        desc = "Grep Files";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>fb";
-      action = ":Telescope buffers";
-      options = {
-        silent = true;
-        desc = "Find Buffer";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>fh";
-      action = ":Telescope help_tags";
-      options = {
-        silent = true;
-        desc = "Find Help";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>fd";
-      action = ":Telescope diagnostics";
-      options = {
-        silent = true;
-        desc = "Find Diagnostics";
-      };
-    }
-    {
-      mode = "n";
-      key = "<leader>ft";
-      action = ":Telescope treesitter";
-      options = {
-        silent = true;
-        desc = "Find Treesitter";
       };
     }
   ];
