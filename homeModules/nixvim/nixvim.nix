@@ -55,15 +55,15 @@
     };
 
     keymaps = [
-    {
-      mode = "n";
-      key = "<C-m>";
-      action = "<cmd>Neotree toggle<CR>";
-      options = {
-        desc = "Leader Test";
-      };
-    }
-  ];
+      {
+        mode = "n";
+        key = "<leader>m";
+        action = "<cmd>Neotree toggle<CR>";
+        options = {
+          desc = "Leader Test";
+        };
+      }
+    ];
     
     plugins.cmp-nvim-lsp.enable = true;
 
