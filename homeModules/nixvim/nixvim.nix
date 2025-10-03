@@ -9,6 +9,8 @@
     enable = true;
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
+    
+    globals.mapLeader = " ";
 
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
