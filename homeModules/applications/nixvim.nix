@@ -23,6 +23,8 @@
       ];
     };
 
+    plugins.cmp-nvim-lsp.enable = true;
+
     plugins.conform-nvim.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
