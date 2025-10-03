@@ -57,7 +57,7 @@
     keymaps = [
     {
       mode = "n";
-      key = "<leader>a";
+      key = "<leader>q";
       action = ":echo hi";
       options = {
         silent = true;
