@@ -8,6 +8,7 @@
     ./applications/firefox.nix
     ./applications/pnpm.nix
     ./applications/portablemc.nix
+    ./applications/rp.nix
 
     ./git/git.nix
     ./git/gh.nix
