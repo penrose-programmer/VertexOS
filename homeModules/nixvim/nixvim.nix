@@ -44,7 +44,7 @@
       telescope-nvim
       nvim-cmp
     ];
-    
+
     globalOpts = {
       expandtab = true;
       shiftwidth = 2;
