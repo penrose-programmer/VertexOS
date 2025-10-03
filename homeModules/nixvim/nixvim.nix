@@ -57,6 +57,15 @@
     keymaps = [
     {
       mode = "n";
+      key = "<leader>a";
+      action = ":echo hi";
+      options = {
+        silent = true;
+        desc = "Leader Test";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>ff";
       action = ":Telescope find_files";
       options = {
