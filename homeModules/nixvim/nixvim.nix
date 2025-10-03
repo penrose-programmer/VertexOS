@@ -57,19 +57,8 @@
     keymaps = [
     {
       mode = "n";
-      key = "<mapLeader>f";
-      action = "???";
-      #    lua = true;
-      options = {
-        silent = true;
-        desc = "  Find";
-      };
-    }
-    {
-      mode = "n";
-      key = "<mapLeader>ff";
+      key = "<leader>ff";
       action = ":Telescope find_files";
-      #    lua = true;
       options = {
         silent = true;
         desc = "Find Files";
@@ -78,8 +67,7 @@
     {
       mode = "n";
       key = "<leader>fg";
-      action = "<cmd>lua require('telescope.builtin').live_grep()<CR>";
-      #    lua = true;
+      action = ":Telescope live_grep";
       options = {
         silent = true;
         desc = "Grep Files";
@@ -88,8 +76,7 @@
     {
       mode = "n";
       key = "<leader>fb";
-      action = "<cmd>lua require('telescope.builtin').buffers()<CR>";
-      #    lua = true;
+      action = ":Telescope buffers";
       options = {
         silent = true;
         desc = "Find Buffer";
@@ -98,8 +85,7 @@
     {
       mode = "n";
       key = "<leader>fh";
-      action = "<cmd>lua require('telescope.builtin').help_tags()<CR>";
-      #    lua = true;
+      action = ":Telescope help_tags";
       options = {
         silent = true;
         desc = "Find Help";
@@ -108,8 +94,7 @@
     {
       mode = "n";
       key = "<leader>fd";
-      action = "<cmd>lua require('telescope.builtin').diagnostics()<CR>";
-      #    lua = true;
+      action = ":Telescope diagnostics";
       options = {
         silent = true;
         desc = "Find Diagnostics";
@@ -118,8 +103,7 @@
     {
       mode = "n";
       key = "<leader>ft";
-      action = "<cmd>lua require('telescope.builtin').treesitter()<CR>";
-      #    lua = true;
+      action = ":Telescope treesitter";
       options = {
         silent = true;
         desc = "Find Treesitter";
