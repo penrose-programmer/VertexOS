@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   imports = [
     ./applications/applications.nix
-    ./applications/nixvim.nix
     ./applications/neofetch.nix
     ./applications/tmux.nix
     ./applications/kitty.nix
@@ -15,5 +14,7 @@
 
     ./hypr/hyprland.nix
     ./hypr/hypridle.nix
+
+    ./nixvim/nixvim.nix
   ];
 }

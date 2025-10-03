@@ -1,6 +1,7 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
-    nixd
+
+  imports = [
+    ./lsp.nix
   ];
 
   programs.nixvim = {
@@ -10,19 +11,15 @@
 
     colorschemes.ayu.enable = true;
 
-    plugins.lsp = {
-      enable = true;
-      inlayHints = true;
-
-      servers = {
-        nixd.enable = true;
-      };
-    };
- 
     plugins.cmp = {
       enable = true;
       settings = {
+        completion = {
+          completeopt = "menu,menuone,noinsert";
+        };
+
         autoEnableSources = true;
+
         sources = [
           { name = "nvim_lsp"; }
           { name = "path"; }
