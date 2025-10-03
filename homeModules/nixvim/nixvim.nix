@@ -60,7 +60,6 @@
       key = "<leader>q";
       action = "<cmd>echo 'hi'<cr>";
       options = {
-        silent = true;
         desc = "Leader Test";
       };
     }
