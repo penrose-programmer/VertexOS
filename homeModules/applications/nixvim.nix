@@ -10,12 +10,15 @@
 
     colorschemes.ayu.enable = true;
 
+    plugins.nixd.enable = true;
+
     plugins.lsp = {
       enable = true;
       inlayHints = true;
 
       servers = {
         nixd.enable = true;
+        
       };
     };
 
