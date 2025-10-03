@@ -25,6 +25,11 @@
           { name = "path"; }
           { name = "buffer"; }
         ];
+
+        mapping = {
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<CR>"      = "cmp.mapping.confirm({ select = true })";
+        };
       };
     };
 
