@@ -10,6 +10,15 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
 
+    extraPlugins = with pkgs.vimPlugins; [
+      nvim-treesitter
+      neo-tree-nvim
+      nvim-web-devicons
+      vim-tmux-navigator
+      telescope-nvim
+      nvim-cmp
+    ];
+
     colorschemes.ayu.enable = true;
 
     plugins.cmp = {
@@ -38,14 +47,7 @@
 
     plugins.telescope.enable = true;
 
-    extraPlugins = with pkgs.vimPlugins; [
-      nvim-treesitter
-      neo-tree-nvim
-      nvim-web-devicons
-      vim-tmux-navigator
-      telescope-nvim
-      nvim-cmp
-    ];
+    plugins.web-devicons.enable = true;
 
     globalOpts = {
       expandtab = true;
