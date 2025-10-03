@@ -18,7 +18,7 @@
         nixd.enable = true;
       };
     };
-
+    
     plugins.cmp = {
       autoEnableSources = true;
       settings.sources = [
@@ -31,7 +31,7 @@
       neo-tree-nvim
       nvim-web-devicons
       vim-tmux-navigator
-      nvim-cmp
+      cmp-nvim-lsp
     ];
 
     globalOpts = {
