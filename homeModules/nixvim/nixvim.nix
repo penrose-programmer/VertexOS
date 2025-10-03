@@ -57,7 +57,7 @@
     keymaps = [
     {
       mode = "n";
-      key = "<leader>f";
+      key = "<mapLeader>f";
       action = "???";
       #    lua = true;
       options = {
@@ -67,7 +67,7 @@
     }
     {
       mode = "n";
-      key = "<leader>ff";
+      key = "<mapLeader>ff";
       action = ":Telescope find_files";
       #    lua = true;
       options = {
