@@ -57,7 +57,7 @@
     keymaps = [
     {
       mode = "n";
-      key = "<leader>e";
+      key = "<C-m>";
       action = "<cmd>Neotree toggle<CR>";
       options = {
         desc = "Leader Test";
