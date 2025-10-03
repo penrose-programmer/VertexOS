@@ -4,7 +4,7 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
 
-    colorschemes.oxocarbon.enable = true;
+    colorschemes.ayu.enable = true;
     lsp.servers.nix.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
