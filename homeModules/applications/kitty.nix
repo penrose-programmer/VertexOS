@@ -6,90 +6,48 @@
     font.size = 10;
 
     extraConfig = ''
-      # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+      # The Background/Foreground
+      background #0b0e14
+      foreground #bfbdb6
 
-      #: Color scheme {{{
+      # The Cursor Colours
+      cursor #bfbdb6
+      selection_background #2d3a4a
+      selection_foreground #bfbdb6
 
-      foreground #bfbab0
-      background #0f1419
+      # Black
+      color0  #0b0e14
 
-      #: The foreground and background colors
+      # Red
+      color1  #f07178
 
-      # background_opacity         1.0
-      # dynamic_background_opacity no
+      # Green
+      color2  #b8cc52
 
-      #: The opacity of the background. A number between 0 and 1, where 1 is
-      #: opaque and 0 is fully transparent.  This will only work if
-      #: supported by the OS (for instance, when using a compositor under
-      #: X11). Note that it only sets the default background color's
-      #: opacity. This is so that things like the status bar in vim,
-      #: powerline prompts, etc. still look good.  But it means that if you
-      #: use a color theme with a background color in your editor, it will
-      #: not be rendered as transparent.  Instead you should change the
-      #: default background color in your kitty config and not use a
-      #: background color in the editor color scheme. Or use the escape
-      #: codes to set the terminals default colors in a shell script to
-      #: launch your editor.  Be aware that using a value less than 1.0 is a
-      #: (possibly significant) performance hit.  If you want to dynamically
-      #: change transparency of windows set dynamic_background_opacity to
-      #: yes (this is off by default as it has a performance cost)
+      # Yellow
+      color3  #ffb454
 
-      # dim_opacity 0.75
+      # Blue
+      color4  #59c2ff
 
-      #: How much to dim text that has the DIM/FAINT attribute set. One
-      #: means no dimming and zero means fully dimmed (i.e. invisible).
+      # Magenta
+      color5  #d2a6ff
 
-      selection_foreground #0f1419
-      selection_background #ffb454
+      # Cyan
+      color6  #95e6cb
 
-      #: The foreground and background for text selected with the mouse
+      # White
+      color7  #bfbdb6
 
-
-      #: The 16 terminal colors. There are 8 basic colors, each color has a
-      #: dull and bright version. You can also set the remaining colors from
-      #: the 256 color table as color16 to color255.
-
-      color0 #9da2a6
-      color8 #d9dbdd
-
-      #: black
-
-      color1 #ff3333
-      color9 #f51818
-
-      #: red
-
-      color2  #bae67e
-      color10 #c2d94c
-
-      #: green
-
-      color3  #ffcc66
-      color11 #f29718
-
-      #: yellow
-
-      color4  #73d0ff
+      # Bright Variants
+      color8  #565a6e
+      color9  #f07178
+      color10 #b8cc52
+      color11 #ffb454
       color12 #59c2ff
-
-      #: blue
-
-      color5  #d4bfff
-      color13 #b77ee0
-
-      #: magenta
-
-      color6  #83cec6
-      color14 #5ccfe6
-
-      #: cyan
-
-      color7  #f0f0f0
+      color13 #d2a6ff
+      color14 #95e6cb
       color15 #ffffff
-
-      #: white
-
-      #: }}}
     '';
   };
 }
