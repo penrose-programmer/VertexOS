@@ -33,6 +33,7 @@
       neo-tree-nvim
       nvim-web-devicons
       vim-tmux-navigator
+      nvim-cmp
     ];
 
     globalOpts = {
