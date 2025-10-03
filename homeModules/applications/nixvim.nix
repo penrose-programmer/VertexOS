@@ -18,13 +18,16 @@
         nixd.enable = true;
       };
     };
-    
+ 
     plugins.cmp = {
-      autoEnableSources = true;
-      settings.sources = [
-        { name = "nvim_lsp"; }
-      ];
-    };
+      enable = true;
+        settings = {
+          autoEnableSources = true;
+          sources = [
+            { name = "nvim_lsp"; }
+          ];
+        };
+      };
 
     plugins.cmp-nvim-lsp.enable = true;
 
