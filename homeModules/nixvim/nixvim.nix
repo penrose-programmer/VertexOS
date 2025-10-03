@@ -2,6 +2,7 @@
 
   imports = [
     ./lsp.nix
+    ./gcc.nix
   ];
 
   programs.nixvim = {
@@ -32,7 +33,7 @@
         };
       };
     };
-
+    
     plugins.cmp-nvim-lsp.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
