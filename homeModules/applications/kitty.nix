@@ -6,32 +6,48 @@
     font.size = 10;
 
     extraConfig = ''
-background #0F1419
-    foreground #E6E1CF
+      # The Background/Foreground
+      background #0b0e14
+      foreground #bfbdb6
 
-    cursor #E6E1CF
-    selection_background #272D38
-    selection_foreground #E6E1CF
+      # The Cursor Colours
+      cursor #bfbdb6
+      selection_background #2d3a4a
+      selection_foreground #bfbdb6
 
-    # Normal colors
-    color0  #0F1419
-    color1  #F07178
-    color2  #B8CC52
-    color3  #FFB454
-    color4  #59C2FF
-    color5  #D2A6FF
-    color6  #95E6CB
-    color7  #E6E1CF
+      # Black
+      color0  #0b0e14
 
-    # Bright colors
-    color8  #3E4B59
-    color9  #F07178
-    color10 #B8CC52
-    color11 #FFB454
-    color12 #59C2FF
-    color13 #D2A6FF
-    color14 #95E6CB
-    color15 #F3F4F5
+      # Red
+      color1  #f07178
+
+      # Green
+      color2  #b8cc52
+
+      # Yellow
+      color3  #ffb454
+
+      # Blue
+      color4  #59c2ff
+
+      # Magenta
+      color5  #d2a6ff
+
+      # Cyan
+      color6  #95e6cb
+
+      # White
+      color7  #bfbdb6
+
+      # Bright Variants
+      color8  #565a6e
+      color9  #f07178
+      color10 #b8cc52
+      color11 #ffb454
+      color12 #59c2ff
+      color13 #d2a6ff
+      color14 #95e6cb
+      color15 #ffffff
     '';
   };
 }
