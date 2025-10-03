@@ -16,7 +16,7 @@
 
       servers = {
         nixd.enable = true;
-      ];
+      };
     };
 
     plugins.cmp = {
