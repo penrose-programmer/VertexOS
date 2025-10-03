@@ -5,7 +5,7 @@
     nixpkgs.useGlobalPackages = true;
 
     colorschemes.ayu.enable = true;
-    lsp.servers.*.enable
+    lsp.servers."*".enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
