@@ -58,7 +58,7 @@
     {
       mode = "n";
       key = "<leader>q";
-      action = "<cmd>echo hi<CR>";
+      action = "<cmd>echo 'hi'<cr>";
       options = {
         silent = true;
         desc = "Leader Test";
