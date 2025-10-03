@@ -10,7 +10,7 @@
 
     colorschemes.ayu.enable = true;
 
-    lsp.onAttach = {
+    plugins.lsp = {
       enable = true;
       inlayHints = true;
 
