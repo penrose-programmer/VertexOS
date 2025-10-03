@@ -6,8 +6,17 @@
 
     colorschemes.ayu.enable = true;
 
-    lsp = {
-      servers.nil_ls.enable = true;
+    lsp.servers = {
+      nixd.enable = true;
+    };
+
+    plugins.cmp = {
+      autoEnableSources = true;
+      settings.sources = [
+        { name = "nvim_lsp"; }
+        { name = "path"; }
+        { name = "buffer"; }
+      ];
     };
 
     plugins.conform-nvim.enable = true;
