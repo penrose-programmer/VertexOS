@@ -68,7 +68,7 @@
     {
       mode = "n";
       key = "<leader>ff";
-      action = "<cmd>lua require('telescope.builtin').find_files()<CR>";
+      action = ":Telescope find_files";
       #    lua = true;
       options = {
         silent = true;
