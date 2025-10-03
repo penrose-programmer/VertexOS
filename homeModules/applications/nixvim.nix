@@ -26,12 +26,13 @@
       ];
     };
 
+    plugins.cmp-nvim-lsp.enable = true;
+
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
       neo-tree-nvim
       nvim-web-devicons
       vim-tmux-navigator
-      cmp-nvim-lsp
     ];
 
     globalOpts = {
