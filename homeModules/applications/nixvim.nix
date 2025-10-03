@@ -7,7 +7,7 @@
     colorschemes.ayu.enable = true;
 
     lsp = {
-      servers.nixd.enable = true;
+      servers.nil_ls.enable = true;
     };
 
     extraPlugins = with pkgs.vimPlugins; [
