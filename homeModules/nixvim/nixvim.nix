@@ -41,6 +41,7 @@
       neo-tree-nvim
       nvim-web-devicons
       vim-tmux-navigator
+      telescope-nvim
       nvim-cmp
     ];
     
