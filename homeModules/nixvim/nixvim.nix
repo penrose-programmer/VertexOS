@@ -7,13 +7,13 @@
 
   programs.nixvim = {
     enable = true;
-    defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
     
     config = { 
       globals.mapLeader = " ";
       clipboard.register = "unnamedplus";
       colorschemes.ayu.enable = true;
+      defaultEditor = true;
     };
 
     extraPlugins = with pkgs.vimPlugins; [
