@@ -12,13 +12,12 @@
 
     plugins.nixd.enable = true;
 
-    plugins.lsp = {
+    lsp = {
       enable = true;
       inlayHints = true;
 
       servers = {
         nixd.enable = true;
-        
       };
     };
 
