@@ -10,12 +10,15 @@
 
     colorschemes.ayu.enable = true;
 
-    # LSP
-    lsp.servers = {
-      nixd.enable = true;
+    plugins.lsp = {
+      enable = true;
+      inlayHints = true;
+
+      servers = {
+        nixd.enable = true;
+      ];
     };
 
-    # CMP
     plugins.cmp = {
       autoEnableSources = true;
       settings.sources = [
@@ -25,11 +28,11 @@
       ];
     };
 
-    # Extra plugins
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
       neo-tree-nvim
       nvim-web-devicons
+      vim-tmux-navigator
     ];
 
     globalOpts = {
