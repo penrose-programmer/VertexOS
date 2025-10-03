@@ -10,7 +10,11 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
     
-    globals.mapLeader = " ";
+    config = { 
+      globals.mapLeader = " ";
+      clipboard.register = "unnamedplus";
+      colorschemes.ayu.enable = true;
+    };
 
     extraPlugins = with pkgs.vimPlugins; [
       nvim-treesitter
@@ -20,8 +24,6 @@
       telescope-fzf-native-nvim
       nvim-cmp
     ];
-
-    colorschemes.ayu.enable = true;
 
     plugins.cmp = {
       enable = true;
@@ -136,6 +138,5 @@
       shiftwidth = 2;
     };
 
-    clipboard.register = "unnamedplus";
   };
 }
