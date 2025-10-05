@@ -4,6 +4,7 @@
     ./lsp.nix
     ./gcc.nix
     ./plugins.nix
+    ./keymaps.nix
   ];
 
   programs.nixvim = {
@@ -12,7 +13,6 @@
     nixpkgs.useGlobalPackages = true;
     
     globals.mapLeader = " ";
-
 
     plugins.cmp = {
       enable = true;
