@@ -3,6 +3,7 @@
   imports = [
     ./lsp.nix
     ./gcc.nix
+    ./plugins.nix
   ];
 
   programs.nixvim = {
@@ -10,18 +11,8 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
     
-    globals.mapLeader = ",";
+    globals.mapLeader = " ";
 
-    extraPlugins = with pkgs.vimPlugins; [
-      nvim-treesitter
-      neo-tree-nvim
-      nvim-web-devicons
-      vim-tmux-navigator
-      telescope-fzf-native-nvim
-      nvim-cmp
-    ];
-
-    colorschemes.ayu.enable = true;
 
     plugins.cmp = {
       enable = true;
@@ -53,22 +44,7 @@
         };
       };
     };
-
-    keymaps = [
-      {
-        mode = "n";
-        key = "<leader>m";
-        action = "<cmd>Neotree toggle<CR>";
-        options = {
-          desc = "Leader Test";
-        };
-      }
-    ];
     
-    plugins.cmp-nvim-lsp.enable = true;
-
-    plugins.web-devicons.enable = true;
-
     globalOpts = {
       expandtab = true;
       shiftwidth = 2;
