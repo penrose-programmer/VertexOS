@@ -8,7 +8,9 @@
         telescope-fzf-native-nvim
         nvim-cmp
       ];
+
       plugins.web-devicons.enable = true;
       colorschemes.ayu.enable = true;
+      plugins.bufferline.enable = true;
     };
 }
