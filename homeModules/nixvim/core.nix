@@ -4,7 +4,9 @@
     defaultEditor = true;
     nixpkgs.useGlobalPackages = true;
     
-    globals.mapLeader = " ";
+    extraConfigLuaPre = ''
+      vim.g.mapleader = " "
+    '';
 
     plugins.cmp = {
       enable = true;
