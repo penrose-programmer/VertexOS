@@ -3,6 +3,8 @@
     enable = true;
     autoEnable = true;
 
+    targets.kitty.enable = false;
+
     base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
 
     cursor.package = pkgs.bibata-cursors;
