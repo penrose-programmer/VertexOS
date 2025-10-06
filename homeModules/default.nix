@@ -15,6 +15,7 @@
 
     ./hypr/hyprland.nix
     ./hypr/hypridle.nix
+    ./hypr/hyprpaper.nix
 
     ./nixvim/default.nix
   ];
