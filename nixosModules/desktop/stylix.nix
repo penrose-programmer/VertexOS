@@ -26,6 +26,6 @@
     cursor.name = "Bibata-Modern-Classic";
     cursor.size = 20;
 
-    image = ./../../wallpapers/Subterranean.png;
+    image = ./Subterranean.png;
   };
 }
