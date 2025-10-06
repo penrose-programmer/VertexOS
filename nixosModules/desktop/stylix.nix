@@ -12,7 +12,7 @@
     fonts = {
       monospace = {
          package = pkgs.jetbrains-mono;
-         name = "JetBrainsMono";
+         name = "Jetbrains Mono Nerd Font";
       };
       sansSerif = {
         package = pkgs.rubik;
