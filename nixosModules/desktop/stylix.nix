@@ -8,7 +8,5 @@
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Classic";
     cursor.size = 20;
-    
-    image = "/home/penrose/Pictures/space.jpg";
   };
 }
