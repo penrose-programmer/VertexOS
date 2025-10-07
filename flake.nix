@@ -24,6 +24,11 @@
 	inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -50,6 +55,7 @@
                 ./hosts/vertex/home.nix
                 ./homeModules/default.nix
           	inputs.nixvim.homeModules.nixvim
+                inputs.caelestia-shell
               ];
             };
           }
