@@ -56,6 +56,10 @@
                 ./homeModules/default.nix
                 inputs.nixvim.homeModules.nixvim
               ];
+
+              home.packages = [
+                inputs.caelestia-shell.packages.x86_64-linux.default
+              ];
             };
           }
         ];
