@@ -54,7 +54,7 @@
               imports = [
                 ./hosts/vertex/home.nix
                 ./homeModules/default.nix
-                nixvim.homeModules.nixvim
+                inputs.nixvim.homeModules.nixvim
               ];
             };
           }
