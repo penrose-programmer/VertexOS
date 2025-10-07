@@ -54,7 +54,6 @@
               imports = [
                 ./hosts/vertex/home.nix
                 ./homeModules/default.nix
-                "${inputs.caelestia-shell}/home-manager-module.nix"
               ];
             };
           }
