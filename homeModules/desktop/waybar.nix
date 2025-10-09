@@ -106,11 +106,7 @@ programs.waybar = {
       }
 
       #workspaces button {
-        all: unset; /* wipe default background/padding from waybar */
-        min-width: 10px;
-        min-height: 10px;
-        width: 10px;
-        height: 10px;
+        all: unset;
         margin: 0 3px;
         border-radius: 50%;
         background-color: alpha(#${config.stylix.base16Scheme.base03}, 0.7);
