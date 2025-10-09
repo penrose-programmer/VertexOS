@@ -5,6 +5,7 @@
     ./desktop/screenshot.nix
     ./desktop/clipboard.nix
     ./desktop/stylix.nix
+    ./desktop/fonts.nix
 
     ./applications/thunar.nix
     ./applications/firefox.nix
