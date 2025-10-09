@@ -3,7 +3,9 @@
     enable = true;
     autoEnable = false;
 
-    base16Scheme = pkgs.base16-schemes.ayu-dark;
+    base16Scheme = {
+      path = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+    };
 
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Classic";
