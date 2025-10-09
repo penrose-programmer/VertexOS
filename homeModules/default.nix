@@ -13,9 +13,10 @@
     ./git/git.nix
     ./git/gh.nix
 
-    ./wm/hyprland.nix
-    ./wm/hypridle.nix
-    ./wm/hyprpaper.nix
+    ./desktop/hyprland.nix
+    ./desktop/hypridle.nix
+    ./desktop/hyprpaper.nix
+    ./desktop/waybar.nix
 
     ./nixvim/default.nix
   ];
