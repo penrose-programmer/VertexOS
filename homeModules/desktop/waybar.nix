@@ -127,7 +127,7 @@ programs.waybar = {
       }
 
       #workspaces button label {
-        display: none;
+        all: unset;
       }
 
       #clock {
