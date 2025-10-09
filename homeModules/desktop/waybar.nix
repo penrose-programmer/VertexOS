@@ -118,7 +118,19 @@ programs.waybar = {
       }
 
       #workspaces button {
-        margin: 3px 6px; /* if you still want spacing between icons */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 6px;
+        margin: 0 3px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+
+      #workspaces button:focus {
+        outline: none;
+        box-shadow: none;
       }
 
       #clock {
