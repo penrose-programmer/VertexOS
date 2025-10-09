@@ -112,13 +112,13 @@ programs.waybar = {
 
       #workspaces {
         background-color: #1a1b26;
-        color: #ffffff;
         margin: 5px;
         min-width: 0;
         border: none;
       }
 
       #workspaces button {
+        color: #ffffff;
         padding: 4px 6px;
         margin: 0 3px;
         border: none;
