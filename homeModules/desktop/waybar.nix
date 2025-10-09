@@ -114,14 +114,12 @@ programs.waybar = {
       }
 
       #workspaces button:hover {
-        transform: scale(1.3);
         background-color: alpha(#${config.stylix.base16Scheme.base04}, 0.9);
       }
 
       #workspaces button.visible,
       #workspaces button.active {
         background-color: #${config.stylix.base16Scheme.base07}; /* white-ish */
-        transform: scale(1.25);
       }
 
       #workspaces button.urgent {
@@ -129,7 +127,7 @@ programs.waybar = {
       }
 
       #workspaces button label {
-        display: none; /* hide workspace numbers/names */
+        display: none;
       }
 
       #clock {
