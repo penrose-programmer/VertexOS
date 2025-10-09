@@ -97,7 +97,7 @@ programs.waybar = {
         border: none;
         outline: none;
         box-shadow: none;
-        font-family: "JetBrainsMono Nerd Font", "Rubik", Helvetica, Arial, sans-serif;
+        font-family: "JetBrainsMono", "Rubik", Helvetica, Arial, sans-serif;
         font-size: 14px;
         min-height: 0;
         background: none;
