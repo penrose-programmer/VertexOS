@@ -11,16 +11,20 @@ programs.waybar = {
           "hyprland/workspaces"
         ];
 
-        "modules-center" = ["clock"];
+        "modules-center" = [];
 
         "modules-right" = [
           "bluetooth"
           "network"
           "pulseaudio" 
           "battery"
+          "clock"
         ];
 
         "hyprland/workspaces" = {
+          "persistent-workspaces" = {
+            "*" = 3;
+          };
           "format" = "{icon}";
           "format-icons" = {
             "active" = "";
@@ -43,9 +47,8 @@ programs.waybar = {
         };
 
         "clock" = {
-          "timezone" = "Asia/Kolkata";
           "tooltip" = false;
-          "format" = "{:%H:%M:%S  -  %A, %d}";
+          "format" = "{%r %d/%m/%y}";
           "interval" = 1;
         };
 
@@ -107,14 +110,10 @@ programs.waybar = {
         font-weight: 500;
       }
 
-      #workspaces,
-      #custom-uptime,
-      #cpu {
+      #workspaces {
         background-color: #1a1b26;
         padding: 0.3rem 0.7rem;
-        margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
-        border-radius: 6px; /* These modules are always rounded */
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin: 5px 0px; 
         min-width: 0;
         border: none;
         /* Transition for background-color and color only */
@@ -122,13 +121,8 @@ programs.waybar = {
       }
 
       #workspaces {
-        padding: 2px;
-        margin-left: 7px; /* Margin from the far left edge */
-        margin-right: 5px; /* Spacing after the workspaces module */
-      }
-
-      #custom-uptime {
-        margin-right: 5px; /* Spacing after the uptime module */
+        margin-left: 3px; /* Margin from the far left edge */
+        margin-right: 3px; /* Spacing after the workspaces module */
       }
 
       #workspaces button {
