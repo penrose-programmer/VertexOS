@@ -22,6 +22,22 @@
       base0F = "E6B673";
     };
 
+    fonts = {
+      monospace = {
+         package = pkgs.jetbrains-mono;
+         name = "JetBrainsMono";
+      };
+      sansSerif = {
+        package = pkgs.rubik;
+        name = "Rubik";
+      };
+      serif = {
+        package = pkgs.noto-fonts;
+        name = "Noto Serif";
+      };
+    };
+
+
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Classic";
     cursor.size = 20;
