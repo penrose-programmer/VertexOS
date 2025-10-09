@@ -118,14 +118,14 @@ programs.waybar = {
       }
 
       #workspaces button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         padding: 4px 6px;
         margin: 0 3px;
-        background: transparent;
         border: none;
+        background: transparent;
+        outline: none;
         box-shadow: none;
+        min-width: 0;
+        min-height: 0;
       }
 
       #workspaces button:focus {
