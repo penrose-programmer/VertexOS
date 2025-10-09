@@ -3,20 +3,12 @@ programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
-        modules-right = [ "tray" "idle_inhibitor" "cpu" "memory" "network" "pulseaudio" "battery" "clock"];
+        modules-right = [ "network" "pulseaudio" "battery" "clock"];
         modules-left = [ "hyprland/workspaces" ];
 
         clock = {
           interval = 1;
           format = "{:%r %d/%m/%Y}";
-        };
-
-        "idle_inhibitor" = {
-          format = "{icon}";
-          format-icons = {
-            activated = "";
-            deactivated = "";
-          };
         };
 
         "hyprland/window" = {
@@ -27,16 +19,6 @@ programs.waybar = {
           persistent-workspaces = {
             "*" = 3;
           };
-        };
-
-        cpu = {
-          format = "CPU {usage}%";
-          on-click = "kitty htop";
-        };
-
-        memory = {
-          format = "MEM {}%";
-          on-click = "kitty htop";
         };
 
         pulseaudio = {
@@ -98,7 +80,7 @@ programs.waybar = {
         outline: none;
         box-shadow: none;
         font-family: "JetBrainsMono Nerd Font",  Arial, sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         min-height: 0;
         background: none;
         color: #${config.stylix.base16Scheme.base05};
@@ -106,47 +88,52 @@ programs.waybar = {
 
       .modules-left {
         background: alpha( #${config.stylix.base16Scheme.base00}, 0.5);
-        border-radius: 50px;
+        border-radius: 5px;
         padding: 4 2 4 2;
         margin: 10 0 0 10;
       }
 
       .modules-right {
         background: alpha( #${config.stylix.base16Scheme.base00}, 0.5);
-        border-radius: 50px;
+        border-radius: 5px;
         padding: 4 0 4 2;
         margin: 10 10 0 0;
       }
 
+
+      #workspaces {
+        padding: 0 4 0 4;
+      }
+
       #workspaces button {
-        background-color: alpha(#${config.stylix.base16Scheme.base01}, 0.5);
-        margin: 0 1 0 1;
-        border-radius: 0px;
-        padding: 2 4 2 4;
-      }
-
-      #workspaces button:first-child {
-        border-radius: 50 0 0 50;
-        padding: 2 6 2 12;
-        margin: 0 1 0 2;
-      }
-
-      #workspaces button:last-child {
-        border-radius: 0 50 50 0;
-        padding: 2 12 2 6;
-        margin: 0 2 0 1;
+        all: unset; /* wipe default background/padding from waybar */
+        min-width: 10px;
+        min-height: 10px;
+        width: 10px;
+        height: 10px;
+        margin: 0 3px;
+        border-radius: 50%;
+        background-color: alpha(#${config.stylix.base16Scheme.base03}, 0.7);
+        transition: background 0.2s ease, transform 0.15s ease;
       }
 
       #workspaces button:hover {
-        background-color: shade( alpha(#${config.stylix.base16Scheme.base01}, 0.5), 0.9);
+        transform: scale(1.3);
+        background-color: alpha(#${config.stylix.base16Scheme.base04}, 0.9);
       }
 
-      #workspaces button.visible {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
+      #workspaces button.visible,
+      #workspaces button.active {
+        background-color: #${config.stylix.base16Scheme.base07}; /* white-ish */
+        transform: scale(1.25);
       }
 
-      #workspaces button.visible:hover {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.6);
+      #workspaces button.urgent {
+        background-color: #${config.stylix.base16Scheme.base08}; /* red-ish */
+      }
+
+      #workspaces button label {
+        display: none; /* hide workspace numbers/names */
       }
 
       #clock {
@@ -174,33 +161,6 @@ programs.waybar = {
         border-radius: 0px;
         padding: 0 10 0 10;
         margin: 0 1 0 1;
-      }
-
-      #memory {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
-        border-radius: 0px;
-        padding: 0 10 0 10;
-        margin: 0 1 0 1;
-      }
-
-      #cpu  {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
-        border-radius: 0px;
-        padding: 0 15 0 10;
-        margin: 0 1 0 1;
-      }
-
-      #idle_inhibitor {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
-        border-radius: 0px;
-        border-radius: 50 0 0 50;
-        padding: 0 15 0 10;
-        margin: 0 1 0 1
-      }
-
-      #tray {
-        padding: 0 5 0 10;
-        margin: 0 1 0 2;
       }
 
       @keyframes blink
