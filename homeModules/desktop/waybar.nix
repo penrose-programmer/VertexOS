@@ -112,14 +112,13 @@ programs.waybar = {
 
       #workspaces {
         background-color: #1a1b26;
-        padding: 3px;
-        margin: 0; /* remove offset */
+        margin: 5px;
         min-width: 0;
         border: none;
       }
 
       #workspaces button {
-        margin: 0 3px; /* if you still want spacing between icons */
+        margin: 3px 6px; /* if you still want spacing between icons */
       }
 
       #clock {
