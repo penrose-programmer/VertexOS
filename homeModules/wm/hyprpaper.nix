@@ -2,8 +2,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "/home/penrose/Pictures/space.jpg" ];
-      wallpaper = [ ",/home/penrose/Pictures/space.jpg" ];
+      preload = [ "/home/penrose/Pictures/Subterranean.png" ];
+      wallpaper = [ ",/home/penrose/Pictures/Subterranean.png" ];
     };
   };
 }
