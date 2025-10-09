@@ -92,7 +92,7 @@ programs.waybar = {
 
     style = ''
       * {
-        font-family: 'JetBrainsMono Nerd Font', sans-serif;
+        font-family: "JetBrainsMono Nerd Font", Helvetica, sans-serif;
         font-size: 13px;
         min-height: 0;
         padding-right: 0px;
