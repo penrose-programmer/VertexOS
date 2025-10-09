@@ -3,233 +3,326 @@ programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
-        "layer": "top",
-        "position": "top",
-        "margin-bottom": -10,
-        "spacing" : 0,
-        "modules-left": [
-          "hyprland/workspaces",
-          "custom/uptime",
-          "cpu",
-        ],
+        "layer" = "top";
+        "position" = "top";
+        "margin-bottom" = -10;
+        "spacing" = 0;
+        "modules-left" = [
+          "hyprland/workspaces"
+        ];
 
-        "modules-center": ["clock"],
+        "modules-center" = ["clock"];
 
-        "modules-right": [
-          "custom/pomodoro",
-          "bluetooth",
-          "network",
-          "pulseaudio", 
-          "backlight",
-          "battery",
-        ],
+        "modules-right" = [
+          "bluetooth"
+          "network"
+          "pulseaudio" 
+          "battery"
+        ];
 
-        "hyprland/workspaces": {
-          "format": "{name}: {icon}",
-          "format-icons": {
-            "active": "",
-            "default": ""
-          }
-        },
+        "hyprland/workspaces" = {
+          "format" = "{icon}";
+          "format-icons" = {
+            "active" = "";
+            "default" = "";
+          };
+        };
 
-        "bluetooth": {
-          "format": "󰂲",
-          "format-on": "{icon}",
-          "format-off": "{icon}", 
-          "format-connected":"{icon}",
-          "format-icons":{
-            "on":"󰂯",
-            "off": "󰂲",
-            "connected": "󰂱",
-          },
-          "on-click": "blueman-manager",
-          "tooltip-format-connected":"{device_enumerate}"
-        },
+        "bluetooth" = {
+          "format" = "󰂲";
+          "format-on" = "{icon}";
+          "format-off" = "{icon}"; 
+          "format-connected" = "{icon}";
+          "format-icons" = {
+            "on" = "󰂯";
+            "off" = "󰂲";
+            "connected" = "󰂱";
+          };
+          "on-click" = "blueman-manager";
+          "tooltip-format-connected" = "{device_enumerate}";
+        };
 
-        "clock": {
-          "timezone": "Asia/Kolkata",
-          "tooltip": false,
-          "format": "{:%H:%M:%S  -  %A, %d}",
-          "interval": 1
-        },
+        "clock" = {
+          "timezone" = "Asia/Kolkata";
+          "tooltip" = false;
+          "format" = "{:%H:%M:%S  -  %A, %d}";
+          "interval" = 1;
+        };
 
-        "network": {
-          "format-wifi": "󰤢",
-          "format-ethernet": "󰈀 ",
-          "format-disconnected": "󰤠 ",
-          "interval": 5,
-          "tooltip-format": "{essid} ({signalStrength}%)",
-          "on-click": "nm-connection-editor"
-        },
+        "network" = {
+          "format-wifi" = "󰤢";
+          "format-ethernet" = "󰈀 ";
+          "format-disconnected" = "󰤠 ";
+          "interval" = 5;
+          "tooltip-format" = "{essid} ({signalStrength}%)";
+          "on-click" = "nm-connection-editor";
+        };
 
-        "cpu": {
-        "interval": 1,
-        "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "on-click": "ghostty -e htop"
-        },
+        "pulseaudio" = {
+          "format" = "{icon}  {volume}%";
+          "format-muted" = "";
+          "format-icons" = {
+            "default" = ["" "" " "];
+          };
+          "on-click" = "pavucontrol";
+        };
 
-        "memory": {
-        "interval": 30,
-        "format": "  {used:0.1f}G/{total:0.1f}G",
-        "tooltip-format": "Memory"
-        },
+        "battery" = {
+          "interval" = 2;
+          "states" = {
+              "good" = 95;
+              "warning" = 30;
+              "critical" = 15;
+          };
+          "format" = "{icon}  {capacity}%";
+          "format-full" = "{icon}  {capacity}%";
+          "format-charging" = " {capacity}%";
+          "format-plugged" = " {capacity}%";
+          "format-alt" = "{icon} {time}";
+          "format-icons" = ["" "" "" "" ""];
+        };
 
-        "custom/uptime": {
-        "format": "{}",
-        "format-icon": [""], 
-        "tooltip": false,
-        "interval": 1600,
-        "exec": "$HOME/.config/waybar/scripts/uptime.sh"
-        },
+        "custom/lock" = {
+          "tooltip" = false;
+          "on-click" = "sh -c '(sleep 0s; hyprlock)' & disown";
+          "format" = "";
+        };
 
-        "backlight": {
-          "format": "{icon}  {percent}%",
-          "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
-          "tooltip": false
-        },
-
-        "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "",
-        "format-icons": {
-        "default": ["", "", " "]
-        },
-        "on-click": "pavucontrol"
-        },
-
-        "battery": {
-          "interval":2,
-          "states": {
-              "good": 95,
-              "warning": 30,
-              "critical": 15
-          },
-          "format": "{icon}  {capacity}%",
-          "format-full": "{icon}  {capacity}%",
-          "format-charging": " {capacity}%",
-          "format-plugged": " {capacity}%",
-          "format-alt": "{icon} {time}",
-          // "format-good": "", // An empty format will hide the module
-          // "format-full": "",
-          "format-icons": ["", "", "", "", ""]
-        },
-
-        "custom/lock": {
-          "tooltip": false,
-          "on-click": "sh -c '(sleep 0s; hyprlock)' & disown",
-          "format" : ""
-        },
-
-        "custom/pomodoro": {
-          "format": "{}",
-          "return-type": "json",
-          "exec": "waybar-module-pomodoro --no-work-icons",
-          "on-click": "waybar-module-pomodoro toggle",
-          "on-click-right": "waybar-module-pomodoro reset",
-        },
-
-      }
+        "custom/pomodoro" = {
+          "format" = "{}";
+          "return-type" = "json";
+          "exec" = "waybar-module-pomodoro --no-work-icons";
+          "on-click" = "waybar-module-pomodoro toggle";
+          "on-click-right" = "waybar-module-pomodoro reset";
+        };
+      };
 
       style = ''
-      * {
-        border: none;
-        outline: none;
-        box-shadow: none;
-        font-family: "JetBrainsMono Nerd Font",  Arial, sans-serif;
-        font-size: 12px;
-        min-height: 0;
-        background: none;
-        color: #${config.stylix.base16Scheme.base05};
-      }
-
-      .modules-left {
-        background: alpha( #${config.stylix.base16Scheme.base00}, 0.5);
-        border-radius: 5px;
-        padding: 4 2 4 2;
-        margin: 10 0 0 10;
-      }
-
-      .modules-right {
-        background: alpha( #${config.stylix.base16Scheme.base00}, 0.5);
-        border-radius: 5px;
-        padding: 4 0 4 2;
-        margin: 10 10 0 0;
-      }
-
-
-      #workspaces {
-        padding: 0 4 0 4;
-      }
-
-      #workspaces button {
-        all: unset;
-        margin: 0 3px;
-        border-radius: 50%;
-        background-color: alpha(#${config.stylix.base16Scheme.base03}, 0.7);
-        transition: background 0.2s ease, transform 0.15s ease;
-      }
-
-      #workspaces button:hover {
-        background-color: alpha(#${config.stylix.base16Scheme.base04}, 0.9);
-      }
-
-      #workspaces button.visible,
-      #workspaces button.active {
-        background-color: #${config.stylix.base16Scheme.base07}; /* white-ish */
-      }
-
-      #workspaces button.urgent {
-        background-color: #${config.stylix.base16Scheme.base08}; /* red-ish */
-      }
-
-      #workspaces button label {
-        all: unset;
-      }
-
-      #clock {
-        min-width: 100px;
-        padding: 0 10 0 10;
-      }
-
-      #battery {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
-        padding: 0 10 0 10;
-        border-radius: 0 3 3 0;
-        margin: 0 10 0 1;
-      }
-
-      #pulseaudio {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
-        border-radius: 0px;
-        padding: 0 15 0 10;
-        margin: 0 1 0 1;
-        min-width: 50px;
-      }
-
-      #network {
-        background-color: shade( #${config.stylix.base16Scheme.base0D}, 0.75);
-        border-radius: 0px;
-        padding: 0 10 0 10;
-        margin: 0 1 0 1;
-      }
-
-      @keyframes blink
-      {
-        to
-        {
-          background-color: alpha(#${config.stylix.base16Scheme.base0F}, 0.8);
+        /* --- Global Styles --- */
+        * {
+          font-family: 'SF Pro Text', 'Inter', 'Segoe UI, NotoSans Nerd Font', sans-serif;
+          font-size: 13px;
+          min-height: 0;
+          padding-right: 0px;
+          padding-left: 0px;
+          padding-bottom: 0px;
         }
-      }
 
-      #battery.critical:not(.charging)
-      {
-        animation-name            : blink;
-        animation-duration        : 1s;
-        animation-timing-function : linear;
-        animation-iteration-count : infinite;
-        animation-direction       : alternate;
-      }
+        /* --- Waybar Container --- */
+        #waybar {
+          background: transparent;
+          color: #c6d0f5;
+          margin: 0px;
+          font-weight: 500;
+        }
+
+        /* --- Left Modules (Individual, Fully Rounded Blocks - With Horizontal Spacing & Simple Hover) --- */
+        #workspaces,
+        #custom-uptime,
+        #cpu {
+          background-color: #1a1b26;
+          padding: 0.3rem 0.7rem;
+          margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
+          border-radius: 6px; /* These modules are always rounded */
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          min-width: 0;
+          border: none;
+          /* Transition for background-color and color only */
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        #workspaces {
+          padding: 2px;
+          margin-left: 7px; /* Margin from the far left edge */
+          margin-right: 5px; /* Spacing after the workspaces module */
+        }
+
+        #custom-uptime {
+          margin-right: 5px; /* Spacing after the uptime module */
+        }
+
+        /* Simple Hover effects for individual left modules - BRIGHTER COLOR */
+        #custom-uptime:hover,
+        #cpu:hover {
+          background-color: rgb(41, 42, 53); /* Brighter highlight */
+        }
+
+        #workspaces button {
+          color: #babbf1;
+          border-radius: 5px; /* Workspaces buttons are always rounded */
+          padding: 0.3rem 0.6rem;
+          background: transparent;
+          transition: all 0.2s ease-in-out;
+          border: none;
+          outline: none;
+        }
+
+        #workspaces button.active {
+          color: #99d1db;
+          background-color: rgba(153, 209, 219, 0.1);
+          box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
+        }
+
+        #workspaces button:hover {
+          background: rgb(41, 42, 53); /* Reference bright hover color */
+          color: #c6d0f5;
+        }
+
+        /* --- Center Module (Individual, Fully Rounded Block - With Simple Hover) --- */
+        #clock {
+          background-color: #1a1b26;
+          padding: 0.3rem 0.7rem;
+          margin: 5px 0px;
+          border-radius: 6px; /* This module is always rounded */
+          box-shadow: 0 1px 3px rgba(153, 209, 219, 0.2);
+          min-width: 0;
+          border: none;
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        /* Simple Hover effect for clock module - BRIGHTER COLOR */
+        #clock:hover {
+          background-color: rgba(153, 209, 219, 0.1); /* Brighter highlight */
+        }
+
+        #custom-pomodoro {
+            background-color: #1a1b26; /* Consistent dark background */
+            padding: 0.3rem 0.7rem; /* Consistent padding with other modules (e.g., cpu, uptime) */
+            margin: 5px 0px; /* 5px top/bottom margin, 0px left/right (base for individual control) */
+            border-radius: 6px; /* Consistent rounded corners with other individual modules */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+            min-width: 0;
+            border: none;
+            outline: none; /* Ensure no default outline */
+            /* Transition for background-color, color, outline, and box-shadow for smooth effect */
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, outline 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            color: #babbf1; /* A calm color, consistent with custom-uptime */
+            font-weight: 600; /* Slightly bolder for the timer, consistent with clock */
+        }
+
+        /* Positioning and spacing for the custom-pomodoro module */
+        #custom-pomodoro {
+            margin-left: 5px; /* Spacing from the previous module (e.g., clock) */
+            margin-right: 5px; /* Spacing before the seamless right bar starts (e.g., bluetooth) */
+        }
+
+        /* Hover effect for the new pomodoro module (consistent with others + rectangular outline) */
+        #custom-pomodoro:hover {
+            background-color: rgb(41, 42, 53); /* Brighter highlight, consistent with other individual modules */
+            color: #c6d0f5; /* Text color change on hover, consistent with other individual modules */
+            outline: 1px solid rgba(255, 255, 255, 0.1); /* Rectangular outline on hover */
+            outline-offset: -1px;
+        }
+
+        /* --- Highlighted state for Pomodoro module when running (work or break) --- */
+        #custom-pomodoro.work,
+        #custom-pomodoro.break {
+          color: #99d1db; /* Text color consistent with active workspaces button */
+          background-color: rgba(153, 209, 219, 0.1); /* Background color consistent with active workspaces button */
+          box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2); /* Inner shadow for outline effect */
+          outline: none;
+        }
+
+        /* --- Right Modules (Single, Seamless Bar ) --- */
+        #bluetooth,
+        #pulseaudio,
+        #backlight,
+        #network,
+        #custom-lock,
+        #battery {
+          background-color: #1a1b26;
+          padding: 0.3rem 0.7rem;
+          margin: 5px 0px; 
+          border-radius: 0;
+          box-shadow: none;
+          min-width: 0;
+          border: none;
+          transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+
+        #bluetooth:hover,
+        #pulseaudio:hover,
+        #backlight:hover,
+        #network:hover,
+        #custom-lock:hover,
+        #battery:hover {
+          background-color: rgb(41, 42, 53);
+        }
+
+        #bluetooth {
+          margin-left: 0px; 
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+        }
+
+        #battery {
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+          margin-right: 7px;
+        }
+
+        #custom-uptime {
+          color: #babbf1;
+        }
+        #cpu {
+          color: #c6d0f5;
+        }
+
+        #clock {
+          color: #99d1db;
+          font-weight: 500;
+        }
+
+        #pulseaudio {
+          color: #c6d0f5;
+        }
+        #backlight {
+          color: #c6d0f5;
+        }
+
+        #network {
+          color: #c6d0f5;
+        }
+
+        #network.disconnected {
+          color: #e78284;
+        }
+
+        #custom-lock {
+          color: #babbf1;
+        }
+        #bluetooth {
+          color: #888888;
+          font-size: 16px;
+        }
+        #bluetooth.on {
+          color: #2196f3;
+        }
+        #bluetooth.connected {
+          color: #99d1db;
+        }
+        #battery {
+          color: #99d1db;;
+        }
+        #battery.charging {
+          color: #a6d189;
+        }
+        #battery.warning:not(.charging) {
+          color: #e78284;
+        }
+
+        /* --- Tooltip Styles --- */
+        tooltip {
+          background-color: #1a1b26;
+          color: #dddddd;
+          padding: 5px 12px;
+          margin: 5px 0px;
+          border-radius: 6px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+          font-size: 12px;
+        }
       '';
+    };
   };
 }
