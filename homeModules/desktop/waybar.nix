@@ -127,18 +127,17 @@ programs.waybar = {
 
       #workspaces button {
         color: #babbf1;
-        border-radius: 5px; /* Workspaces buttons are always rounded */
-        padding: 0.3rem 0.6rem;
+        padding: 3px;
         background: transparent;
         transition: all 0.2s ease-in-out;
         border: none;
+        border-style: solid;
         outline: none;
       }
 
       #workspaces button.active {
         color: #99d1db;
         background-color: rgba(153, 209, 219, 0.1);
-        box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2);
       }
 
       #workspaces button:hover {
