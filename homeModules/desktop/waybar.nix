@@ -116,8 +116,6 @@ programs.waybar = {
         margin: 5px 0px; 
         min-width: 0;
         border: none;
-        /* Transition for background-color and color only */
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       }
 
       #workspaces {
@@ -127,22 +125,11 @@ programs.waybar = {
 
       #workspaces button {
         color: #babbf1;
-        padding: 3px;
+        padding: 10px;
         background: transparent;
         transition: all 0.2s ease-in-out;
         border: none;
-        border-style: solid;
         outline: none;
-      }
-
-      #workspaces button.active {
-        color: #99d1db;
-        background-color: rgba(153, 209, 219, 0.1);
-      }
-
-      #workspaces button:hover {
-        background: rgb(41, 42, 53); /* Reference bright hover color */
-        color: #c6d0f5;
       }
 
       #clock {
@@ -150,7 +137,6 @@ programs.waybar = {
         padding: 0.3rem 0.7rem;
         margin: 5px 0px;
         border-radius: 6px; /* This module is always rounded */
-        box-shadow: 0 1px 3px rgba(153, 209, 219, 0.2);
         min-width: 0;
         border: none;
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
