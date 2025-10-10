@@ -104,7 +104,7 @@ programs.waybar = {
       }
 
       #waybar {
-        background: transparent;
+        background: #ffffff;
         color: #${config.stylix.base16Scheme.base05};
         margin: 0px;
         font-weight: 500;
