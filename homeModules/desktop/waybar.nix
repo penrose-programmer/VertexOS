@@ -95,7 +95,6 @@ programs.waybar = {
 
     style = ''
       * {
-        background-color: #${config.stylix.base16Scheme.base00};
         font-family: "JetBrainsMono Nerd Font", Helvetica, sans-serif;
         font-size: 13px;
         min-height: 0;
@@ -106,19 +105,20 @@ programs.waybar = {
 
       #waybar {
         background: transparent;
-        color: #${config.stylix.base16Scheme.base07};
+        color: #${config.stylix.base16Scheme.base05};
         margin: 0px;
         font-weight: 500;
       }
 
       #workspaces {
+        background-color: #${config.stylix.base16Scheme.base00};
         margin: 5px;
         min-width: 0;
         border: none;
       }
 
       #workspaces button {
-        color: #${config.stylix.base16Scheme.base07};
+        color: #${config.stylix.base16Scheme.base05};
         padding: 4px 6px;
         margin: 0 3px;
         border: none;
@@ -135,6 +135,7 @@ programs.waybar = {
       }
 
       #clock {
+        background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
         margin: 5px 0px;
         border-radius: 6px;
@@ -143,31 +144,18 @@ programs.waybar = {
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       }
 
-      #clock:hover {
-        background-color: rgba(153, 209, 219, 0.1); /* Brighter highlight */
-      }
-
       #bluetooth,
       #pulseaudio,
       #network,
       #custom-lock,
       #battery {
-        background-color: #1a1b26;
+        background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
         margin: 5px 0px; 
         border-radius: 0;
         box-shadow: none;
         min-width: 0;
         border: none;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-      }
-
-      #bluetooth:hover,
-      #pulseaudio:hover,
-      #network:hover,
-      #custom-lock:hover,
-      #battery:hover {
-        background-color: rgb(41, 42, 53);
       }
 
       #bluetooth {
@@ -183,54 +171,54 @@ programs.waybar = {
       }
 
       #clock {
-        color: #99d1db;
+        color: #E6E1CF; /* base05 - main text */
         font-weight: 500;
       }
 
       #pulseaudio {
-        color: #c6d0f5;
+        color: #FFB454; /* base0A - warm accent */
       }
 
       #network {
-        color: #c6d0f5;
+        color: #FFB454; /* base0A - warm accent */
       }
 
       #network.disconnected {
-        color: #e78284;
+        color: #F07178; /* base08 - error/red */
       }
 
       #custom-lock {
-        color: #babbf1;
+        color: #FFB454; /* base0A - warm accent */
       }
 
       #bluetooth {
-        color: #888888;
+        color: #BFBDB6; /* base04 - muted text */
         font-size: 16px;
       }
 
       #bluetooth.on {
-        color: #2196f3;
+        color: #FFB454; /* base0A - warm accent */
       }
 
       #bluetooth.connected {
-        color: #99d1db;
+        color: #E6E1CF; /* base05 - main text */
       }
 
       #battery {
-        color: #99d1db;;
+        color: #E6E1CF; /* base05 - main text */
       }
 
       #battery.charging {
-        color: #a6d189;
+        color: #B8CC52; /* base0B - green/success */
       }
 
       #battery.warning:not(.charging) {
-        color: #e78284;
+        color: #F07178; /* base08 - warning */
       }
 
       tooltip {
-        background-color: #1a1b26;
-        color: #dddddd;
+        background-color: #131721; /* base01 - tooltip background */
+        color: #E6E1CF; /* base05 - tooltip text */
         padding: 5px 12px;
         margin: 5px 0px;
         border-radius: 6px;
