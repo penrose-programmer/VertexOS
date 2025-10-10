@@ -10,6 +10,7 @@
     ./applications/portablemc.nix
     ./applications/rp.nix
     ./applications/mpg.nix
+    ./applications/lazygit.nix
 
     ./git/git.nix
     ./git/gh.nix
