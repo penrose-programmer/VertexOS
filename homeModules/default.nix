@@ -11,6 +11,7 @@
     ./applications/rp.nix
     ./applications/mpg.nix
     ./applications/lazygit.nix
+    ./applications/godot.nix
 
     ./git/git.nix
     ./git/gh.nix
