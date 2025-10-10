@@ -19,6 +19,7 @@ programs.waybar = {
           "pulseaudio" 
           "battery"
           "clock"
+          "custom/lock"
         ];
 
         "hyprland/workspaces" = {
@@ -58,7 +59,7 @@ programs.waybar = {
           "format-disconnected" = "󰤠 ";
           "interval" = 5;
           "tooltip-format" = "{essid} ({signalStrength}%)";
-          "on-click" = "nm-connection-editor";
+          "on-click" = "kitty nmtui";
         };
 
         "pulseaudio" = {
@@ -138,10 +139,9 @@ programs.waybar = {
         background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
         margin: 5px 0px;
-        border-radius: 6px;
+        border-radius: 5px;
         min-width: 0;
         border: none;
-        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
       }
 
       #bluetooth,
@@ -151,22 +151,21 @@ programs.waybar = {
       #battery {
         background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
-        margin: 0px 0px; 
+        margin: 5px 0px; 
         border-radius: 0;
-        box-shadow: none;
         min-width: 0;
         border: none;
       }
 
       #bluetooth {
         margin-left: 0px; 
-        border-top-left-radius: 6px;
-        border-bottom-left-radius: 6px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
       }
 
       #battery {
-        border-top-right-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
         margin-right: 7px;
       }
 
@@ -175,7 +174,7 @@ programs.waybar = {
         color: #E6E1CF; /* base05 - tooltip text */
         padding: 5px 12px;
         margin: 5px 0px;
-        border-radius: 6px;
+        border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         font-size: 12px;
