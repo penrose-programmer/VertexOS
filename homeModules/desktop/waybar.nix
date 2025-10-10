@@ -5,10 +5,9 @@ programs.waybar = {
       mainBar = {
         "layer" = "top";
         "position" = "top";
-        "margin-top" = 10;
-        "margin-left" = 10;
-        "margin-right" = 10;
-        "margin-bottom" = 0;
+        "margin-top" = 5;
+        "margin-left" = 5;
+        "margin-right" = 5;
         "spacing" = 0;
         "modules-left" = [
           "hyprland/workspaces"
