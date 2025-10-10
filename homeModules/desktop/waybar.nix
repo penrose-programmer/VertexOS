@@ -159,14 +159,14 @@ programs.waybar = {
       #custom-lock {
         background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
-        margin: 5px;
+        margin: 10px;
         border-radius: 5px;
         min-width: 0;
         border: none;
       }
 
       #bluetooth {
-        margin-left: 5px; 
+        margin-left: 10px; 
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
       }
@@ -174,14 +174,14 @@ programs.waybar = {
       #battery {
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        margin-right: 5px;
+        margin-right: 10px;
       }
 
       tooltip {
         background-color: #131721; /* base01 - tooltip background */
         color: #E6E1CF; /* base05 - tooltip text */
         padding: 5px 12px;
-        margin: 5px 0px;
+        margin: 10px 0px;
         border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
