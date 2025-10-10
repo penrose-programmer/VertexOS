@@ -95,6 +95,7 @@ programs.waybar = {
 
     style = ''
       * {
+        background-color: #${config.stylix.base16Scheme.base00};
         font-family: "JetBrainsMono Nerd Font", Helvetica, sans-serif;
         font-size: 13px;
         min-height: 0;
@@ -111,7 +112,6 @@ programs.waybar = {
       }
 
       #workspaces {
-        background-color: #${config.stylix.base16Scheme.base00};
         margin: 5px;
         min-width: 0;
         border: none;
