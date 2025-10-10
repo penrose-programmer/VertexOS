@@ -8,7 +8,7 @@ programs.waybar = {
         "margin-top" = 5;
         "margin-left" = 5;
         "margin-right" = 5;
-        "margin-bottom" = 0;
+        "margin-bottom" = -5;
         "spacing" = 0;
         "modules-left" = [
           "hyprland/workspaces"
