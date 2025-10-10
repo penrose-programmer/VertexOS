@@ -9,6 +9,7 @@
     ./applications/pnpm.nix
     ./applications/portablemc.nix
     ./applications/rp.nix
+    ./applications/mpg.nix
 
     ./git/git.nix
     ./git/gh.nix
@@ -17,7 +18,6 @@
     ./desktop/hypridle.nix
     ./desktop/hyprpaper.nix
     ./desktop/waybar.nix
-    ./desktop/alsa.nix
 
     ./nixvim/default.nix
   ];

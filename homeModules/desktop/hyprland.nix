@@ -78,6 +78,7 @@
         "nm-applet"
         "neofetch"
         "quickshell"
+        "mpg123 ~/Music/SFX/welcome_aboard.mp3"
       ];
 
       input.touchpad = {
