@@ -159,6 +159,13 @@ programs.waybar = {
         border: none;
       }
 
+      #bluetooth,
+      #network,
+      #pulseaudio
+      #battery {
+        color: #${config.stylix.base16Scheme.base07};
+      }
+
       #custom-lock {
         margin: 5px;
         border-radius: 5px;
