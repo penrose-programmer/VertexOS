@@ -111,7 +111,7 @@ programs.waybar = {
       }
 
       #workspaces {
-        background-color: #${config.stylix.base16Scheme.base00};
+        background-color: transparent;
         margin: 5px;
         min-width: 0;
         border: none;
