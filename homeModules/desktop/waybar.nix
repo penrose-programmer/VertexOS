@@ -63,7 +63,7 @@ programs.waybar = {
         };
 
         "pulseaudio" = {
-          "format" = "{icon}  {volume}%";
+          "format" = "{icon}";
           "format-muted" = "";
           "format-icons" = {
             "default" = ["" "" " "];
@@ -78,11 +78,11 @@ programs.waybar = {
               "warning" = 30;
               "critical" = 15;
           };
-          "format" = "{icon}  {capacity}%";
-          "format-full" = "{icon}  {capacity}%";
-          "format-charging" = " {capacity}%";
-          "format-plugged" = " {capacity}%";
-          "format-alt" = "{icon} {time}";
+          "format" = "{icon}";
+          "format-full" = "{icon}";
+          "format-charging" = " ";
+          "format-plugged" = " ";
+          "format-alt" = "{icon}";
           "format-icons" = ["" "" "" "" ""];
         };
 
@@ -114,6 +114,7 @@ programs.waybar = {
       #workspaces {
         background-color: #${config.stylix.base16Scheme.base00};
         margin: 5px;
+        border-radius: 5px;
         min-width: 0;
         border: none;
       }
