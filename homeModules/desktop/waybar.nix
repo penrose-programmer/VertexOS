@@ -181,8 +181,8 @@ programs.waybar = {
 
       #bluetooth,
       #network,
-      #pulseaudio
-      #battery {
+      #pulseaudio,
+      #battery, {
         color: #${config.stylix.base16Scheme.base09};
       }
 
