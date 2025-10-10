@@ -113,8 +113,8 @@ programs.waybar = {
 
       #workspaces {
         background-color: #${config.stylix.base16Scheme.base00};
+        padding-right: 5px;
         margin: 5px;
-        margin-right: 7px;
         border-radius: 5px;
         min-width: 0;
         border: none;
