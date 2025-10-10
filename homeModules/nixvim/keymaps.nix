@@ -15,15 +15,9 @@
       }
       {
         mode = "n";
-        key = "<leader>fb";
-        action = "<cmd>Telescope buffers<CR>";
-        options.desc = "Find buffers";
-      }
-      {
-        mode = "n";
-        key = "<leader>fh";
-        action = "<cmd>Telescope help_tags<CR>";
-        options.desc = "Help tags";
+        key = "<leader>lg";
+        action = "<cmd>LazyGit<CR>";
+        options.desc = "Open LazyGit";
       }
     ];
   };
