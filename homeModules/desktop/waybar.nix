@@ -8,6 +8,7 @@ programs.waybar = {
         "margin-top" = 5;
         "margin-left" = 5;
         "margin-right" = 5;
+        "margin-bottom" = 0;
         "spacing" = 0;
         "modules-left" = [
           "hyprland/workspaces"
@@ -161,13 +162,6 @@ programs.waybar = {
         border: none;
       }
 
-      #bluetooth,
-      #network,
-      #pulseaudio
-      #battery {
-        color: #${config.stylix.base16Scheme.base09};
-      }
-
       #custom-lock {
         margin: 5px;
         border-radius: 5px;
@@ -183,6 +177,13 @@ programs.waybar = {
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         margin-right: 5px;
+      }
+
+      #bluetooth,
+      #network,
+      #pulseaudio
+      #battery {
+        color: #${config.stylix.base16Scheme.base09};
       }
 
       tooltip {
