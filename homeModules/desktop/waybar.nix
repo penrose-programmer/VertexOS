@@ -170,52 +170,6 @@ programs.waybar = {
         margin-right: 7px;
       }
 
-      #clock {
-        color: #E6E1CF; /* base05 - main text */
-        font-weight: 500;
-      }
-
-      #pulseaudio {
-        color: #FFB454; /* base0A - warm accent */
-      }
-
-      #network {
-        color: #FFB454; /* base0A - warm accent */
-      }
-
-      #network.disconnected {
-        color: #F07178; /* base08 - error/red */
-      }
-
-      #custom-lock {
-        color: #FFB454; /* base0A - warm accent */
-      }
-
-      #bluetooth {
-        color: #BFBDB6; /* base04 - muted text */
-        font-size: 16px;
-      }
-
-      #bluetooth.on {
-        color: #FFB454; /* base0A - warm accent */
-      }
-
-      #bluetooth.connected {
-        color: #E6E1CF; /* base05 - main text */
-      }
-
-      #battery {
-        color: #E6E1CF; /* base05 - main text */
-      }
-
-      #battery.charging {
-        color: #B8CC52; /* base0B - green/success */
-      }
-
-      #battery.warning:not(.charging) {
-        color: #F07178; /* base08 - warning */
-      }
-
       tooltip {
         background-color: #131721; /* base01 - tooltip background */
         color: #E6E1CF; /* base05 - tooltip text */
