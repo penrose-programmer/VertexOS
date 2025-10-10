@@ -112,7 +112,7 @@ programs.waybar = {
       }
 
       #workspaces {
-        background-color: transparent;
+        background-color: #${config.stylix.base16Scheme.base00};
         margin: 5px;
         min-width: 0;
         border: none;
@@ -147,6 +147,7 @@ programs.waybar = {
       #bluetooth,
       #pulseaudio,
       #network,
+      #custom-lock,
       #battery {
         background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
@@ -157,16 +158,12 @@ programs.waybar = {
       }
 
       #custom-lock {
-        background-color: #${config.stylix.base16Scheme.base00};
-        padding: 0.3rem 0.7rem;
-        margin: 10px;
+        margin: 5px;
         border-radius: 5px;
-        min-width: 0;
-        border: none;
       }
 
       #bluetooth {
-        margin-left: 10px; 
+        margin-left: 5px; 
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
       }
@@ -174,7 +171,7 @@ programs.waybar = {
       #battery {
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
-        margin-right: 10px;
+        margin-right: 5px;
       }
 
       tooltip {
