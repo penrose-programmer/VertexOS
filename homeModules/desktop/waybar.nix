@@ -183,7 +183,7 @@ programs.waybar = {
       #network,
       #pulseaudio,
       #battery {
-        color: #${config.stylix.base16Scheme.base09};
+        color: #${config.stylix.base16Scheme.base08};
       }
 
       tooltip {
