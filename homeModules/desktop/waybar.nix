@@ -104,7 +104,7 @@ programs.waybar = {
       }
 
       #waybar {
-        background: #ffffff;
+        background: transparent;
         color: #${config.stylix.base16Scheme.base05};
         margin: 0px;
         font-weight: 500;
@@ -151,7 +151,7 @@ programs.waybar = {
       #battery {
         background-color: #${config.stylix.base16Scheme.base00};
         padding: 0.3rem 0.7rem;
-        margin: 5px 0px; 
+        margin: 0px 0px; 
         border-radius: 0;
         box-shadow: none;
         min-width: 0;
