@@ -48,7 +48,7 @@ programs.waybar = {
 
         "clock" = {
           "tooltip" = false;
-          "format" = "{%r %d/%m/%y}";
+          "format" = "{%r %d/%m/%Y}";
           "interval" = 1;
         };
 
@@ -105,20 +105,20 @@ programs.waybar = {
 
       #waybar {
         background: transparent;
-        color: #c6d0f5;
+        color: #${config.stylix.base16Scheme.base07};
         margin: 0px;
         font-weight: 500;
       }
 
       #workspaces {
-        background-color: #1a1b26;
+        background-color: #${config.stylix.base16Scheme.base00};
         margin: 5px;
         min-width: 0;
         border: none;
       }
 
       #workspaces button {
-        color: #ffffff;
+        color: #${config.stylix.base16Scheme.base07};
         padding: 4px 6px;
         margin: 0 3px;
         border: none;
@@ -135,10 +135,9 @@ programs.waybar = {
       }
 
       #clock {
-        background-color: #1a1b26;
         padding: 0.3rem 0.7rem;
         margin: 5px 0px;
-        border-radius: 6px; /* This module is always rounded */
+        border-radius: 6px;
         min-width: 0;
         border: none;
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
