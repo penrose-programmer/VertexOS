@@ -48,7 +48,7 @@ programs.waybar = {
 
         "clock" = {
           "tooltip" = false;
-          "format" = "{%r %d/%m/%Y}";
+          "format" = "{:%r %d/%m/%Y}";
           "interval" = 1;
         };
 
