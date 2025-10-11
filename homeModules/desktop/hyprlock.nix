@@ -11,7 +11,7 @@
 
       background = [
         {
-          path = "~/Pictures/Sleeping.png";
+          path = "~/Pictures/Black.jpg";
         }
       ];
     };
