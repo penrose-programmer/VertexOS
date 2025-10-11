@@ -69,7 +69,7 @@ programs.waybar = {
           "format" = "{icon}";
           "format-muted" = "";
           "format-icons" = {
-            "default" = ["" "" " "];
+            "default" = ["" "" ""];
           };
           "on-click" = "pavucontrol";
         };
