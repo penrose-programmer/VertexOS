@@ -19,6 +19,7 @@
     ./desktop/hyprland.nix
     ./desktop/hypridle.nix
     ./desktop/hyprpaper.nix
+    ./desktop/hyprlock.nix
     ./desktop/waybar.nix
 
     ./nixvim/default.nix
