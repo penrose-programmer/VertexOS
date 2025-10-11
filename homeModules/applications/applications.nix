@@ -10,6 +10,7 @@
     neofetch
     nodejs_22
     pnpm
+    gcc
     portablemc
     ripgrep
   ];

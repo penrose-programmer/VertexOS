@@ -1,9 +1,9 @@
 { pkgs, ... }: {
-
   imports = [
     ./core.nix
+    ./cmp.nix
+    ./telescope.nix
     ./lsp.nix
-    ./gcc.nix
     ./plugins.nix
     ./keymaps.nix
   ];
