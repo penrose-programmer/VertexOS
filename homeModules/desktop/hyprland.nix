@@ -11,7 +11,8 @@
       };
 
       decoration = {
-        rounding = 8;
+        rounding = 0;
+        active_opacity = 0.85;
         inactive_opacity = 0.75;
       };
 
