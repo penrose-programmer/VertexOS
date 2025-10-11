@@ -1,9 +1,11 @@
 { pkgs, ... }: {
-  plugins.telescope = {
-    enable = true;
-    extensions = {
-      fzf-native = {
-        enable = true;
+  programs.nixvim = {
+    plugins.telescope = {
+      enable = true;
+      extensions = {
+        fzf-native = {
+          enable = true;
+        };
       };
     };
   };
