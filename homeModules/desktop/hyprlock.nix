@@ -11,7 +11,7 @@
 
       background = [
         {
-          path = "~/Pictures/Lockscreen.jpg";
+          path = "~/Pictures/Wallpaper.jpg";
         }
       ];
     };
