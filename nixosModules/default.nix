@@ -9,7 +9,6 @@
 
     ./applications/thunar.nix
     ./applications/firefox.nix
-    ./applications/rofi.nix
     ./applications/nm-applet.nix
     ./applications/htop.nix
     ./applications/kitty.nix

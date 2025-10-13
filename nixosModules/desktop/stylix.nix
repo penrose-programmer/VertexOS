@@ -3,8 +3,6 @@
     enable = true;
     autoEnable = false;
 
-    targets.rofi.enable = true;
-
     base16Scheme = {
       base00 = "0F1419";
       base01 = "131721";
