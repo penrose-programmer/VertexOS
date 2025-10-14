@@ -13,5 +13,6 @@
     gcc
     portablemc
     ripgrep
+    blender
   ];
 }
