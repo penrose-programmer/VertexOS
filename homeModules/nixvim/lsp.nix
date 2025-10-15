@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     nixd
+    rust-analyzer
   ];
 
   programs.nixvim = {
@@ -12,6 +13,7 @@
 
       servers = {
         nixd.enable = true;
+        rust_analyzer.enable = true;
       };
     };
   };

@@ -12,6 +12,5 @@
 
       plugins.web-devicons.enable = true;
       colorschemes.ayu.enable = true;
-      plugins.rustaceanvim.enable = true;
     };
 }
