@@ -14,5 +14,6 @@
     portablemc
     ripgrep
     blender
+    musescore
   ];
 }
