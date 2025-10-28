@@ -15,5 +15,6 @@
     ripgrep
     blender
     musescore
+    ollama
   ];
 }
