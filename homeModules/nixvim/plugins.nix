@@ -8,6 +8,7 @@
         telescope-fzf-native-nvim
         nvim-cmp
         lazygit-nvim
+        vim-be-good
       ];
 
       plugins.cmp-nvim-lsp.enable = true;
