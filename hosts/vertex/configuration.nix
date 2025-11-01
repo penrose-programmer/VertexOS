@@ -31,7 +31,7 @@
   users.users.penrose = {
     isNormalUser = true;
     description = "Talhah Ahmed";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "kvm" "adbusers" ];
   };
 
   nixpkgs.config.allowUnfree = true;

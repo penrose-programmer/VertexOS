@@ -16,5 +16,6 @@
     blender
     musescore
     ollama
+    adb-sync
   ];
 }
