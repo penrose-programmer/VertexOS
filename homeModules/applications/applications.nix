@@ -16,6 +16,6 @@
     blender
     musescore
     ollama
-    adb-sync
+    android-tools
   ];
 }
