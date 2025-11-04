@@ -16,6 +16,6 @@
     blender
     musescore
     ollama
-    android-tools
+    mullvad-vpn
   ];
 }
