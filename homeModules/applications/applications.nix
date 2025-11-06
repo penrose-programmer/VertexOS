@@ -16,6 +16,5 @@
     blender
     musescore
     ollama
-    mullvad-vpn
   ];
 }
