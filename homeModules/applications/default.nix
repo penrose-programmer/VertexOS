@@ -6,5 +6,6 @@
     ./languages.nix
     ./rofi.nix
     ./tmux.nix
+    ./openvpn.nix
   ];
 }
