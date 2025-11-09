@@ -16,5 +16,6 @@
     blender
     musescore
     ollama
+    protonvpn-gui
   ];
 }
