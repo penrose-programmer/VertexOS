@@ -17,5 +17,7 @@
     musescore
     ollama
     protonvpn-gui
+    openvpn
+    freecad
   ];
 }
