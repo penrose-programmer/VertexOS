@@ -18,6 +18,6 @@
     ollama
     protonvpn-gui
     openvpn
-    inkscape
+    krita
   ];
 }
