@@ -9,7 +9,6 @@
         nvim-cmp
         lazygit-nvim
         vim-be-good
-        vim-godot
       ];
 
       plugins.cmp-nvim-lsp.enable = true;
