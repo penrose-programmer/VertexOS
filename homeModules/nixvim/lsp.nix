@@ -14,7 +14,7 @@
         gdscript = {
           enable = true;
           package = null;
-          cmd = [ "godot4" "--headless" "--editor" "--lsp" ];
+          cmd = [ "godot4" "--headless" "--lsp" ];
         };
       };
     };
