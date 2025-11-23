@@ -11,7 +11,11 @@
           installRustc = true;
           installCargo = true;
         };
-        gdscript.enable = true;
+        gdscript = {
+          enable = true;
+          package = null;
+          cmd = [ "godot4" "--headless" "--editor" "--lsp" ];
+        };
       };
     };
   };
