@@ -9,11 +9,11 @@
         nvim-cmp
         lazygit-nvim
         vim-be-good
+        vim-godot
       ];
 
       plugins.cmp-nvim-lsp.enable = true;
       plugins.web-devicons.enable = true;
-      plugins.godot.enable = true;
       colorschemes.ayu.enable = true;
     };
 }
