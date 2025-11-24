@@ -2,8 +2,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "/home/penrose/Pictures/Wallpaper.png" ];
-      wallpaper = [ ",/home/penrose/Pictures/Wallpaper.png" ];
+      preload = [ "/home/penrose/Pictures/BeachCaveWallpaper.webp" ];
+      wallpaper = [ ",/home/penrose/Pictures/BeachCaveWallpaper.webp" ];
     };
   };
 }
