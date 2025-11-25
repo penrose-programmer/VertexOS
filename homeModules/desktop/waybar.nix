@@ -106,6 +106,7 @@ programs.waybar = {
         font-size: 12px;
         min-width: 7px;
         min-height: 0px;
+        border-radius: 0px;
       }
 
       #workspaces,
@@ -123,7 +124,6 @@ programs.waybar = {
       #clock,
       #custom-lock {
         border: 2px solid #${config.stylix.base16Scheme.base02};
-        border-radius: 5px;
       }
 
       #network,
@@ -136,12 +136,10 @@ programs.waybar = {
 
       #bluetooth {
         border-left: 2px solid #${config.stylix.base16Scheme.base02};
-        border-radius: 5px 0px 0px 5px;
       }
 
       #battery {
         border-right: 2px solid #${config.stylix.base16Scheme.base02};
-        border-radius: 0px 5px 5px 0px;
       }
 
       #workspaces button {
@@ -201,7 +199,6 @@ programs.waybar = {
         color: #E6E1CF; /* base05 - tooltip text */
         padding: 5px 12px;
         margin: 10px 0px;
-        border-radius: 5px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         font-size: 12px;
