@@ -4,6 +4,7 @@
     ./desktop/tlp.nix
     ./desktop/screenshot.nix
     ./desktop/clipboard.nix
+    ./desktop/dunst.nix
     ./desktop/stylix.nix
     ./desktop/fonts.nix
 
