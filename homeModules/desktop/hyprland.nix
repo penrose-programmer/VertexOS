@@ -20,6 +20,10 @@
         gaps_out = 10;
       };
 
+      animations = {
+        enabled = false;
+      };
+
       bind = [
         "$mod, RETURN, exec, kitty"
         "$mod, H, movefocus, l"
@@ -42,7 +46,7 @@
         "$mod_c, L, resizeactive, 10 0"
         "$mod, DELETE, exec, hyprlock"
         "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
-        "ALT, SPACE, exec, rofi -show drun -theme Arc-Dark"
+        "ALT, SPACE, exec, rofi -show drun"
         "$mod, Z, exec, firefox"
         "$mod, X, exec, vscode"
         "$mod, C, exec, thunar"

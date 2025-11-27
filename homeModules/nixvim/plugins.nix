@@ -14,6 +14,5 @@
 
       plugins.cmp-nvim-lsp.enable = true;
       plugins.web-devicons.enable = true;
-      colorschemes.ayu.enable = true;
     };
 }

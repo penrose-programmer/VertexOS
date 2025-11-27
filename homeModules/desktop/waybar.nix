@@ -123,23 +123,23 @@ programs.waybar = {
       #workspaces,
       #clock,
       #custom-lock {
-        border: 2px solid #${config.stylix.base16Scheme.base02};
+        border: 2px solid #${config.stylix.base16Scheme.base01};
       }
 
       #network,
       #pulseaudio,
       #bluetooth,
       #battery {
-        border-top: 2px solid #${config.stylix.base16Scheme.base02};
-        border-bottom: 2px solid #${config.stylix.base16Scheme.base02};
+        border-top: 2px solid #${config.stylix.base16Scheme.base01};
+        border-bottom: 2px solid #${config.stylix.base16Scheme.base01};
       }
 
       #bluetooth {
-        border-left: 2px solid #${config.stylix.base16Scheme.base02};
+        border-left: 2px solid #${config.stylix.base16Scheme.base01};
       }
 
       #battery {
-        border-right: 2px solid #${config.stylix.base16Scheme.base02};
+        border-right: 2px solid #${config.stylix.base16Scheme.base01};
       }
 
       #workspaces button {
@@ -152,18 +152,18 @@ programs.waybar = {
       }
 
       #workspaces button.active {
-        color: #${config.stylix.base16Scheme.base0A};
+        color: #${config.stylix.base16Scheme.base0D};
       }
 
       #bluetooth,
       #network,
       #pulseaudio,
       #battery {
-        color: #${config.stylix.base16Scheme.base0A};
+        color: #${config.stylix.base16Scheme.base0E};
       }
 
       #clock {
-        color: #${config.stylix.base16Scheme.base09};
+        color: #${config.stylix.base16Scheme.base0D};
       }
 
       #custom-lock {
