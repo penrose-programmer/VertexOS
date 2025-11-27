@@ -3,6 +3,13 @@
     enable = true;
     autoEnable = true;
 
+    targets = {
+      hyprlock.enable = true;
+      hyprlock.useWallpaper = false;
+
+      waybar.enable = false;
+    };
+
     base16Scheme = {
       base00 = "0B0F14";  # background
       base01 = "1A1F26";  # surface
@@ -35,6 +42,12 @@
         package = pkgs.noto-fonts;
         name = "Noto Serif";
       };
+    };
+
+    fonts.sizes = {
+      applications = 10;
+      terminal = 10;
+      desktop = 8;
     };
 
     cursor.package = pkgs.bibata-cursors;
