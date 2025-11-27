@@ -2,8 +2,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "/home/penrose/Pictures/Wallpaper.png" ];
-      wallpaper = [ ",/home/penrose/Pictures/Wallpaper.png" ];
+      preload = [ "/home/penrose/Pictures/samurai.jpg" ];
+      wallpaper = [ ",/home/penrose/Pictures/samurai.jpg" ];
     };
   };
 }

@@ -4,9 +4,7 @@
     autoEnable = true;
 
     targets = {
-      hyprlock.enable = true;
-      hyprlock.useWallpaper = false;
-
+      hyprlock.enable = false;
       waybar.enable = false;
     };
 
