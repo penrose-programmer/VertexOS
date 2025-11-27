@@ -11,7 +11,7 @@
     };
 
     base16Scheme = {
-      path = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+      path = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
     };
 
     fonts = {
