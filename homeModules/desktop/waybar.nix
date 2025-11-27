@@ -116,34 +116,34 @@ programs.waybar = {
       #battery,
       #clock,
       #custom-lock {
-        background-color: #${config.stylix.base16Scheme.base00};
+        background-color: ${config.stylix.base16Scheme.base00};
         font-weight: 500;
       }
 
       #workspaces,
       #clock,
       #custom-lock {
-        border: 2px solid #${config.stylix.base16Scheme.base01};
+        border: 2px solid ${config.stylix.base16Scheme.base01};
       }
 
       #network,
       #pulseaudio,
       #bluetooth,
       #battery {
-        border-top: 2px solid #${config.stylix.base16Scheme.base01};
-        border-bottom: 2px solid #${config.stylix.base16Scheme.base01};
+        border-top: 2px solid ${config.stylix.base16Scheme.base01};
+        border-bottom: 2px solid ${config.stylix.base16Scheme.base01};
       }
 
       #bluetooth {
-        border-left: 2px solid #${config.stylix.base16Scheme.base01};
+        border-left: 2px solid ${config.stylix.base16Scheme.base01};
       }
 
       #battery {
-        border-right: 2px solid #${config.stylix.base16Scheme.base01};
+        border-right: 2px solid ${config.stylix.base16Scheme.base01};
       }
 
       #workspaces button {
-        color: #${config.stylix.base16Scheme.base05};
+        color: ${config.stylix.base16Scheme.base05};
       }
 
       #workspaces button:hover {
@@ -152,22 +152,22 @@ programs.waybar = {
       }
 
       #workspaces button.active {
-        color: #${config.stylix.base16Scheme.base0D};
+        color: ${config.stylix.base16Scheme.base0D};
       }
 
       #bluetooth,
       #network,
       #pulseaudio,
       #battery {
-        color: #${config.stylix.base16Scheme.base0E};
+        color: ${config.stylix.base16Scheme.base0E};
       }
 
       #clock {
-        color: #${config.stylix.base16Scheme.base0D};
+        color: ${config.stylix.base16Scheme.base0D};
       }
 
       #custom-lock {
-        color: #${config.stylix.base16Scheme.base05};
+        color: ${config.stylix.base16Scheme.base05};
       }
 
       #clock {
