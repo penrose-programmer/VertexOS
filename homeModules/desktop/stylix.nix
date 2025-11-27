@@ -10,10 +10,6 @@
       waybar.enable = false;
     };
 
-    base16Scheme = {
-      path = "${pkgs.base16-schemes}/share/themes/gruvbox-dark.yaml";
-    };
-
     fonts = {
       monospace = {
          package = pkgs.jetbrains-mono;

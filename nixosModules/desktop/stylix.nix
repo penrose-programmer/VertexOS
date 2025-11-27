@@ -4,22 +4,22 @@
     autoEnable = true;
 
     base16Scheme = {
-      base00 = "0B0F14";  # background
-      base01 = "1A1F26";  # surface
-      base02 = "2A2F3A";  # subtle dividers
-      base03 = "5C6270";  # muted text
-      base04 = "A0A4A8";  # secondary text
-      base05 = "E0E2E4";  # primary text
-      base06 = "F5F7FA";  # highlights
-      base07 = "FFFFFF";  # bright highlights
-      base08 = "FF6C6B";  # red
-      base09 = "FBA922";  # orange
-      base0A = "FFCC00";  # yellow
-      base0B = "98C379";  # green
-      base0C = "56B6C2";  # cyan
-      base0D = "61AFEF";  # blue
-      base0E = "C678DD";  # magenta
-      base0F = "D19A66";  # brown / accent
+      base00 = "#1A1B26";
+      base01 = "#16161E";
+      base02 = "#2F3549";
+      base03 = "#444B6A";
+      base04 = "#787C99";
+      base05 = "#A9B1D6";
+      base06 = "#CBCCD1";
+      base07 = "#D5D6DB";
+      base08 = "#C0CAF5";
+      base09 = "#A9B1D6";
+      base0A = "#0DB9D7";
+      base0B = "#9ECE6A";
+      base0C = "#B4F9F8";
+      base0D = "#2AC3DE";
+      base0E = "#BB9AF7";
+      base0F = "#F7768E";
     };
 
     fonts = {
