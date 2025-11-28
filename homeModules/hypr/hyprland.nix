@@ -18,8 +18,11 @@
 
       general = {
         gaps_out = 10;
-
       };
+
+      plugins = [
+        pkgs.hyprlandPlugins.hyprscrolling
+      ];
 
       animations = {
         enabled = false;
