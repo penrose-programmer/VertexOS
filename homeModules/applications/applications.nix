@@ -19,5 +19,6 @@
     protonvpn-gui
     openvpn
     gimp
+    inkscape
   ];
 }

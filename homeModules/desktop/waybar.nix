@@ -159,7 +159,7 @@ programs.waybar = {
       #network,
       #pulseaudio,
       #battery {
-        color: ${config.stylix.base16Scheme.base0E};
+        color: ${config.stylix.base16Scheme.base08};
       }
 
       #clock {
@@ -196,7 +196,7 @@ programs.waybar = {
 
       tooltip {
         background-color: #131721; /* base01 - tooltip background */
-        color: #E6E1CF; /* base05 - tooltip text */
+        color: ${config.stylix.base16Scheme.base08};
         padding: 5px 12px;
         margin: 10px 0px;
         border: 1px solid rgba(255, 255, 255, 0.1);

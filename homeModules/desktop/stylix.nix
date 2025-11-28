@@ -9,22 +9,26 @@
     };
 
     base16Scheme = {
-      base00 = "#16161E";
-      base01 = "#1A1B26";
-      base02 = "#2F3549";
-      base03 = "#444B6A";
-      base04 = "#787C99";
-      base05 = "#787C99";
-      base06 = "#CBCCD1";
-      base07 = "#D5D6DB";
-      base08 = "#F7768E";
-      base09 = "#FF9E64";
-      base0A = "#E0AF68";
-      base0B = "#41A6B5";
-      base0C = "#7DCFFF";
-      base0D = "#7AA2F7";
-      base0E = "#BB9AF7";
-      base0F = "#D18616";
+      base00 = "#101010";
+      base01 = "#252525";
+      base02 = "#464646";
+      base03 = "#525252";
+      base04 = "#ababab";
+      base05 = "#b9b9b9";
+      base06 = "#e3e3e3";
+      base07 = "#f7f7f7";
+
+      base08 = "#ff5f5f"; # red
+
+      base09 = "#999999";
+      base0A = "#a0a0a0";
+      base0B = "#8e8e8e";
+      base0C = "#868686";
+
+      base0D = "#5f87ff"; # blue
+
+      base0E = "#747474";
+      base0F = "#5e5e5e";
     };
 
     fonts = {
