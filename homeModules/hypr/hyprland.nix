@@ -18,6 +18,7 @@
 
       general = {
         gaps_out = 10;
+
       };
 
       animations = {
