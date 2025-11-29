@@ -4,22 +4,18 @@ programs.waybar = {
     settings = {
       mainBar = {
         "layer" = "top";
-        "position" = "top";
+        "position" = "bottom";
 
         "margin-left" = 10;
-        "margin-top" = 10;
+        "margin-bottom" = 5;
         "margin-right" = 10;
         "spacing" = 0;
 
         "height" = 10;
 
-        "modules-left" = [
-          "hyprland/workspaces"
-        ];
+        "modules-left" = [];
 
-        "modules-center" = [];
-
-        "modules-right" = [
+        "modules-center" = [
           "bluetooth"
           "network"
           "pulseaudio" 
@@ -28,15 +24,7 @@ programs.waybar = {
           "custom/lock"
         ];
 
-        "hyprland/workspaces" = {
-          "persistent-workspaces" = {
-            "*" = 3;
-          };
-          "format" = "{icon}";
-          "format-icons" = {
-            "default" = "";
-          };
-        };
+        "modules-right" = [];
 
         "bluetooth" = {
           "format" = "󰂲";
@@ -109,7 +97,6 @@ programs.waybar = {
         border-radius: 0px;
       }
 
-      #workspaces,
       #bluetooth,
       #network,
       #pulseaudio,
@@ -120,7 +107,6 @@ programs.waybar = {
         font-weight: 500;
       }
 
-      #workspaces,
       #clock,
       #custom-lock {
         border: 2px solid ${config.stylix.base16Scheme.base01};
@@ -142,19 +128,6 @@ programs.waybar = {
         border-right: 2px solid ${config.stylix.base16Scheme.base01};
       }
 
-      #workspaces button {
-        color: ${config.stylix.base16Scheme.base05};
-      }
-
-      #workspaces button:hover {
-          box-shadow: inherit;
-          text-shadow: inherit;
-      }
-
-      #workspaces button.active {
-        color: ${config.stylix.base16Scheme.base0D};
-      }
-
       #bluetooth,
       #network,
       #pulseaudio,
@@ -174,7 +147,6 @@ programs.waybar = {
         margin: 0px 5px;
       }
 
-      #workspaces,
       #bluetooth,
       #network,
       #battery,
@@ -184,10 +156,6 @@ programs.waybar = {
 
       #pulseaudio {
         padding: 0px 7px 0px 5px;
-      }
-
-      #workspaces button {
-        padding: 0px 7px 0px 4px;
       }
 
       #custom-lock {

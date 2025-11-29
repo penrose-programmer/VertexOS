@@ -1,10 +1,23 @@
 { pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
+
+    plugins = [
+      pkgs.hyprlandPlugins.hyprscrolling
+    ];
+
     settings = {
       "$mod" = "SUPER";
       "$mod_s" = "SUPER_SHIFT";
       "$mod_c" = "SUPER_CTRL";
+      
+      plugin = {
+        hyprscrolling = {
+          fullscreen_on_one_column = true;
+          focus_fit_method = 0;
+          column_width = 0.48;
+        };
+      };
 
       misc = {
         disable_hyprland_logo = true;
@@ -17,15 +30,20 @@
       };
 
       general = {
+        layout = "scrolling";
+        gaps_in = 0;
         gaps_out = 10;
       };
 
-      plugins = [
-        pkgs.hyprlandPlugins.hyprscrolling
-      ];
-
       animations = {
-        enabled = false;
+        enabled = true;
+        bezier = [
+          "slick, 0.0, 0.1, 0.9 , 1.0"
+        ];
+        animation = [
+          "windows, 1, 2, slick, slide"
+          "fade, 1, 2, slick"
+        ];
       };
 
       bind = [
@@ -35,7 +53,7 @@
         "$mod, k, movefocus, u"
         "$mod, l, movefocus, r"
         "$mod, Q, killactive"
-        "$mod, F, fullscreen"
+        "$mod, F, fullscreen, 1"
         "$mod, T, togglefloating"
         "$mod_s, H, movewindow, l"
         "$mod_s, J, movewindow, d"
@@ -52,19 +70,9 @@
         "$mod_s, DELETE, exec, kitty hyprctl dispatch exit"
         "ALT, SPACE, exec, rofi -show drun"
         "$mod, Z, exec, firefox"
-        "$mod, X, exec, vscode"
+        "$mod, X, exec, kitty nvim"
         "$mod, C, exec, thunar"
-      ] ++ (
-        # workspaces
-        builtins.concatLists (builtins.genList (i:
-            let ws = i + 1;
-            in [
-              "$mod, code:1${toString i}, focusworkspaceoncurrentmonitor, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspacesilent, ${toString ws}"
-            ]
-          )
-        9)
-      );
+      ];
 
       bindm = [
         "$mod, mouse:273, resizewindow"
@@ -82,12 +90,10 @@
 
       exec-once = [
         "hypridle"
-        "waybar"
         "blueman-applet"
         "nm-applet"
-        "neofetch"
-        "quickshell"
         "mpg123 ~/Music/SFX/welcome_aboard.mp3"
+        "sleep 1 && waybar"
       ];
 
       input.touchpad = {
