@@ -8,7 +8,6 @@
     ./desktop/stylix.nix
     ./desktop/fonts.nix
 
-    ./applications/docker.nix
     ./applications/thunar.nix
     ./applications/firefox.nix
     ./applications/nm-applet.nix
@@ -18,6 +17,7 @@
     ./hypr/hypr.nix
 
     ./services/services.nix
+    ./services/ollama.nix
     ./services/kanata.nix
   ];
 }
