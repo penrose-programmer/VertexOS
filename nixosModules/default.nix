@@ -8,6 +8,7 @@
     ./desktop/stylix.nix
     ./desktop/fonts.nix
 
+    ./applications/docker.nix
     ./applications/thunar.nix
     ./applications/firefox.nix
     ./applications/nm-applet.nix
