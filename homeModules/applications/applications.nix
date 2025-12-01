@@ -15,9 +15,6 @@
     ripgrep
     blender
     musescore
-    ollama
-    protonvpn-gui
-    openvpn
     gimp3-with-plugins
     inkscape
   ];
