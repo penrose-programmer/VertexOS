@@ -1,8 +1,8 @@
 { pkgs, ... }: {
   imports = [
     ./applications.nix
-    ./gimp.nix
     ./bash.nix
+    ./docker.nix
     ./kitty.nix
     ./languages.nix
     ./rofi.nix

@@ -18,7 +18,7 @@
     ollama
     protonvpn-gui
     openvpn
-    gimp
+    gimp3-with-plugins
     inkscape
   ];
 }
