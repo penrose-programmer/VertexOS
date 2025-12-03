@@ -94,7 +94,6 @@
         "nm-applet"
         "mpg123 ~/Music/SFX/welcome_aboard.mp3"
         "sleep 1 && waybar"
-        "ollama start"
       ];
 
       input.touchpad = {
