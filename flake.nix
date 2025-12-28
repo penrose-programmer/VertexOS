@@ -4,18 +4,12 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
+    };
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -23,12 +17,6 @@
 	url = "github:nix-community/stylix";
 	inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -44,7 +32,6 @@
 
 
           home-manager.nixosModules.home-manager
-
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -55,10 +42,6 @@
                 ./hosts/vertex/home.nix
                 ./homeModules/default.nix
                 inputs.nixvim.homeModules.nixvim
-              ];
-
-              home.packages = [
-                inputs.caelestia-shell.packages.x86_64-linux.default
               ];
             };
           }

@@ -6,11 +6,6 @@
 
       servers = {
         nixd.enable = true;
-        rust_analyzer = {
-          enable = true;
-          installRustc = true;
-          installCargo = true;
-        };
         gdscript = {
           enable = true;
           package = null;

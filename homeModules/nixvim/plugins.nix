@@ -1,18 +1,12 @@
-{ pkgs, ... }: {
-    programs.nixvim = {
-      extraPlugins = with pkgs.vimPlugins; [
-        nvim-treesitter
-        neo-tree-nvim
-        nvim-web-devicons
-        vim-tmux-navigator
-        telescope-fzf-native-nvim
-        nvim-cmp
-        lazygit-nvim
-        vim-be-good
-        vim-godot
-      ];
+{ pkgs, config, ... }: {
+  programs.nixvim = {
+    plugins.neo-tree.enable = true;
+    plugins.lazygit.enable = true;
+    plugins.cmp-nvim-lsp.enable = true;
+    plugins.web-devicons.enable = true;
+    plugins.tmux-navigator.enable = true;
+    plugins.godot.enable = true;
 
-      plugins.cmp-nvim-lsp.enable = true;
-      plugins.web-devicons.enable = true;
-    };
+    colorschemes.catppuccin.enable = true;
+  };
 }

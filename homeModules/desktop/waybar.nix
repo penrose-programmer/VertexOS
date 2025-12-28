@@ -3,28 +3,85 @@ programs.waybar = {
     enable = true;
     settings = {
       mainBar = {
-        "layer" = "top";
-        "position" = "bottom";
+        layer = "top";
+        position = "top";
+        height = 20;
 
-        "margin-left" = 10;
-        "margin-bottom" = 5;
-        "margin-right" = 10;
-        "spacing" = 0;
-
-        "height" = 10;
-
-        "modules-left" = [];
-
-        "modules-center" = [
-          "bluetooth"
-          "network"
-          "pulseaudio" 
-          "battery"
-          "clock"
-          "custom/lock"
+        modules-left = [
+          "hyprland/workspaces"
+          "cpu"
+          "memory"
         ];
 
-        "modules-right" = [];
+        modules-center = ["clock"];
+
+        modules-right = [
+          "pulseaudio"
+          "battery"
+          "network"
+          "bluetooth"
+        ];
+
+        "hyprland/workspaces" = {
+          "persistent-workspaces" = {
+            "*" = 3;
+          };
+          "format" = "{icon}";
+          "format-icons" = {
+            "active" = "";
+            "default" = "";
+          };
+        };
+
+        "clock" = {
+            "interval" = 1;
+            "format" = "{:%H:%M:%S}";
+            "max-length" = 25;
+        };
+
+        "pulseaudio" = {
+          "format" = "{icon}  {volume}%";
+          "format-muted" = "";
+          "format-icons" = {
+            "default" = ["" "" ""];
+          };
+          "on-click" = "pavucontrol";
+        };
+
+        "battery" = {
+          "interval" = 2;
+          "states" = {
+              "good" = 95;
+              "warning" = 30;
+              "critical" = 15;
+          };
+
+          "format" = "{icon} {capacity}%";
+          "format-full" = "{icon} {capacity}%";
+          "format-charging" = " {capacity}%";
+          "format-plugged" = " {capacity}%";
+          "format-alt" = "{icon} {time}";
+          "format-icons" = ["" "" "" "" ""];
+        };
+
+       "cpu" = {
+           "format" = "CPU {icon}";
+           "format-icons" = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+        };
+        
+        "memory" = {
+           "format" = "MEM {icon}";
+           "format-icons" = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+        };
+
+        "network" = {
+          "format-wifi" = "󰤢 ";
+          "format-ethernet" = "󰈀 ";
+          "format-disconnected" = "󰤠 ";
+          "interval" = 5;
+          "tooltip-format" = "{essid} ({signalStrength}%)";
+          "on-click" = "kitty nmtui";
+        };
 
         "bluetooth" = {
           "format" = "󰂲";
@@ -39,137 +96,33 @@ programs.waybar = {
           "on-click" = "blueman-manager";
           "tooltip-format-connected" = "{device_enumerate}";
         };
-
-        "clock" = {
-          "tooltip" = false;
-          "format" = "{:%r}";
-          "interval" = 1;
-        };
-
-        "network" = {
-          "format-wifi" = "󰤢";
-          "format-ethernet" = "󰈀";
-          "format-disconnected" = "󰤠";
-          "interval" = 5;
-          "tooltip-format" = "{essid} ({signalStrength}%)";
-          "on-click" = "kitty nmtui";
-        };
-
-        "pulseaudio" = {
-          "format" = "{icon}";
-          "format-muted" = "";
-          "format-icons" = {
-            "default" = ["" "" ""];
-          };
-          "on-click" = "pavucontrol";
-        };
-
-        "battery" = {
-          "interval" = 2;
-          "states" = {
-              "good" = 95;
-              "warning" = 30;
-              "critical" = 15;
-          };
-          "format" = "{icon}";
-          "format-full" = "{icon}";
-          "format-charging" = "";
-          "format-plugged" = "";
-          "format-alt" = "{icon}";
-          "format-icons" = ["" "" "" "" ""];
-        };
-
-        "custom/lock" = {
-          "tooltip" = false;
-          "on-click" = "sh -c '(sleep 0s; hyprlock)' & disown";
-          "format" = "";
-        };
       };
     };
 
     style = ''
       * {
-        background: transparent;
         font-family: "JetBrainsMono Nerd Font", Helvetica, sans-serif;
+        color: #ffffff;
         font-size: 12px;
-        min-width: 7px;
-        min-height: 0px;
-        border-radius: 0px;
+        min-height: 0;
+
+        background-color: #000000;
       }
 
-      #bluetooth,
-      #network,
       #pulseaudio,
       #battery,
-      #clock,
-      #custom-lock {
-        background-color: ${config.stylix.base16Scheme.base00};
-        font-weight: 500;
-      }
-
-      #clock,
-      #custom-lock {
-        border: 2px solid ${config.stylix.base16Scheme.base01};
-      }
-
       #network,
-      #pulseaudio,
       #bluetooth,
-      #battery {
-        border-top: 2px solid ${config.stylix.base16Scheme.base01};
-        border-bottom: 2px solid ${config.stylix.base16Scheme.base01};
+      #cpu,
+      #memory {
+        padding: 0 10px;
       }
 
-      #bluetooth {
-        border-left: 2px solid ${config.stylix.base16Scheme.base01};
+      label {
+          all: unset;
       }
-
-      #battery {
-        border-right: 2px solid ${config.stylix.base16Scheme.base01};
-      }
-
-      #bluetooth,
-      #network,
-      #pulseaudio,
-      #battery {
-        color: ${config.stylix.base16Scheme.base08};
-      }
-
-      #clock {
-        color: ${config.stylix.base16Scheme.base0D};
-      }
-
-      #custom-lock {
-        color: ${config.stylix.base16Scheme.base05};
-      }
-
-      #clock {
-        margin: 0px 5px;
-      }
-
-      #bluetooth,
-      #network,
-      #battery,
-      #clock {
-        padding: 0px 5px;
-      }
-
-      #pulseaudio {
-        padding: 0px 7px 0px 5px;
-      }
-
-      #custom-lock {
-        padding: 0px 8px 0px 4px;
-      }
-
-      tooltip {
-        background-color: #131721; /* base01 - tooltip background */
-        color: ${config.stylix.base16Scheme.base08};
-        padding: 5px 12px;
-        margin: 10px 0px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        font-size: 12px;
+      button {
+          all: unset;
       }
     '';
   };

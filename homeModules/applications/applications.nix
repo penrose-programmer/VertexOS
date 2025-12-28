@@ -4,7 +4,7 @@
     p3x-onenote
     obs-studio
     obsidian
-    godot_4_5
+    godot_4-mono
     lazygit
     mpg123
     neofetch
@@ -17,5 +17,7 @@
     musescore
     gimp3-with-plugins
     inkscape
+    ungoogled-chromium
+    butler
   ];
 }
