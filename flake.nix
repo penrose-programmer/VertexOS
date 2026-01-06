@@ -4,10 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,7 +37,6 @@
               imports = [
                 ./hosts/vertex/home.nix
                 ./homeModules/default.nix
-                inputs.nixvim.homeModules.nixvim
               ];
             };
           }
