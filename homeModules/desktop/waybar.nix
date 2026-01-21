@@ -114,6 +114,7 @@ programs.waybar = {
       #network,
       #bluetooth,
       #cpu,
+      #workspace,
       #memory {
         padding: 0 10px;
       }

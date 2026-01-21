@@ -22,6 +22,8 @@
       base0F = "#3D2F00";
     };
 
+    image = "/Pictures/penrose.png";
+
     fonts = {
       monospace = {
          package = pkgs.jetbrains-mono;

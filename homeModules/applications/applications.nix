@@ -4,7 +4,7 @@
     p3x-onenote
     obs-studio
     obsidian
-    godot
+    godotPackages_4_4.godot
     lazygit
     mpg123
     neofetch
@@ -19,6 +19,6 @@
     inkscape
     ungoogled-chromium
     butler
-    zed-editor
+    neovim
   ];
 }

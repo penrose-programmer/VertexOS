@@ -72,11 +72,11 @@
 
       exec-once = [
         "hypridle"
+	"hyprpaper"
         "waybar"
         "blueman-applet"
         "nm-applet"
         "neofetch"
-        "quickshell"
       ];
 
       input.touchpad = {
