@@ -22,7 +22,7 @@
       base0F = "#3D2F00";
     };
 
-    image = "/Pictures/penrose.png";
+    image = "~/Pictures/Penrose.png";
 
     fonts = {
       monospace = {

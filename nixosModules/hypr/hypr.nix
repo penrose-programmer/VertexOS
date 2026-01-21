@@ -1,5 +1,5 @@
 { pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ hyprland hyprlock hypridle ];
+  environment.systemPackages = with pkgs; [ hyprland hyprlock hypridle hyprpaper];
   
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
