@@ -1,7 +1,9 @@
 { pkgs, ... }: {
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
+  services.xserver.enable = false;
   services.desktopManager.gnome.enable = false;
+
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   
   services.blueman.enable = true;
 

@@ -8,11 +8,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    stylix = {
-	url = "github:nix-community/stylix";
-	inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -23,9 +18,6 @@
         modules = [
           ./hosts/vertex/configuration.nix
           ./nixosModules/default.nix
-
-	  inputs.stylix.nixosModules.stylix
-
 
           home-manager.nixosModules.home-manager
           {

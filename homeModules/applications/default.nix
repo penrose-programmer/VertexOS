@@ -2,9 +2,7 @@
   imports = [
     ./applications.nix
     ./bash.nix
+    ./icons.nix
     ./kitty.nix
-    ./languages.nix
-    ./rofi.nix
-    ./tmux.nix
   ];
 }
