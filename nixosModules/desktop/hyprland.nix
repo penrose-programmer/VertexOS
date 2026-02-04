@@ -1,0 +1,3 @@
+{ pkgs }: {
+  hyprland.enable = true;
+}
