@@ -1,3 +1,5 @@
 { pkgs, ... }: {
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    disable_hyprland_logo = true;
+  };
 }
