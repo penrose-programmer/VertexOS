@@ -6,7 +6,6 @@
     ./desktop/clipboard.nix
     ./desktop/dunst.nix
     ./desktop/fonts.nix
-    ./desktop/hyprland.nix
 
     ./applications/thunar.nix
     ./applications/firefox.nix
