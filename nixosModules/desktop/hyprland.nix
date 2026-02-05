@@ -1,3 +1,3 @@
-{ pkgs }: {
-  hyprland.enable = true;
+{ pkgs, ... }: {
+  programs.hyprland.enable = true;
 }
