@@ -20,5 +20,6 @@
     ungoogled-chromium
     butler
     neovim
+    anki-bin
   ];
 }
