@@ -21,6 +21,5 @@
     butler
     neovim
     anki-bin
-    ibusMinimal
   ];
 }
