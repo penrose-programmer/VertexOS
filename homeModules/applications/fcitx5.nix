@@ -1,11 +1,10 @@
 { pkgs, ... }: {
-  services.displayManager.cosmic-greeter.enable = true;
-  services.displayManager.autoLogin = {
-    enable = true;
-    # Replace `yourUserName` with the actual username of user who should be automatically logged in
-    user = "penrose";
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+      fcitx5-qt
+    ];
   };
-
-  # Enable the COSMIC desktop environment
-  services.desktopManager.cosmic.enable = true;
-}
+};
