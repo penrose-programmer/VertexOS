@@ -4,6 +4,6 @@
     ./bash.nix
     ./icons.nix
     ./kitty.nix
-    ./fcitx5.nix
+    ./ibus.nix
   ];
 }
